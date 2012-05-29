@@ -1,3 +1,6 @@
 [submodule "Vendor/Cedar"]
 	path = Vendor/Cedar
 	url = https://github.com/pivotal/cedar.git
+[submodule "Vendor/PivotalCoreKit"]
+	path = Vendor/PivotalCoreKit
+	url = https://github.com/pivotal/PivotalCoreKit.git

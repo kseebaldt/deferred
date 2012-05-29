@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E10AF2B21575501000EC4E2C /* PivotalSpecHelperKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E10AF2A515754FF400EC4E2C /* PivotalSpecHelperKit.framework */; };
+		E10AF2B61575504E00EC4E2C /* NSURLConnection+DeferredSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = E10AF2B51575504E00EC4E2C /* NSURLConnection+DeferredSpec.m */; };
+		E10AF2BA157551CD00EC4E2C /* NSURLConnectionSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = E10AF2B7157551CD00EC4E2C /* NSURLConnectionSpec.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E15F47471570786900080763 /* KSDeferred.h in Headers */ = {isa = PBXBuildFile; fileRef = E15F47451570786900080763 /* KSDeferred.h */; };
 		E15F47481570786900080763 /* KSDeferred.h in Headers */ = {isa = PBXBuildFile; fileRef = E15F47451570786900080763 /* KSDeferred.h */; };
 		E15F47491570786900080763 /* KSDeferred.m in Sources */ = {isa = PBXBuildFile; fileRef = E15F47461570786900080763 /* KSDeferred.m */; };
@@ -18,7 +21,6 @@
 		E18A7B3215674EC20083D745 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E18A7B3115674EC20083D745 /* Cocoa.framework */; };
 		E18A7B4615674ED10083D745 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E18A7B1815674D9B0083D745 /* Foundation.framework */; };
 		E18A7B4915674ED10083D745 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E18A7B4815674ED10083D745 /* main.m */; };
-		E18A7B4D15674ED10083D745 /* Specs.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = E18A7B4C15674ED10083D745 /* Specs.1 */; };
 		E18A7B5115674F0C0083D745 /* KSPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = E18A7B2615674DC50083D745 /* KSPromise.m */; };
 		E18A7B5215674F0C0083D745 /* KSPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = E18A7B2615674DC50083D745 /* KSPromise.m */; };
 		E18A7B5615674F350083D745 /* KSDeferredSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = E18A7B5315674F350083D745 /* KSDeferredSpec.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -32,6 +34,62 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		E10AF2A215754FF400EC4E2C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E10AF29115754FF400EC4E2C /* PivotalCoreKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AEF15AC511C97E8B005B4F92;
+			remoteInfo = PivotalCoreKit;
+		};
+		E10AF2A415754FF400EC4E2C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E10AF29115754FF400EC4E2C /* PivotalCoreKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AEF15AE011C97F15005B4F92;
+			remoteInfo = PivotalSpecHelperKit;
+		};
+		E10AF2A615754FF400EC4E2C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E10AF29115754FF400EC4E2C /* PivotalCoreKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AECC4BBA11C6E2280027AB1B;
+			remoteInfo = Spec;
+		};
+		E10AF2A815754FF400EC4E2C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E10AF29115754FF400EC4E2C /* PivotalCoreKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AE138E7011E542BF004E825D;
+			remoteInfo = "PivotalCoreKit-StaticLib";
+		};
+		E10AF2AA15754FF400EC4E2C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E10AF29115754FF400EC4E2C /* PivotalCoreKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AE138F4611E548B5004E825D;
+			remoteInfo = "PivotalSpecHelperKit-StaticLib";
+		};
+		E10AF2AC15754FF400EC4E2C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E10AF29115754FF400EC4E2C /* PivotalCoreKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AEE06699152B6AFA009289FE;
+			remoteInfo = "PivotalUICoreKit-StaticLib";
+		};
+		E10AF2AE15754FF400EC4E2C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E10AF29115754FF400EC4E2C /* PivotalCoreKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6696DFC21266DE6C00111E23;
+			remoteInfo = UISpec;
+		};
+		E10AF2B01575500700EC4E2C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E10AF29115754FF400EC4E2C /* PivotalCoreKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = AEF15ADF11C97F15005B4F92;
+			remoteInfo = PivotalSpecHelperKit;
+		};
 		E18A7B6B15674FC70083D745 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E18A7B5715674FC50083D745 /* Cedar.xcodeproj */;
@@ -104,13 +162,15 @@
 			dstPath = /usr/share/man/man1/;
 			dstSubfolderSpec = 0;
 			files = (
-				E18A7B4D15674ED10083D745 /* Specs.1 in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E10AF29115754FF400EC4E2C /* PivotalCoreKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PivotalCoreKit.xcodeproj; path = PivotalCoreKit/PivotalCoreKit.xcodeproj; sourceTree = "<group>"; };
+		E10AF2B51575504E00EC4E2C /* NSURLConnection+DeferredSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLConnection+DeferredSpec.m"; sourceTree = "<group>"; };
+		E10AF2B7157551CD00EC4E2C /* NSURLConnectionSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NSURLConnectionSpec.mm; sourceTree = "<group>"; };
 		E15F47451570786900080763 /* KSDeferred.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSDeferred.h; sourceTree = "<group>"; };
 		E15F47461570786900080763 /* KSDeferred.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSDeferred.m; sourceTree = "<group>"; };
 		E18A7B1515674D9B0083D745 /* libDeferred.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDeferred.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -127,7 +187,6 @@
 		E18A7B4415674ED10083D745 /* Specs */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Specs; sourceTree = BUILT_PRODUCTS_DIR; };
 		E18A7B4815674ED10083D745 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E18A7B4B15674ED10083D745 /* Specs-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Specs-Prefix.pch"; sourceTree = "<group>"; };
-		E18A7B4C15674ED10083D745 /* Specs.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Specs.1; sourceTree = "<group>"; };
 		E18A7B5315674F350083D745 /* KSDeferredSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = KSDeferredSpec.mm; sourceTree = "<group>"; };
 		E18A7B5715674FC50083D745 /* Cedar.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Cedar.xcodeproj; sourceTree = "<group>"; };
 		E19A78F31568187100880A4E /* NSURLConnection+Deferred.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLConnection+Deferred.h"; sourceTree = "<group>"; };
@@ -155,6 +214,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E10AF2B21575501000EC4E2C /* PivotalSpecHelperKit.framework in Frameworks */,
 				E18A7B811567503C0083D745 /* Cedar.framework in Frameworks */,
 				E18A7B4615674ED10083D745 /* Foundation.framework in Frameworks */,
 			);
@@ -163,6 +223,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E10AF28715754FDE00EC4E2C /* PivotalCoreKit */ = {
+			isa = PBXGroup;
+			children = (
+				E10AF29115754FF400EC4E2C /* PivotalCoreKit.xcodeproj */,
+			);
+			name = PivotalCoreKit;
+			sourceTree = "<group>";
+		};
+		E10AF29215754FF400EC4E2C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E10AF2A315754FF400EC4E2C /* PivotalCoreKit.framework */,
+				E10AF2A515754FF400EC4E2C /* PivotalSpecHelperKit.framework */,
+				E10AF2A715754FF400EC4E2C /* Spec */,
+				E10AF2A915754FF400EC4E2C /* libPivotalCoreKit-StaticLib.a */,
+				E10AF2AB15754FF400EC4E2C /* libPivotalSpecHelperKit-StaticLib.a */,
+				E10AF2AD15754FF400EC4E2C /* libPivotalUICoreKit-StaticLib.a */,
+				E10AF2AF15754FF400EC4E2C /* UISpec.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E10AF2B31575502F00EC4E2C /* Stubs */ = {
+			isa = PBXGroup;
+			children = (
+				E10AF2B51575504E00EC4E2C /* NSURLConnection+DeferredSpec.m */,
+			);
+			path = Stubs;
+			sourceTree = "<group>";
+		};
 		E18A7B0A15674D9B0083D745 = {
 			isa = PBXGroup;
 			children = (
@@ -220,6 +310,7 @@
 		E18A7B2915674E570083D745 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				E10AF28715754FDE00EC4E2C /* PivotalCoreKit */,
 				E18A7B2A15674E620083D745 /* Cedar */,
 			);
 			path = Vendor;
@@ -262,10 +353,11 @@
 		E18A7B4715674ED10083D745 /* Specs */ = {
 			isa = PBXGroup;
 			children = (
+				E10AF2B31575502F00EC4E2C /* Stubs */,
 				E18A7B4A15674ED10083D745 /* Supporting Files */,
 				E18A7B4815674ED10083D745 /* main.m */,
-				E18A7B4C15674ED10083D745 /* Specs.1 */,
 				E18A7B5315674F350083D745 /* KSDeferredSpec.mm */,
+				E10AF2B7157551CD00EC4E2C /* NSURLConnectionSpec.mm */,
 			);
 			path = Specs;
 			sourceTree = "<group>";
@@ -364,6 +456,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				E10AF2B11575500700EC4E2C /* PBXTargetDependency */,
 				E18A7B80156750330083D745 /* PBXTargetDependency */,
 			);
 			name = Specs;
@@ -394,6 +487,10 @@
 					ProductGroup = E18A7B5815674FC50083D745 /* Products */;
 					ProjectRef = E18A7B5715674FC50083D745 /* Cedar.xcodeproj */;
 				},
+				{
+					ProductGroup = E10AF29215754FF400EC4E2C /* Products */;
+					ProjectRef = E10AF29115754FF400EC4E2C /* PivotalCoreKit.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -405,6 +502,55 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		E10AF2A315754FF400EC4E2C /* PivotalCoreKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = PivotalCoreKit.framework;
+			remoteRef = E10AF2A215754FF400EC4E2C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E10AF2A515754FF400EC4E2C /* PivotalSpecHelperKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = PivotalSpecHelperKit.framework;
+			remoteRef = E10AF2A415754FF400EC4E2C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E10AF2A715754FF400EC4E2C /* Spec */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = Spec;
+			remoteRef = E10AF2A615754FF400EC4E2C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E10AF2A915754FF400EC4E2C /* libPivotalCoreKit-StaticLib.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libPivotalCoreKit-StaticLib.a";
+			remoteRef = E10AF2A815754FF400EC4E2C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E10AF2AB15754FF400EC4E2C /* libPivotalSpecHelperKit-StaticLib.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libPivotalSpecHelperKit-StaticLib.a";
+			remoteRef = E10AF2AA15754FF400EC4E2C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E10AF2AD15754FF400EC4E2C /* libPivotalUICoreKit-StaticLib.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libPivotalUICoreKit-StaticLib.a";
+			remoteRef = E10AF2AC15754FF400EC4E2C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E10AF2AF15754FF400EC4E2C /* UISpec.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = UISpec.app;
+			remoteRef = E10AF2AE15754FF400EC4E2C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		E18A7B6C15674FC70083D745 /* Cedar.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
@@ -493,12 +639,19 @@
 				E18A7B5615674F350083D745 /* KSDeferredSpec.mm in Sources */,
 				E19A78F91568187100880A4E /* NSURLConnection+Deferred.m in Sources */,
 				E15F474B1570786900080763 /* KSDeferred.m in Sources */,
+				E10AF2B61575504E00EC4E2C /* NSURLConnection+DeferredSpec.m in Sources */,
+				E10AF2BA157551CD00EC4E2C /* NSURLConnectionSpec.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		E10AF2B11575500700EC4E2C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PivotalSpecHelperKit;
+			targetProxy = E10AF2B01575500700EC4E2C /* PBXContainerItemProxy */;
+		};
 		E18A7B80156750330083D745 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Cedar;
