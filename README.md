@@ -1,6 +1,6 @@
 Async library inspired by CommonJS/jQuery deferreds
 
-# Example
+# Examples
 
 ## Getting a promise from a NSURLConnection
 
@@ -25,3 +25,14 @@ Async library inspired by CommonJS/jQuery deferreds
     [promise whenResolved:^(KSPromise *p) {
         // will only be called after all joined promises are resolved
     }];
+
+## Deferring and return a promise of a value
+    KSDeferred *deferred = [KSDeferred defer];
+    return deferred.promise;
+
+## Resolving a promise
+    [deferred resolveWithValue:@"VALUE"];
+
+## Rejecting a promise
+    NSError *someError;
+    [deferred rejectWithError:someError];
