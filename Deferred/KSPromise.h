@@ -2,16 +2,20 @@
 
 @class KSPromise;
 typedef void(^deferredCallback)(KSPromise *);
-typedef void(^deferredErrorCallback)(NSError *);
 
 @interface KSPromise : NSObject
 
 @property (strong, nonatomic) id value;
 @property (strong, nonatomic) NSError *error;
 
++ (KSPromise *)join:(NSArray *)promises;
 - (KSPromise *)whenFulfilled:(deferredCallback)complete;
 - (KSPromise *)whenResolved:(deferredCallback)complete;
-- (KSPromise *)whenRejected:(deferredErrorCallback)complete;
+- (KSPromise *)whenRejected:(deferredCallback)complete;
 - (void)cancel;
+- (NSArray *)joinedPromises;
+- (BOOL)isResolved;
+- (BOOL)isRejected;
+- (BOOL)isFulfilled;
 
 @end

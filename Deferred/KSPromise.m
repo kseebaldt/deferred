@@ -1,17 +1,20 @@
 #import "KSDeferred.h"
 
 @interface KSPromise ()
+@property (strong, nonatomic, readwrite) NSMutableArray *parentPromises;
+
 @property (strong, nonatomic) NSMutableArray *fulfilledCallbacks;
 @property (strong, nonatomic) NSMutableArray *resolvedCallbacks;
 @property (strong, nonatomic) NSMutableArray *rejectedCallbacks;
 
-@property (nonatomic) BOOL resolved;
-@property (nonatomic) BOOL rejected;
+@property (nonatomic, getter=isResolved) BOOL resolved;
+@property (nonatomic, getter=isRejected) BOOL rejected;
 @property (nonatomic) BOOL cancelled;
 @end
 
 @implementation KSPromise
 
+@synthesize parentPromises = _parentPromises;
 @synthesize fulfilledCallbacks = _fulfilledCallbacks, resolvedCallbacks = _resolvedCallbacks, rejectedCallbacks = _rejectedCallbacks;
 @synthesize value = _value, error = _error;
 @synthesize resolved = _resolved, rejected = _rejected;
@@ -20,6 +23,7 @@
 - (id)init {
     self = [super init];
     if (self) {
+        self.parentPromises = [NSMutableArray array];
         self.fulfilledCallbacks = [NSMutableArray array];
         self.resolvedCallbacks = [NSMutableArray array];
         self.rejectedCallbacks = [NSMutableArray array];
@@ -27,8 +31,23 @@
     return self;
 }
 
++ (KSPromise *)join:(NSArray *)promises {
+    KSPromise *promise = [[KSPromise alloc] init];
+    for (KSPromise *joinedPromise in promises) {
+        [promise.parentPromises addObject:joinedPromise];
+        [joinedPromise whenFulfilled:^(KSPromise *fulfilledPromise) {
+           [promise joinedPromiseFulfilled:fulfilledPromise];
+        }];
+    }
+    return promise;
+}
+
+- (BOOL)isFulfilled {
+    return self.isResolved || self.isRejected;
+}
+
 - (KSPromise *)whenFulfilled:(deferredCallback)callback {
-    if (self.rejected || self.resolved) {
+    if (self.isFulfilled) {
         callback(self);
     } else {
         [self.fulfilledCallbacks addObject:[callback copy]];
@@ -37,7 +56,7 @@
 }
 
 - (KSPromise *)whenResolved:(deferredCallback)callback {
-    if (self.resolved) {
+    if (self.isResolved) {
         callback(self);
     } else {
         [self.resolvedCallbacks addObject:[callback copy]];
@@ -45,9 +64,9 @@
     return self;
 }
 
-- (KSPromise *)whenRejected:(deferredErrorCallback)callback {
-    if (self.rejected) {
-        callback(self.error);
+- (KSPromise *)whenRejected:(deferredCallback)callback {
+    if (self.isRejected) {
+        callback(self);
     } else {
         [self.rejectedCallbacks addObject:[callback copy]];
     }    
@@ -68,8 +87,8 @@
     self.error = error;
     self.rejected = YES;
     if (self.cancelled) return;
-    for (deferredErrorCallback callback in self.rejectedCallbacks) {
-        callback(error);
+    for (deferredCallback callback in self.rejectedCallbacks) {
+        callback(self);
     }
     [self fulfill];
 }
@@ -82,6 +101,32 @@
 
 - (void)cancel {
     self.cancelled = YES;
+}
+
+- (NSArray *)joinedPromises {
+    return self.parentPromises;
+}
+
+#pragma mark - Private methods
+- (void)joinedPromiseFulfilled:(KSPromise *)promise {
+    BOOL fulfilled = YES;
+    NSMutableArray *errors = [NSMutableArray array];
+    NSMutableArray *values = [NSMutableArray array];
+    for (KSPromise *joinedPromise in self.parentPromises) {
+        fulfilled = fulfilled && joinedPromise.isFulfilled;
+        if (joinedPromise.isRejected) {
+            [errors addObject:joinedPromise.error];
+        } else if (joinedPromise.isResolved) {
+            [values addObject:joinedPromise.value];
+        }
+    }
+    if (fulfilled) {
+        if (errors.count > 0) {
+            [self rejectWithError:[NSError errorWithDomain:@"KSPromiseJoinError" code:1 userInfo:[NSDictionary dictionaryWithObject:errors forKey:@"errors"]]];
+        } else {
+            [self resolveWithValue:values];
+        }
+    }
 }
 
 @end
