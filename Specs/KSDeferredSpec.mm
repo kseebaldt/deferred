@@ -12,7 +12,7 @@ describe(@"KSDeferred", ^{
     __block KSDeferred *deferred;
 
     beforeEach(^{
-        deferred = [[[KSDeferred alloc] init] autorelease];
+        deferred = [KSDeferred defer];
         promise = deferred.promise;
     });
     
