@@ -79,6 +79,62 @@ describe(@"NSURLConnection+Deferred", ^{
             promise.error should equal(error);
         });
     });    
+    
+    describe(@"joining two connections", ^{
+        __block NSURLConnection *connection2;
+        __block KSPromise *joinedPromise;
+        __block BOOL joinedResolvedCalled;
+        __block BOOL joinedRejectedCalled;
+        
+        beforeEach(^{
+            NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.example.com/test"]];
+            KSPromise *promise2 = [NSURLConnection sendRequest:request];
+            connection2 = NSURLConnection.connections.lastObject;
+            
+            joinedPromise = [KSPromise join:[NSArray arrayWithObjects:promise, promise2, nil]];
+            [joinedPromise whenResolved:^(KSPromise *p) {
+                joinedResolvedCalled = YES;
+            }];
+            [joinedPromise whenRejected:^(KSPromise *p) {
+                joinedRejectedCalled = YES;
+            }];        
+        });
+                             
+        describe(@"when the first connection finishes", ^{
+            beforeEach(^{
+                PSHKFakeHTTPURLResponse *response = [[[PSHKFakeHTTPURLResponse alloc] initWithStatusCode:200 andHeaders:nil andBody:@"BODY1"] autorelease];
+                [connection receiveResponse:response];
+            });
+            
+            it(@"should not resolve the promise", ^{
+                joinedPromise.isResolved should_not be_truthy;
+                joinedResolvedCalled should_not be_truthy;
+            });
+            
+            describe(@"when the second connection finishes", ^{
+                beforeEach(^{
+                    PSHKFakeHTTPURLResponse *response = [[[PSHKFakeHTTPURLResponse alloc] initWithStatusCode:200 andHeaders:nil andBody:@"BODY2"] autorelease];
+                    [connection2 receiveResponse:response];
+                });
+                
+                it(@"should resolve the promise", ^{
+                    joinedPromise.isResolved should be_truthy;
+                    joinedResolvedCalled should be_truthy;
+                });
+                
+                it(@"should have an array of responses", ^{
+                    [joinedPromise.value count] should equal(2);
+                    NSData *data1 = [[joinedPromise.value objectAtIndex:0] objectAtIndex:1];
+                    NSString *body1 = [[[NSString alloc] initWithData:data1 encoding:NSUTF8StringEncoding] autorelease];
+                    NSData *data2 = [[joinedPromise.value objectAtIndex:1] objectAtIndex:1];
+                    NSString *body2 = [[[NSString alloc] initWithData:data2 encoding:NSUTF8StringEncoding] autorelease];
+                    body1 should equal(@"BODY1");
+                    body2 should equal(@"BODY2");
+                });
+            });         
+
+        });
+    });
 
 });
 
