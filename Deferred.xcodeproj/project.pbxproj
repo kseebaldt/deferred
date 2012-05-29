@@ -1,0 +1,686 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E15F47471570786900080763 /* KSDeferred.h in Headers */ = {isa = PBXBuildFile; fileRef = E15F47451570786900080763 /* KSDeferred.h */; };
+		E15F47481570786900080763 /* KSDeferred.h in Headers */ = {isa = PBXBuildFile; fileRef = E15F47451570786900080763 /* KSDeferred.h */; };
+		E15F47491570786900080763 /* KSDeferred.m in Sources */ = {isa = PBXBuildFile; fileRef = E15F47461570786900080763 /* KSDeferred.m */; };
+		E15F474A1570786900080763 /* KSDeferred.m in Sources */ = {isa = PBXBuildFile; fileRef = E15F47461570786900080763 /* KSDeferred.m */; };
+		E15F474B1570786900080763 /* KSDeferred.m in Sources */ = {isa = PBXBuildFile; fileRef = E15F47461570786900080763 /* KSDeferred.m */; };
+		E18A7B1915674D9B0083D745 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E18A7B1815674D9B0083D745 /* Foundation.framework */; };
+		E18A7B2715674DC50083D745 /* KSPromise.h in Headers */ = {isa = PBXBuildFile; fileRef = E18A7B2515674DC50083D745 /* KSPromise.h */; };
+		E18A7B2815674DC50083D745 /* KSPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = E18A7B2615674DC50083D745 /* KSPromise.m */; };
+		E18A7B3215674EC20083D745 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E18A7B3115674EC20083D745 /* Cocoa.framework */; };
+		E18A7B4615674ED10083D745 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E18A7B1815674D9B0083D745 /* Foundation.framework */; };
+		E18A7B4915674ED10083D745 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E18A7B4815674ED10083D745 /* main.m */; };
+		E18A7B4D15674ED10083D745 /* Specs.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = E18A7B4C15674ED10083D745 /* Specs.1 */; };
+		E18A7B5115674F0C0083D745 /* KSPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = E18A7B2615674DC50083D745 /* KSPromise.m */; };
+		E18A7B5215674F0C0083D745 /* KSPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = E18A7B2615674DC50083D745 /* KSPromise.m */; };
+		E18A7B5615674F350083D745 /* KSDeferredSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = E18A7B5315674F350083D745 /* KSDeferredSpec.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E18A7B811567503C0083D745 /* Cedar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E18A7B6C15674FC70083D745 /* Cedar.framework */; };
+		E18A7B82156751FA0083D745 /* KSPromise.h in Headers */ = {isa = PBXBuildFile; fileRef = E18A7B2515674DC50083D745 /* KSPromise.h */; };
+		E19A78F51568187100880A4E /* NSURLConnection+Deferred.h in Headers */ = {isa = PBXBuildFile; fileRef = E19A78F31568187100880A4E /* NSURLConnection+Deferred.h */; };
+		E19A78F61568187100880A4E /* NSURLConnection+Deferred.h in Headers */ = {isa = PBXBuildFile; fileRef = E19A78F31568187100880A4E /* NSURLConnection+Deferred.h */; };
+		E19A78F71568187100880A4E /* NSURLConnection+Deferred.m in Sources */ = {isa = PBXBuildFile; fileRef = E19A78F41568187100880A4E /* NSURLConnection+Deferred.m */; };
+		E19A78F81568187100880A4E /* NSURLConnection+Deferred.m in Sources */ = {isa = PBXBuildFile; fileRef = E19A78F41568187100880A4E /* NSURLConnection+Deferred.m */; };
+		E19A78F91568187100880A4E /* NSURLConnection+Deferred.m in Sources */ = {isa = PBXBuildFile; fileRef = E19A78F41568187100880A4E /* NSURLConnection+Deferred.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E18A7B6B15674FC70083D745 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E18A7B5715674FC50083D745 /* Cedar.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AEEE1FB611DC271300029872;
+			remoteInfo = Cedar;
+		};
+		E18A7B6D15674FC70083D745 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E18A7B5715674FC50083D745 /* Cedar.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AEEE218611DC28E200029872;
+			remoteInfo = Specs;
+		};
+		E18A7B6F15674FC70083D745 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E18A7B5715674FC50083D745 /* Cedar.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 96A07F0813F276640021974D;
+			remoteInfo = FocusedSpecs;
+		};
+		E18A7B7115674FC70083D745 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E18A7B5715674FC50083D745 /* Cedar.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AEEE222911DC2B0600029872;
+			remoteInfo = "Cedar-StaticLib";
+		};
+		E18A7B7315674FC70083D745 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E18A7B5715674FC50083D745 /* Cedar.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AEEE227611DC2CF900029872;
+			remoteInfo = iOSSpecs;
+		};
+		E18A7B7515674FC70083D745 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E18A7B5715674FC50083D745 /* Cedar.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 96B5F9F6144A81A7000A6A5D;
+			remoteInfo = OCUnitApp;
+		};
+		E18A7B7715674FC70083D745 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E18A7B5715674FC50083D745 /* Cedar.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 96B5FA11144A81A8000A6A5D;
+			remoteInfo = OCUnitAppTests;
+		};
+		E18A7B7915674FC70083D745 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E18A7B5715674FC50083D745 /* Cedar.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 96158A86144A915E005895CE;
+			remoteInfo = OCUnitAppLogicTests;
+		};
+		E18A7B7F156750330083D745 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E18A7B5715674FC50083D745 /* Cedar.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = AEEE1FB511DC271300029872;
+			remoteInfo = Cedar;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E18A7B4215674ED10083D745 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				E18A7B4D15674ED10083D745 /* Specs.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		E15F47451570786900080763 /* KSDeferred.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSDeferred.h; sourceTree = "<group>"; };
+		E15F47461570786900080763 /* KSDeferred.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSDeferred.m; sourceTree = "<group>"; };
+		E18A7B1515674D9B0083D745 /* libDeferred.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDeferred.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E18A7B1815674D9B0083D745 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E18A7B1C15674D9B0083D745 /* Deferred-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Deferred-Prefix.pch"; sourceTree = "<group>"; };
+		E18A7B2515674DC50083D745 /* KSPromise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSPromise.h; sourceTree = "<group>"; };
+		E18A7B2615674DC50083D745 /* KSPromise.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSPromise.m; sourceTree = "<group>"; };
+		E18A7B3015674EC20083D745 /* libDeferred-OSX.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libDeferred-OSX.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E18A7B3115674EC20083D745 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		E18A7B3415674EC20083D745 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		E18A7B3515674EC20083D745 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		E18A7B3615674EC20083D745 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E18A7B3915674EC20083D745 /* Deferred-OSX-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Deferred-OSX-Prefix.pch"; sourceTree = "<group>"; };
+		E18A7B4415674ED10083D745 /* Specs */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Specs; sourceTree = BUILT_PRODUCTS_DIR; };
+		E18A7B4815674ED10083D745 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E18A7B4B15674ED10083D745 /* Specs-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Specs-Prefix.pch"; sourceTree = "<group>"; };
+		E18A7B4C15674ED10083D745 /* Specs.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Specs.1; sourceTree = "<group>"; };
+		E18A7B5315674F350083D745 /* KSDeferredSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = KSDeferredSpec.mm; sourceTree = "<group>"; };
+		E18A7B5715674FC50083D745 /* Cedar.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Cedar.xcodeproj; sourceTree = "<group>"; };
+		E19A78F31568187100880A4E /* NSURLConnection+Deferred.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLConnection+Deferred.h"; sourceTree = "<group>"; };
+		E19A78F41568187100880A4E /* NSURLConnection+Deferred.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLConnection+Deferred.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E18A7B1215674D9B0083D745 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E18A7B1915674D9B0083D745 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E18A7B2D15674EC20083D745 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E18A7B3215674EC20083D745 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E18A7B4115674ED10083D745 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E18A7B811567503C0083D745 /* Cedar.framework in Frameworks */,
+				E18A7B4615674ED10083D745 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E18A7B0A15674D9B0083D745 = {
+			isa = PBXGroup;
+			children = (
+				E18A7B1A15674D9B0083D745 /* Deferred */,
+				E18A7B4715674ED10083D745 /* Specs */,
+				E18A7B3715674EC20083D745 /* Deferred-OSX */,
+				E18A7B2915674E570083D745 /* Vendor */,
+				E18A7B1715674D9B0083D745 /* Frameworks */,
+				E18A7B1615674D9B0083D745 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E18A7B1615674D9B0083D745 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E18A7B1515674D9B0083D745 /* libDeferred.a */,
+				E18A7B3015674EC20083D745 /* libDeferred-OSX.a */,
+				E18A7B4415674ED10083D745 /* Specs */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E18A7B1715674D9B0083D745 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E18A7B1815674D9B0083D745 /* Foundation.framework */,
+				E18A7B3115674EC20083D745 /* Cocoa.framework */,
+				E18A7B3315674EC20083D745 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E18A7B1A15674D9B0083D745 /* Deferred */ = {
+			isa = PBXGroup;
+			children = (
+				E18A7B1B15674D9B0083D745 /* Supporting Files */,
+				E18A7B2515674DC50083D745 /* KSPromise.h */,
+				E18A7B2615674DC50083D745 /* KSPromise.m */,
+				E19A78F31568187100880A4E /* NSURLConnection+Deferred.h */,
+				E19A78F41568187100880A4E /* NSURLConnection+Deferred.m */,
+				E15F47451570786900080763 /* KSDeferred.h */,
+				E15F47461570786900080763 /* KSDeferred.m */,
+			);
+			path = Deferred;
+			sourceTree = "<group>";
+		};
+		E18A7B1B15674D9B0083D745 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E18A7B1C15674D9B0083D745 /* Deferred-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E18A7B2915674E570083D745 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				E18A7B2A15674E620083D745 /* Cedar */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		E18A7B2A15674E620083D745 /* Cedar */ = {
+			isa = PBXGroup;
+			children = (
+				E18A7B5715674FC50083D745 /* Cedar.xcodeproj */,
+			);
+			path = Cedar;
+			sourceTree = "<group>";
+		};
+		E18A7B3315674EC20083D745 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E18A7B3415674EC20083D745 /* AppKit.framework */,
+				E18A7B3515674EC20083D745 /* CoreData.framework */,
+				E18A7B3615674EC20083D745 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		E18A7B3715674EC20083D745 /* Deferred-OSX */ = {
+			isa = PBXGroup;
+			children = (
+				E18A7B3815674EC20083D745 /* Supporting Files */,
+			);
+			path = "Deferred-OSX";
+			sourceTree = "<group>";
+		};
+		E18A7B3815674EC20083D745 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E18A7B3915674EC20083D745 /* Deferred-OSX-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E18A7B4715674ED10083D745 /* Specs */ = {
+			isa = PBXGroup;
+			children = (
+				E18A7B4A15674ED10083D745 /* Supporting Files */,
+				E18A7B4815674ED10083D745 /* main.m */,
+				E18A7B4C15674ED10083D745 /* Specs.1 */,
+				E18A7B5315674F350083D745 /* KSDeferredSpec.mm */,
+			);
+			path = Specs;
+			sourceTree = "<group>";
+		};
+		E18A7B4A15674ED10083D745 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E18A7B4B15674ED10083D745 /* Specs-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E18A7B5815674FC50083D745 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E18A7B6C15674FC70083D745 /* Cedar.framework */,
+				E18A7B6E15674FC70083D745 /* Specs */,
+				E18A7B7015674FC70083D745 /* FocusedSpecs */,
+				E18A7B7215674FC70083D745 /* libCedar-StaticLib.a */,
+				E18A7B7415674FC70083D745 /* iOSSpecs.app */,
+				E18A7B7615674FC70083D745 /* OCUnitApp.app */,
+				E18A7B7815674FC70083D745 /* OCUnitAppTests.octest */,
+				E18A7B7A15674FC70083D745 /* OCUnitAppLogicTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		E18A7B1315674D9B0083D745 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E18A7B2715674DC50083D745 /* KSPromise.h in Headers */,
+				E19A78F51568187100880A4E /* NSURLConnection+Deferred.h in Headers */,
+				E15F47471570786900080763 /* KSDeferred.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E18A7B2E15674EC20083D745 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E18A7B82156751FA0083D745 /* KSPromise.h in Headers */,
+				E19A78F61568187100880A4E /* NSURLConnection+Deferred.h in Headers */,
+				E15F47481570786900080763 /* KSDeferred.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		E18A7B1415674D9B0083D745 /* Deferred */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E18A7B2215674D9B0083D745 /* Build configuration list for PBXNativeTarget "Deferred" */;
+			buildPhases = (
+				E18A7B1115674D9B0083D745 /* Sources */,
+				E18A7B1215674D9B0083D745 /* Frameworks */,
+				E18A7B1315674D9B0083D745 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Deferred;
+			productName = Futures;
+			productReference = E18A7B1515674D9B0083D745 /* libDeferred.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		E18A7B2F15674EC20083D745 /* Deferred-OSX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E18A7B3D15674EC20083D745 /* Build configuration list for PBXNativeTarget "Deferred-OSX" */;
+			buildPhases = (
+				E18A7B2C15674EC20083D745 /* Sources */,
+				E18A7B2D15674EC20083D745 /* Frameworks */,
+				E18A7B2E15674EC20083D745 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Deferred-OSX";
+			productName = "Futures-OSX";
+			productReference = E18A7B3015674EC20083D745 /* libDeferred-OSX.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		E18A7B4315674ED10083D745 /* Specs */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E18A7B4E15674ED10083D745 /* Build configuration list for PBXNativeTarget "Specs" */;
+			buildPhases = (
+				E18A7B4015674ED10083D745 /* Sources */,
+				E18A7B4115674ED10083D745 /* Frameworks */,
+				E18A7B4215674ED10083D745 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E18A7B80156750330083D745 /* PBXTargetDependency */,
+			);
+			name = Specs;
+			productName = Specs;
+			productReference = E18A7B4415674ED10083D745 /* Specs */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E18A7B0C15674D9B0083D745 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = E18A7B0F15674D9B0083D745 /* Build configuration list for PBXProject "Deferred" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E18A7B0A15674D9B0083D745;
+			productRefGroup = E18A7B1615674D9B0083D745 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = E18A7B5815674FC50083D745 /* Products */;
+					ProjectRef = E18A7B5715674FC50083D745 /* Cedar.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				E18A7B1415674D9B0083D745 /* Deferred */,
+				E18A7B2F15674EC20083D745 /* Deferred-OSX */,
+				E18A7B4315674ED10083D745 /* Specs */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		E18A7B6C15674FC70083D745 /* Cedar.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Cedar.framework;
+			remoteRef = E18A7B6B15674FC70083D745 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E18A7B6E15674FC70083D745 /* Specs */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = Specs;
+			remoteRef = E18A7B6D15674FC70083D745 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E18A7B7015674FC70083D745 /* FocusedSpecs */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = FocusedSpecs;
+			remoteRef = E18A7B6F15674FC70083D745 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E18A7B7215674FC70083D745 /* libCedar-StaticLib.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libCedar-StaticLib.a";
+			remoteRef = E18A7B7115674FC70083D745 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E18A7B7415674FC70083D745 /* iOSSpecs.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = iOSSpecs.app;
+			remoteRef = E18A7B7315674FC70083D745 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E18A7B7615674FC70083D745 /* OCUnitApp.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = OCUnitApp.app;
+			remoteRef = E18A7B7515674FC70083D745 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E18A7B7815674FC70083D745 /* OCUnitAppTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = OCUnitAppTests.octest;
+			remoteRef = E18A7B7715674FC70083D745 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E18A7B7A15674FC70083D745 /* OCUnitAppLogicTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = OCUnitAppLogicTests.octest;
+			remoteRef = E18A7B7915674FC70083D745 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E18A7B1115674D9B0083D745 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E18A7B2815674DC50083D745 /* KSPromise.m in Sources */,
+				E19A78F71568187100880A4E /* NSURLConnection+Deferred.m in Sources */,
+				E15F47491570786900080763 /* KSDeferred.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E18A7B2C15674EC20083D745 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E18A7B5115674F0C0083D745 /* KSPromise.m in Sources */,
+				E19A78F81568187100880A4E /* NSURLConnection+Deferred.m in Sources */,
+				E15F474A1570786900080763 /* KSDeferred.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E18A7B4015674ED10083D745 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E18A7B4915674ED10083D745 /* main.m in Sources */,
+				E18A7B5215674F0C0083D745 /* KSPromise.m in Sources */,
+				E18A7B5615674F350083D745 /* KSDeferredSpec.mm in Sources */,
+				E19A78F91568187100880A4E /* NSURLConnection+Deferred.m in Sources */,
+				E15F474B1570786900080763 /* KSDeferred.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E18A7B80156750330083D745 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Cedar;
+			targetProxy = E18A7B7F156750330083D745 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		E18A7B2015674D9B0083D745 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		E18A7B2115674D9B0083D745 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E18A7B2315674D9B0083D745 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/Futures.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Futures/Deferred-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		E18A7B2415674D9B0083D745 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/Futures.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Futures/Deferred-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		E18A7B3E15674EC20083D745 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Futures-OSX/Deferred-OSX-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		E18A7B3F15674EC20083D745 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Futures-OSX/Deferred-OSX-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		E18A7B4F15674ED10083D745 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Specs/Specs-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		E18A7B5015674ED10083D745 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Specs/Specs-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E18A7B0F15674D9B0083D745 /* Build configuration list for PBXProject "Deferred" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E18A7B2015674D9B0083D745 /* Debug */,
+				E18A7B2115674D9B0083D745 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E18A7B2215674D9B0083D745 /* Build configuration list for PBXNativeTarget "Deferred" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E18A7B2315674D9B0083D745 /* Debug */,
+				E18A7B2415674D9B0083D745 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E18A7B3D15674EC20083D745 /* Build configuration list for PBXNativeTarget "Deferred-OSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E18A7B3E15674EC20083D745 /* Debug */,
+				E18A7B3F15674EC20083D745 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E18A7B4E15674ED10083D745 /* Build configuration list for PBXNativeTarget "Specs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E18A7B4F15674ED10083D745 /* Debug */,
+				E18A7B5015674ED10083D745 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E18A7B0C15674D9B0083D745 /* Project object */;
+}
