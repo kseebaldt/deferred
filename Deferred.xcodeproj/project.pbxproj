@@ -707,7 +707,7 @@
 			buildSettings = {
 				DSTROOT = /tmp/Futures.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Futures/Deferred-Prefix.pch";
+				GCC_PREFIX_HEADER = "Deferred/Deferred-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -719,7 +719,7 @@
 			buildSettings = {
 				DSTROOT = /tmp/Futures.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Futures/Deferred-Prefix.pch";
+				GCC_PREFIX_HEADER = "Deferred/Deferred-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -736,7 +736,7 @@
 				);
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Futures-OSX/Deferred-OSX-Prefix.pch";
+				GCC_PREFIX_HEADER = "Deferred-OSX/Deferred-OSX-Prefix.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = YES;
@@ -756,7 +756,7 @@
 				);
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Futures-OSX/Deferred-OSX-Prefix.pch";
+				GCC_PREFIX_HEADER = "Deferred-OSX/Deferred-OSX-Prefix.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = "$(TARGET_NAME)";
