@@ -1,13 +1,12 @@
 #import <Cedar/SpecHelper.h>
 #import "NSURLConnection+Deferred.h"
-#import <PivotalSpecHelperKit/PSHKFakeHTTPURLResponse.h>
-#import <PivotalSpecHelperKit/NSURLConnection+Spec.h>
 
 using namespace Cedar::Matchers;
+using namespace Cedar::Doubles;
 
 SPEC_BEGIN(NSURLConnectionDeferredSpec)
 
-describe(@"NSURLConnection+Deferred", ^{
+xdescribe(@"NSURLConnection+Deferred", ^{
     __block NSURLConnection *connection;
     __block KSPromise *promise;
     __block BOOL resolvedCalled;
