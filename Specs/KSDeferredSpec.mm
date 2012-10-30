@@ -20,7 +20,6 @@ describe(@"KSDeferred", ^{
         deferred should_not be_nil;
     });
 
-    
     it(@"should have a promise", ^{
         promise should_not be_nil;
     });

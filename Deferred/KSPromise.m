@@ -49,16 +49,16 @@
 - (KSPromise *)whenFulfilled:(deferredCallback)callback {
     if (self.isFulfilled) {
         callback(self);
-    } else {
+    } else if (!self.cancelled) {
         [self.fulfilledCallbacks addObject:[callback copy]];
-    }  
+    }
     return self;
 }
 
 - (KSPromise *)whenResolved:(deferredCallback)callback {
     if (self.isResolved) {
         callback(self);
-    } else {
+    } else if (!self.cancelled) {
         [self.resolvedCallbacks addObject:[callback copy]];
     }
     return self;
@@ -67,7 +67,7 @@
 - (KSPromise *)whenRejected:(deferredCallback)callback {
     if (self.isRejected) {
         callback(self);
-    } else {
+    } else if (!self.cancelled) {
         [self.rejectedCallbacks addObject:[callback copy]];
     }    
     return self;
@@ -97,10 +97,16 @@
     for (deferredCallback callback in self.fulfilledCallbacks) {
         callback(self);
     }
+    [self.resolvedCallbacks removeAllObjects];
+    [self.rejectedCallbacks removeAllObjects];
+    [self.fulfilledCallbacks removeAllObjects];
 }
 
 - (void)cancel {
     self.cancelled = YES;
+    [self.resolvedCallbacks removeAllObjects];
+    [self.rejectedCallbacks removeAllObjects];
+    [self.fulfilledCallbacks removeAllObjects];
 }
 
 - (NSArray *)joinedPromises {
