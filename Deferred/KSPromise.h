@@ -1,21 +1,24 @@
 #import <Foundation/Foundation.h>
 
 @class KSPromise;
+
+typedef id(^promiseValueCallback)(id);
+typedef id(^promiseErrorCallback)(NSError *);
 typedef void(^deferredCallback)(KSPromise *);
 
 @interface KSPromise : NSObject
-
-@property (strong, nonatomic) id value;
-@property (strong, nonatomic) NSError *error;
+@property (strong, nonatomic, readonly) id value;
+@property (strong, nonatomic, readonly) NSError *error;
 
 + (KSPromise *)join:(NSArray *)promises;
-- (KSPromise *)whenFulfilled:(deferredCallback)complete;
-- (KSPromise *)whenResolved:(deferredCallback)complete;
-- (KSPromise *)whenRejected:(deferredCallback)complete;
+
+- (KSPromise *)then:(promiseValueCallback)fulfilledCallback error:(promiseErrorCallback)errorCallback;
 - (void)cancel;
-- (NSArray *)joinedPromises;
-- (BOOL)isResolved;
-- (BOOL)isRejected;
-- (BOOL)isFulfilled;
+
+#pragma deprecated
+- (void)whenResolved:(deferredCallback)complete;
+- (void)whenRejected:(deferredCallback)complete;
+- (void)whenFulfilled:(deferredCallback)complete;
+
 
 @end

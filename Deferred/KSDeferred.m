@@ -17,7 +17,6 @@
     self = [super init];
     if (self) {
         self.promise = [[KSPromise alloc] init];
-        self.promiseA = [[KSPromiseA alloc] init];
     }
     return self;
 }
@@ -28,11 +27,9 @@
 
 - (void)rejectWithError:(NSError *)error {
     [self.promise rejectWithError:error];
-//    [self.promiseA rejectWithError:error];
 }
 
 - (void)fullfillWithValue:(id)value {
-//    [self.promiseA fulfillWithValue:value];
 }
 
 @end

@@ -14,21 +14,16 @@
 		E15F474A1570786900080763 /* KSDeferred.m in Sources */ = {isa = PBXBuildFile; fileRef = E15F47461570786900080763 /* KSDeferred.m */; };
 		E15F474B1570786900080763 /* KSDeferred.m in Sources */ = {isa = PBXBuildFile; fileRef = E15F47461570786900080763 /* KSDeferred.m */; };
 		E18A7B1915674D9B0083D745 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E18A7B1815674D9B0083D745 /* Foundation.framework */; };
-		E18A7B2715674DC50083D745 /* KSPromise.h in Headers */ = {isa = PBXBuildFile; fileRef = E18A7B2515674DC50083D745 /* KSPromise.h */; };
-		E18A7B2815674DC50083D745 /* KSPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = E18A7B2615674DC50083D745 /* KSPromise.m */; };
 		E18A7B3215674EC20083D745 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E18A7B3115674EC20083D745 /* Cocoa.framework */; };
 		E18A7B4615674ED10083D745 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E18A7B1815674D9B0083D745 /* Foundation.framework */; };
 		E18A7B4915674ED10083D745 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E18A7B4815674ED10083D745 /* main.m */; };
-		E18A7B5115674F0C0083D745 /* KSPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = E18A7B2615674DC50083D745 /* KSPromise.m */; };
-		E18A7B5215674F0C0083D745 /* KSPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = E18A7B2615674DC50083D745 /* KSPromise.m */; };
 		E18A7B5615674F350083D745 /* KSDeferredSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = E18A7B5315674F350083D745 /* KSDeferredSpec.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E18A7B811567503C0083D745 /* Cedar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E18A7B6C15674FC70083D745 /* Cedar.framework */; };
-		E18A7B82156751FA0083D745 /* KSPromise.h in Headers */ = {isa = PBXBuildFile; fileRef = E18A7B2515674DC50083D745 /* KSPromise.h */; };
-		E1E5C51516CAE6F000C1385F /* KSPromiseA.h in Headers */ = {isa = PBXBuildFile; fileRef = E1E5C51316CAE6F000C1385F /* KSPromiseA.h */; };
-		E1E5C51616CAE6F000C1385F /* KSPromiseA.h in Headers */ = {isa = PBXBuildFile; fileRef = E1E5C51316CAE6F000C1385F /* KSPromiseA.h */; };
-		E1E5C51716CAE6F000C1385F /* KSPromiseA.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E5C51416CAE6F000C1385F /* KSPromiseA.m */; };
-		E1E5C51816CAE6F000C1385F /* KSPromiseA.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E5C51416CAE6F000C1385F /* KSPromiseA.m */; };
-		E1E5C51916CAE6F000C1385F /* KSPromiseA.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E5C51416CAE6F000C1385F /* KSPromiseA.m */; };
+		E1E5C51516CAE6F000C1385F /* KSPromise.h in Headers */ = {isa = PBXBuildFile; fileRef = E1E5C51316CAE6F000C1385F /* KSPromise.h */; };
+		E1E5C51616CAE6F000C1385F /* KSPromise.h in Headers */ = {isa = PBXBuildFile; fileRef = E1E5C51316CAE6F000C1385F /* KSPromise.h */; };
+		E1E5C51716CAE6F000C1385F /* KSPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E5C51416CAE6F000C1385F /* KSPromise.m */; };
+		E1E5C51816CAE6F000C1385F /* KSPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E5C51416CAE6F000C1385F /* KSPromise.m */; };
+		E1E5C51916CAE6F000C1385F /* KSPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E5C51416CAE6F000C1385F /* KSPromise.m */; };
 		E1E5C51B16CAE71500C1385F /* KSPromiseASpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = E1E5C51A16CAE71500C1385F /* KSPromiseASpec.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
 
@@ -117,8 +112,6 @@
 		E18A7B1515674D9B0083D745 /* libDeferred.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDeferred.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E18A7B1815674D9B0083D745 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E18A7B1C15674D9B0083D745 /* Deferred-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Deferred-Prefix.pch"; sourceTree = "<group>"; };
-		E18A7B2515674DC50083D745 /* KSPromise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSPromise.h; sourceTree = "<group>"; };
-		E18A7B2615674DC50083D745 /* KSPromise.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSPromise.m; sourceTree = "<group>"; };
 		E18A7B3015674EC20083D745 /* libDeferred-OSX.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libDeferred-OSX.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E18A7B3115674EC20083D745 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		E18A7B3415674EC20083D745 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -130,8 +123,8 @@
 		E18A7B4B15674ED10083D745 /* Specs-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Specs-Prefix.pch"; sourceTree = "<group>"; };
 		E18A7B5315674F350083D745 /* KSDeferredSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = KSDeferredSpec.mm; sourceTree = "<group>"; };
 		E18A7B5715674FC50083D745 /* Cedar.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Cedar.xcodeproj; sourceTree = "<group>"; };
-		E1E5C51316CAE6F000C1385F /* KSPromiseA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSPromiseA.h; sourceTree = "<group>"; };
-		E1E5C51416CAE6F000C1385F /* KSPromiseA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSPromiseA.m; sourceTree = "<group>"; };
+		E1E5C51316CAE6F000C1385F /* KSPromise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSPromise.h; sourceTree = "<group>"; };
+		E1E5C51416CAE6F000C1385F /* KSPromise.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSPromise.m; sourceTree = "<group>"; };
 		E1E5C51A16CAE71500C1385F /* KSPromiseASpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = KSPromiseASpec.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -208,12 +201,10 @@
 			isa = PBXGroup;
 			children = (
 				E18A7B1B15674D9B0083D745 /* Supporting Files */,
-				E18A7B2515674DC50083D745 /* KSPromise.h */,
-				E18A7B2615674DC50083D745 /* KSPromise.m */,
 				E15F47451570786900080763 /* KSDeferred.h */,
 				E15F47461570786900080763 /* KSDeferred.m */,
-				E1E5C51316CAE6F000C1385F /* KSPromiseA.h */,
-				E1E5C51416CAE6F000C1385F /* KSPromiseA.m */,
+				E1E5C51316CAE6F000C1385F /* KSPromise.h */,
+				E1E5C51416CAE6F000C1385F /* KSPromise.m */,
 			);
 			path = Deferred;
 			sourceTree = "<group>";
@@ -310,9 +301,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E18A7B2715674DC50083D745 /* KSPromise.h in Headers */,
 				E15F47471570786900080763 /* KSDeferred.h in Headers */,
-				E1E5C51516CAE6F000C1385F /* KSPromiseA.h in Headers */,
+				E1E5C51516CAE6F000C1385F /* KSPromise.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,9 +310,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E18A7B82156751FA0083D745 /* KSPromise.h in Headers */,
 				E15F47481570786900080763 /* KSDeferred.h in Headers */,
-				E1E5C51616CAE6F000C1385F /* KSPromiseA.h in Headers */,
+				E1E5C51616CAE6F000C1385F /* KSPromise.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,9 +467,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E18A7B2815674DC50083D745 /* KSPromise.m in Sources */,
 				E15F47491570786900080763 /* KSDeferred.m in Sources */,
-				E1E5C51716CAE6F000C1385F /* KSPromiseA.m in Sources */,
+				E1E5C51716CAE6F000C1385F /* KSPromise.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -488,9 +476,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E18A7B5115674F0C0083D745 /* KSPromise.m in Sources */,
 				E15F474A1570786900080763 /* KSDeferred.m in Sources */,
-				E1E5C51816CAE6F000C1385F /* KSPromiseA.m in Sources */,
+				E1E5C51816CAE6F000C1385F /* KSPromise.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -499,11 +486,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E18A7B4915674ED10083D745 /* main.m in Sources */,
-				E18A7B5215674F0C0083D745 /* KSPromise.m in Sources */,
 				E18A7B5615674F350083D745 /* KSDeferredSpec.mm in Sources */,
 				E15F474B1570786900080763 /* KSDeferred.m in Sources */,
 				E10AF2B61575504E00EC4E2C /* NSURLConnection+DeferredSpec.m in Sources */,
-				E1E5C51916CAE6F000C1385F /* KSPromiseA.m in Sources */,
+				E1E5C51916CAE6F000C1385F /* KSPromise.m in Sources */,
 				E1E5C51B16CAE71500C1385F /* KSPromiseASpec.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
