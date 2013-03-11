@@ -16,9 +16,9 @@ typedef void(^deferredCallback)(KSPromise *);
 - (void)cancel;
 
 #pragma deprecated
-- (void)whenResolved:(deferredCallback)complete;
-- (void)whenRejected:(deferredCallback)complete;
-- (void)whenFulfilled:(deferredCallback)complete;
+- (void)whenResolved:(deferredCallback)complete DEPRECATED_ATTRIBUTE;
+- (void)whenRejected:(deferredCallback)complete DEPRECATED_ATTRIBUTE;
+- (void)whenFulfilled:(deferredCallback)complete DEPRECATED_ATTRIBUTE;
 
 
 @end
