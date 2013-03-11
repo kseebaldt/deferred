@@ -1,34 +1,35 @@
-Async library inspired by CommonJS/jQuery deferreds
+Async library inspired by CommonJS Promises/A spec
 
 # Examples
 
-## Getting a promise from a NSURLConnection
+## Creating a deferred object and returning its promise 
 
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.example.com/test"]];
-    KSPromise *promise = [NSURLConnection sendRequest:request];
+    KSDeferred *deferred = [KSDeferred defer];
+    return deferred.promise;
 
 ## Adding callback to the promise
 
-        [promise whenResolved:^(KSPromise *p) {
-            // look at the value
-            p.value; 
-        }];
-        [promise whenRejected:^(KSPromise *p) {
-            // look at the error
-            p.error; 
-        }];
-
-## Joining on multiple promises
-
-    KSPromise *promise = [KSPromise join:[NSArray arrayWithObjects:promise1, promise2, nil]];
-
-    [promise whenResolved:^(KSPromise *p) {
-        // will only be called after all joined promises are resolved
+    [promise then:^id(id value) {
+        .. do something ..
+        return value;
+      } error:^id(NSError *e) {
+        .. handle error ..
+        return e;
     }];
 
-## Deferring and return a promise of a value
-    KSDeferred *deferred = [KSDeferred defer];
-    return deferred.promise;
+## Chaining promises
+
+    KSPromise *chained = [promise then:^id(id value) {
+        return value;
+    } error:^id(NSError *e) {
+        return e;
+    }];
+
+    [chained then:^id(id value) {
+        # value is value returned from first promise
+    } error:^id(NSError *e) {
+        # error is error returned from first promise
+    }];
 
 ## Resolving a promise
     [deferred resolveWithValue:@"VALUE"];
