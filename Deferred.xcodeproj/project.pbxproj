@@ -24,11 +24,12 @@
 		E18A7B5615674F350083D745 /* KSDeferredSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = E18A7B5315674F350083D745 /* KSDeferredSpec.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E18A7B811567503C0083D745 /* Cedar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E18A7B6C15674FC70083D745 /* Cedar.framework */; };
 		E18A7B82156751FA0083D745 /* KSPromise.h in Headers */ = {isa = PBXBuildFile; fileRef = E18A7B2515674DC50083D745 /* KSPromise.h */; };
-		E19A78F51568187100880A4E /* NSURLConnection+Deferred.h in Headers */ = {isa = PBXBuildFile; fileRef = E19A78F31568187100880A4E /* NSURLConnection+Deferred.h */; };
-		E19A78F61568187100880A4E /* NSURLConnection+Deferred.h in Headers */ = {isa = PBXBuildFile; fileRef = E19A78F31568187100880A4E /* NSURLConnection+Deferred.h */; };
-		E19A78F71568187100880A4E /* NSURLConnection+Deferred.m in Sources */ = {isa = PBXBuildFile; fileRef = E19A78F41568187100880A4E /* NSURLConnection+Deferred.m */; };
-		E19A78F81568187100880A4E /* NSURLConnection+Deferred.m in Sources */ = {isa = PBXBuildFile; fileRef = E19A78F41568187100880A4E /* NSURLConnection+Deferred.m */; };
-		E19A78F91568187100880A4E /* NSURLConnection+Deferred.m in Sources */ = {isa = PBXBuildFile; fileRef = E19A78F41568187100880A4E /* NSURLConnection+Deferred.m */; };
+		E1E5C51516CAE6F000C1385F /* KSPromiseA.h in Headers */ = {isa = PBXBuildFile; fileRef = E1E5C51316CAE6F000C1385F /* KSPromiseA.h */; };
+		E1E5C51616CAE6F000C1385F /* KSPromiseA.h in Headers */ = {isa = PBXBuildFile; fileRef = E1E5C51316CAE6F000C1385F /* KSPromiseA.h */; };
+		E1E5C51716CAE6F000C1385F /* KSPromiseA.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E5C51416CAE6F000C1385F /* KSPromiseA.m */; };
+		E1E5C51816CAE6F000C1385F /* KSPromiseA.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E5C51416CAE6F000C1385F /* KSPromiseA.m */; };
+		E1E5C51916CAE6F000C1385F /* KSPromiseA.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E5C51416CAE6F000C1385F /* KSPromiseA.m */; };
+		E1E5C51B16CAE71500C1385F /* KSPromiseASpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = E1E5C51A16CAE71500C1385F /* KSPromiseASpec.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,7 +112,6 @@
 
 /* Begin PBXFileReference section */
 		E10AF2B51575504E00EC4E2C /* NSURLConnection+DeferredSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLConnection+DeferredSpec.m"; sourceTree = "<group>"; };
-		E10AF2B7157551CD00EC4E2C /* NSURLConnectionSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NSURLConnectionSpec.mm; sourceTree = "<group>"; };
 		E15F47451570786900080763 /* KSDeferred.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSDeferred.h; sourceTree = "<group>"; };
 		E15F47461570786900080763 /* KSDeferred.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSDeferred.m; sourceTree = "<group>"; };
 		E18A7B1515674D9B0083D745 /* libDeferred.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDeferred.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,8 +130,9 @@
 		E18A7B4B15674ED10083D745 /* Specs-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Specs-Prefix.pch"; sourceTree = "<group>"; };
 		E18A7B5315674F350083D745 /* KSDeferredSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = KSDeferredSpec.mm; sourceTree = "<group>"; };
 		E18A7B5715674FC50083D745 /* Cedar.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Cedar.xcodeproj; sourceTree = "<group>"; };
-		E19A78F31568187100880A4E /* NSURLConnection+Deferred.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLConnection+Deferred.h"; sourceTree = "<group>"; };
-		E19A78F41568187100880A4E /* NSURLConnection+Deferred.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLConnection+Deferred.m"; sourceTree = "<group>"; };
+		E1E5C51316CAE6F000C1385F /* KSPromiseA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSPromiseA.h; sourceTree = "<group>"; };
+		E1E5C51416CAE6F000C1385F /* KSPromiseA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSPromiseA.m; sourceTree = "<group>"; };
+		E1E5C51A16CAE71500C1385F /* KSPromiseASpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = KSPromiseASpec.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,10 +210,10 @@
 				E18A7B1B15674D9B0083D745 /* Supporting Files */,
 				E18A7B2515674DC50083D745 /* KSPromise.h */,
 				E18A7B2615674DC50083D745 /* KSPromise.m */,
-				E19A78F31568187100880A4E /* NSURLConnection+Deferred.h */,
-				E19A78F41568187100880A4E /* NSURLConnection+Deferred.m */,
 				E15F47451570786900080763 /* KSDeferred.h */,
 				E15F47461570786900080763 /* KSDeferred.m */,
+				E1E5C51316CAE6F000C1385F /* KSPromiseA.h */,
+				E1E5C51416CAE6F000C1385F /* KSPromiseA.m */,
 			);
 			path = Deferred;
 			sourceTree = "<group>";
@@ -274,7 +275,7 @@
 				E18A7B4A15674ED10083D745 /* Supporting Files */,
 				E18A7B4815674ED10083D745 /* main.m */,
 				E18A7B5315674F350083D745 /* KSDeferredSpec.mm */,
-				E10AF2B7157551CD00EC4E2C /* NSURLConnectionSpec.mm */,
+				E1E5C51A16CAE71500C1385F /* KSPromiseASpec.mm */,
 			);
 			path = Specs;
 			sourceTree = "<group>";
@@ -310,8 +311,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E18A7B2715674DC50083D745 /* KSPromise.h in Headers */,
-				E19A78F51568187100880A4E /* NSURLConnection+Deferred.h in Headers */,
 				E15F47471570786900080763 /* KSDeferred.h in Headers */,
+				E1E5C51516CAE6F000C1385F /* KSPromiseA.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,8 +321,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E18A7B82156751FA0083D745 /* KSPromise.h in Headers */,
-				E19A78F61568187100880A4E /* NSURLConnection+Deferred.h in Headers */,
 				E15F47481570786900080763 /* KSDeferred.h in Headers */,
+				E1E5C51616CAE6F000C1385F /* KSPromiseA.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,8 +479,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E18A7B2815674DC50083D745 /* KSPromise.m in Sources */,
-				E19A78F71568187100880A4E /* NSURLConnection+Deferred.m in Sources */,
 				E15F47491570786900080763 /* KSDeferred.m in Sources */,
+				E1E5C51716CAE6F000C1385F /* KSPromiseA.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -488,8 +489,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E18A7B5115674F0C0083D745 /* KSPromise.m in Sources */,
-				E19A78F81568187100880A4E /* NSURLConnection+Deferred.m in Sources */,
 				E15F474A1570786900080763 /* KSDeferred.m in Sources */,
+				E1E5C51816CAE6F000C1385F /* KSPromiseA.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -500,9 +501,10 @@
 				E18A7B4915674ED10083D745 /* main.m in Sources */,
 				E18A7B5215674F0C0083D745 /* KSPromise.m in Sources */,
 				E18A7B5615674F350083D745 /* KSDeferredSpec.mm in Sources */,
-				E19A78F91568187100880A4E /* NSURLConnection+Deferred.m in Sources */,
 				E15F474B1570786900080763 /* KSDeferred.m in Sources */,
 				E10AF2B61575504E00EC4E2C /* NSURLConnection+DeferredSpec.m in Sources */,
+				E1E5C51916CAE6F000C1385F /* KSPromiseA.m in Sources */,
+				E1E5C51B16CAE71500C1385F /* KSPromiseASpec.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

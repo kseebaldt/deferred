@@ -288,7 +288,6 @@ describe(@"KSDeferred", ^{
             });
         });
     });
-    
 });
 
 SPEC_END
