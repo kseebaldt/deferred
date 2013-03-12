@@ -133,7 +133,7 @@
     for (KSPromiseCallbacks *callbacks in self.callbacks) {
         id nextValue = self.value;
         if (callbacks.fulfilledCallback) {
-            callbacks.fulfilledCallback(value);
+            nextValue = callbacks.fulfilledCallback(value);
         } else if (callbacks.deprecatedFulfilledCallback) {
             callbacks.deprecatedFulfilledCallback(self);
             continue;

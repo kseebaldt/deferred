@@ -292,11 +292,11 @@ describe(@"KSPromiseA", ^{
                 } error:nil];
                 
                 __block BOOL done = NO;
-                [thenPromise then:^id(id value) {
-                    value should equal(@"A");
+                [thenPromise then:nil error:^id(NSError *e) {
+                    e should equal(error);
                     done = YES;
-                    return value;
-                } error:nil];
+                    return e;
+                }];
                 [deferred resolveWithValue:@"A"];
                 done should equal(YES);
             });
