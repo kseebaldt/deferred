@@ -1,4 +1,3 @@
-#import "KSPromiseOld.h"
 #import "KSPromise.h"
 
 @interface KSDeferred : NSObject
