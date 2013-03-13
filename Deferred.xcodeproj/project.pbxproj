@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E10AF2B61575504E00EC4E2C /* NSURLConnection+DeferredSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = E10AF2B51575504E00EC4E2C /* NSURLConnection+DeferredSpec.m */; };
 		E15F47471570786900080763 /* KSDeferred.h in Headers */ = {isa = PBXBuildFile; fileRef = E15F47451570786900080763 /* KSDeferred.h */; };
 		E15F47481570786900080763 /* KSDeferred.h in Headers */ = {isa = PBXBuildFile; fileRef = E15F47451570786900080763 /* KSDeferred.h */; };
 		E15F47491570786900080763 /* KSDeferred.m in Sources */ = {isa = PBXBuildFile; fileRef = E15F47461570786900080763 /* KSDeferred.m */; };
@@ -106,7 +105,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		E10AF2B51575504E00EC4E2C /* NSURLConnection+DeferredSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLConnection+DeferredSpec.m"; sourceTree = "<group>"; };
 		E15F47451570786900080763 /* KSDeferred.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSDeferred.h; sourceTree = "<group>"; };
 		E15F47461570786900080763 /* KSDeferred.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSDeferred.m; sourceTree = "<group>"; };
 		E18A7B1515674D9B0083D745 /* libDeferred.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDeferred.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -157,14 +155,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		E10AF2B31575502F00EC4E2C /* Stubs */ = {
-			isa = PBXGroup;
-			children = (
-				E10AF2B51575504E00EC4E2C /* NSURLConnection+DeferredSpec.m */,
-			);
-			path = Stubs;
-			sourceTree = "<group>";
-		};
 		E18A7B0A15674D9B0083D745 = {
 			isa = PBXGroup;
 			children = (
@@ -262,7 +252,6 @@
 		E18A7B4715674ED10083D745 /* Specs */ = {
 			isa = PBXGroup;
 			children = (
-				E10AF2B31575502F00EC4E2C /* Stubs */,
 				E18A7B4A15674ED10083D745 /* Supporting Files */,
 				E18A7B4815674ED10083D745 /* main.m */,
 				E18A7B5315674F350083D745 /* KSDeferredSpec.mm */,
@@ -488,7 +477,6 @@
 				E18A7B4915674ED10083D745 /* main.m in Sources */,
 				E18A7B5615674F350083D745 /* KSDeferredSpec.mm in Sources */,
 				E15F474B1570786900080763 /* KSDeferred.m in Sources */,
-				E10AF2B61575504E00EC4E2C /* NSURLConnection+DeferredSpec.m in Sources */,
 				E1E5C51916CAE6F000C1385F /* KSPromise.m in Sources */,
 				E1E5C51B16CAE71500C1385F /* KSPromiseASpec.mm in Sources */,
 			);
