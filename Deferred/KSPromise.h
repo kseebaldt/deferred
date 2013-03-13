@@ -2,9 +2,9 @@
 
 @class KSPromise;
 
-typedef id(^promiseValueCallback)(id);
-typedef id(^promiseErrorCallback)(NSError *);
-typedef void(^deferredCallback)(KSPromise *);
+typedef id(^promiseValueCallback)(id value);
+typedef id(^promiseErrorCallback)(NSError *error);
+typedef void(^deferredCallback)(KSPromise *p);
 
 @interface KSPromise : NSObject
 @property (strong, nonatomic, readonly) id value;
