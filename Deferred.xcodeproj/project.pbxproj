@@ -12,6 +12,7 @@
 		E15F47491570786900080763 /* KSDeferred.m in Sources */ = {isa = PBXBuildFile; fileRef = E15F47461570786900080763 /* KSDeferred.m */; };
 		E15F474A1570786900080763 /* KSDeferred.m in Sources */ = {isa = PBXBuildFile; fileRef = E15F47461570786900080763 /* KSDeferred.m */; };
 		E15F474B1570786900080763 /* KSDeferred.m in Sources */ = {isa = PBXBuildFile; fileRef = E15F47461570786900080763 /* KSDeferred.m */; };
+		E17F799F16F04D1800BAD8D0 /* KSDeferredDeprecatedSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = E17F799E16F04D1800BAD8D0 /* KSDeferredDeprecatedSpec.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E18A7B1915674D9B0083D745 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E18A7B1815674D9B0083D745 /* Foundation.framework */; };
 		E18A7B3215674EC20083D745 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E18A7B3115674EC20083D745 /* Cocoa.framework */; };
 		E18A7B4615674ED10083D745 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E18A7B1815674D9B0083D745 /* Foundation.framework */; };
@@ -107,6 +108,7 @@
 /* Begin PBXFileReference section */
 		E15F47451570786900080763 /* KSDeferred.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSDeferred.h; sourceTree = "<group>"; };
 		E15F47461570786900080763 /* KSDeferred.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSDeferred.m; sourceTree = "<group>"; };
+		E17F799E16F04D1800BAD8D0 /* KSDeferredDeprecatedSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = KSDeferredDeprecatedSpec.mm; sourceTree = "<group>"; };
 		E18A7B1515674D9B0083D745 /* libDeferred.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDeferred.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E18A7B1815674D9B0083D745 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E18A7B1C15674D9B0083D745 /* Deferred-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Deferred-Prefix.pch"; sourceTree = "<group>"; };
@@ -256,6 +258,7 @@
 				E18A7B4815674ED10083D745 /* main.m */,
 				E18A7B5315674F350083D745 /* KSDeferredSpec.mm */,
 				E1E5C51A16CAE71500C1385F /* KSPromiseASpec.mm */,
+				E17F799E16F04D1800BAD8D0 /* KSDeferredDeprecatedSpec.mm */,
 			);
 			path = Specs;
 			sourceTree = "<group>";
@@ -479,6 +482,7 @@
 				E15F474B1570786900080763 /* KSDeferred.m in Sources */,
 				E1E5C51916CAE6F000C1385F /* KSPromise.m in Sources */,
 				E1E5C51B16CAE71500C1385F /* KSPromiseASpec.mm in Sources */,
+				E17F799F16F04D1800BAD8D0 /* KSDeferredDeprecatedSpec.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
