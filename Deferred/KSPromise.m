@@ -52,8 +52,12 @@
     promise.parentPromises = [NSMutableArray array];
     for (KSPromise *joinedPromise in promises) {
         [promise.parentPromises addObject:joinedPromise];
-        [joinedPromise whenFulfilled:^(KSPromise *fulfilledPromise) {
-            [promise joinedPromiseFulfilled:fulfilledPromise];
+        [joinedPromise then:^id(id value) {
+            [promise joinedPromiseFulfilled:joinedPromise];
+            return value;
+        } error:^id(NSError *error) {
+            [promise joinedPromiseFulfilled:joinedPromise];
+            return error;
         }];
     }
     return promise;
