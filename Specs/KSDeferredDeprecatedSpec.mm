@@ -7,6 +7,9 @@ using namespace Cedar::Matchers;
 
 SPEC_BEGIN(KSDeferredDeprecatedSpec)
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+
 describe(@"KSDeferred", ^{
     __block KSPromise *promise;
     __block KSDeferred *deferred;
@@ -209,5 +212,7 @@ describe(@"KSDeferred", ^{
         });
     });
 });
+
+#pragma clang diagnostic pop
 
 SPEC_END
