@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E10B702716F11AF800957DA4 /* KSNetworkClient.h in Headers */ = {isa = PBXBuildFile; fileRef = E10B702516F11AF800957DA4 /* KSNetworkClient.h */; };
+		E10B702816F11AF800957DA4 /* KSNetworkClient.h in Headers */ = {isa = PBXBuildFile; fileRef = E10B702516F11AF800957DA4 /* KSNetworkClient.h */; };
+		E10B702916F11AF800957DA4 /* KSNetworkClient.m in Sources */ = {isa = PBXBuildFile; fileRef = E10B702616F11AF800957DA4 /* KSNetworkClient.m */; };
+		E10B702A16F11AF800957DA4 /* KSNetworkClient.m in Sources */ = {isa = PBXBuildFile; fileRef = E10B702616F11AF800957DA4 /* KSNetworkClient.m */; };
+		E10B702B16F11AF800957DA4 /* KSNetworkClient.m in Sources */ = {isa = PBXBuildFile; fileRef = E10B702616F11AF800957DA4 /* KSNetworkClient.m */; };
+		E10B703516F11CEA00957DA4 /* KSNetworkClientSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = E10B703416F11CEA00957DA4 /* KSNetworkClientSpec.mm */; };
 		E15F47471570786900080763 /* KSDeferred.h in Headers */ = {isa = PBXBuildFile; fileRef = E15F47451570786900080763 /* KSDeferred.h */; };
 		E15F47481570786900080763 /* KSDeferred.h in Headers */ = {isa = PBXBuildFile; fileRef = E15F47451570786900080763 /* KSDeferred.h */; };
 		E15F47491570786900080763 /* KSDeferred.m in Sources */ = {isa = PBXBuildFile; fileRef = E15F47461570786900080763 /* KSDeferred.m */; };
@@ -106,6 +112,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E10B702516F11AF800957DA4 /* KSNetworkClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSNetworkClient.h; sourceTree = "<group>"; };
+		E10B702616F11AF800957DA4 /* KSNetworkClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSNetworkClient.m; sourceTree = "<group>"; };
+		E10B703416F11CEA00957DA4 /* KSNetworkClientSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = KSNetworkClientSpec.mm; sourceTree = "<group>"; };
 		E15F47451570786900080763 /* KSDeferred.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSDeferred.h; sourceTree = "<group>"; };
 		E15F47461570786900080763 /* KSDeferred.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSDeferred.m; sourceTree = "<group>"; };
 		E17F799E16F04D1800BAD8D0 /* KSDeferredDeprecatedSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = KSDeferredDeprecatedSpec.mm; sourceTree = "<group>"; };
@@ -197,6 +206,8 @@
 				E15F47461570786900080763 /* KSDeferred.m */,
 				E1E5C51316CAE6F000C1385F /* KSPromise.h */,
 				E1E5C51416CAE6F000C1385F /* KSPromise.m */,
+				E10B702516F11AF800957DA4 /* KSNetworkClient.h */,
+				E10B702616F11AF800957DA4 /* KSNetworkClient.m */,
 			);
 			path = Deferred;
 			sourceTree = "<group>";
@@ -259,6 +270,7 @@
 				E18A7B5315674F350083D745 /* KSDeferredSpec.mm */,
 				E1E5C51A16CAE71500C1385F /* KSPromiseASpec.mm */,
 				E17F799E16F04D1800BAD8D0 /* KSDeferredDeprecatedSpec.mm */,
+				E10B703416F11CEA00957DA4 /* KSNetworkClientSpec.mm */,
 			);
 			path = Specs;
 			sourceTree = "<group>";
@@ -295,6 +307,7 @@
 			files = (
 				E15F47471570786900080763 /* KSDeferred.h in Headers */,
 				E1E5C51516CAE6F000C1385F /* KSPromise.h in Headers */,
+				E10B702716F11AF800957DA4 /* KSNetworkClient.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +317,7 @@
 			files = (
 				E15F47481570786900080763 /* KSDeferred.h in Headers */,
 				E1E5C51616CAE6F000C1385F /* KSPromise.h in Headers */,
+				E10B702816F11AF800957DA4 /* KSNetworkClient.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,6 +475,7 @@
 			files = (
 				E15F47491570786900080763 /* KSDeferred.m in Sources */,
 				E1E5C51716CAE6F000C1385F /* KSPromise.m in Sources */,
+				E10B702916F11AF800957DA4 /* KSNetworkClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,6 +485,7 @@
 			files = (
 				E15F474A1570786900080763 /* KSDeferred.m in Sources */,
 				E1E5C51816CAE6F000C1385F /* KSPromise.m in Sources */,
+				E10B702A16F11AF800957DA4 /* KSNetworkClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -483,6 +499,8 @@
 				E1E5C51916CAE6F000C1385F /* KSPromise.m in Sources */,
 				E1E5C51B16CAE71500C1385F /* KSPromiseASpec.mm in Sources */,
 				E17F799F16F04D1800BAD8D0 /* KSDeferredDeprecatedSpec.mm in Sources */,
+				E10B702B16F11AF800957DA4 /* KSNetworkClient.m in Sources */,
+				E10B703516F11CEA00957DA4 /* KSNetworkClientSpec.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
