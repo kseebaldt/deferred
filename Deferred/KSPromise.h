@@ -15,6 +15,9 @@ typedef void(^deferredCallback)(KSPromise *p);
 - (KSPromise *)then:(promiseValueCallback)fulfilledCallback error:(promiseErrorCallback)errorCallback;
 - (void)cancel;
 
+- (id)waitForValue;
+- (id)waitForValueWithTimeout:(NSTimeInterval)timeout;
+
 #pragma deprecated
 - (void)whenResolved:(deferredCallback)complete DEPRECATED_ATTRIBUTE;
 - (void)whenRejected:(deferredCallback)complete DEPRECATED_ATTRIBUTE;

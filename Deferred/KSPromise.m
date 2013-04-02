@@ -35,6 +35,8 @@
 @property (assign, nonatomic) BOOL fulfilled;
 @property (assign, nonatomic) BOOL rejected;
 @property (assign, nonatomic) BOOL cancelled;
+
+@property (assign, atomic) dispatch_semaphore_t sem;
 @end
 
 @implementation KSPromise
@@ -43,6 +45,7 @@
     self = [super init];
     if (self) {
         self.callbacks = [NSMutableArray array];
+        _sem = dispatch_semaphore_create(0);
     }
     return self;
 }
@@ -95,6 +98,23 @@
     [self.callbacks removeAllObjects];
 }
 
+- (id)waitForValue {
+    return [self waitForValueWithTimeout:0];
+}
+
+- (id)waitForValueWithTimeout:(NSTimeInterval)timeout {
+    dispatch_time_t time = timeout == 0 ? DISPATCH_TIME_FOREVER : dispatch_time(DISPATCH_TIME_NOW, timeout * NSEC_PER_SEC);
+    dispatch_semaphore_wait(_sem, time);
+    if (self.fulfilled) {
+        return self.value;
+    } else if (self.rejected) {
+        return self.error;
+    }
+    return [NSError errorWithDomain:@"KSPromise" code:1 userInfo:@{NSLocalizedDescriptionKey: @"Timeout exceeded while waiting for value"}];
+}
+
+#pragma mark - Resolving and Rejecting
+
 - (void)resolveWithValue:(id)value {
     if (self.completed || self.cancelled) return;
     self.value = value;
@@ -144,6 +164,7 @@
         }
     }
     [self.callbacks removeAllObjects];
+    dispatch_semaphore_signal(_sem);
 }
 
 - (BOOL)completed {
