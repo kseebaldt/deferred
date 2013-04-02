@@ -103,8 +103,10 @@
 }
 
 - (id)waitForValueWithTimeout:(NSTimeInterval)timeout {
-    dispatch_time_t time = timeout == 0 ? DISPATCH_TIME_FOREVER : dispatch_time(DISPATCH_TIME_NOW, timeout * NSEC_PER_SEC);
-    dispatch_semaphore_wait(_sem, time);
+    if (![self completed]) {
+        dispatch_time_t time = timeout == 0 ? DISPATCH_TIME_FOREVER : dispatch_time(DISPATCH_TIME_NOW, timeout * NSEC_PER_SEC);
+        dispatch_semaphore_wait(_sem, time);
+    }
     if (self.fulfilled) {
         return self.value;
     } else if (self.rejected) {
