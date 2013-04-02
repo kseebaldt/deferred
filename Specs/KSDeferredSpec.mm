@@ -24,7 +24,7 @@ describe(@"KSDeferred", ^{
         promise should_not be_nil;
     });
 
-    describe(@"joining", ^ {
+    describe(@"when", ^ {
         __block KSPromise *promise2;
         __block KSDeferred *deferred2;
         __block KSPromise *joinedPromise;
@@ -34,7 +34,7 @@ describe(@"KSDeferred", ^{
         beforeEach(^{
             deferred2 = [KSDeferred defer];
             promise2 = deferred2.promise;
-            joinedPromise = [KSPromise join:[NSArray arrayWithObjects:promise, promise2, nil]];
+            joinedPromise = [KSPromise when:[NSArray arrayWithObjects:promise, promise2, nil]];
 
             fulfilled = rejected = NO;
 

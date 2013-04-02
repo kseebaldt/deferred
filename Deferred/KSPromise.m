@@ -50,7 +50,7 @@
     return self;
 }
 
-+ (KSPromise *)join:(NSArray *)promises {
++ (KSPromise *)when:(NSArray *)promises {
     KSPromise *promise = [[KSPromise alloc] init];
     promise.parentPromises = [NSMutableArray array];
     for (KSPromise *joinedPromise in promises) {
@@ -64,6 +64,10 @@
         }];
     }
     return promise;
+}
+
++ (KSPromise *)join:(NSArray *)promises {
+    return [self when:promises];
 }
 
 - (KSPromise *)then:(promiseValueCallback)fulfilledCallback
