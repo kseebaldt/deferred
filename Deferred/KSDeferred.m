@@ -9,8 +9,8 @@
 
 @synthesize promise = _promise;
 
-+ (KSDeferred *)defer {
-    return [[KSDeferred alloc] init];
++ (instancetype)defer {
+    return [[self alloc] init];
 }
 
 - (id)init {

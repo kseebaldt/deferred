@@ -4,7 +4,7 @@
 
 @property (strong, nonatomic) KSPromise *promise;
 
-+ (KSDeferred *)defer;
++ (instancetype)defer;
 
 - (void)resolveWithValue:(id)value;
 - (void)rejectWithError:(NSError *)error;
