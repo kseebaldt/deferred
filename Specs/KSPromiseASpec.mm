@@ -5,6 +5,8 @@
 using namespace Cedar::Matchers;
 using namespace Cedar::Doubles;
 
+// translated from: https://github.com/promises-aplus/promises-spec
+
 SPEC_BEGIN(KSPromiseASpec)
 
 describe(@"KSPromiseA", ^{
@@ -72,9 +74,6 @@ describe(@"KSPromiseA", ^{
     });
     
     describe(@"[Promises/A] State transitions", ^{
-        // NOTE: Promises/A does not specify that attempts to change state twice
-        // should be silently ignored, so we allow implementations to throw
-        // exceptions. See resolution-races.js for more info.
         it(@"cannot fulfill twice", ^{
             __block int called = 0;
             [promise then:^id(id value) {

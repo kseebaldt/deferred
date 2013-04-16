@@ -1,5 +1,7 @@
 Async library inspired by CommonJS Promises/A spec
 
+http://wiki.commonjs.org/wiki/Promises/A
+
 # Examples
 
 ## Creating a deferred object and returning its promise 
@@ -37,3 +39,9 @@ Async library inspired by CommonJS Promises/A spec
 ## Rejecting a promise
     NSError *someError;
     [deferred rejectWithError:someError];
+
+## Author
+
+* [Kurtis Seebaldt](mailto:kurtis@pivotallabs.com), Pivotal Labs
+
+Copyright (c) 2013 Kurtis Seebaldt. This software is licensed under the MIT License.
