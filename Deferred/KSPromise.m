@@ -50,6 +50,10 @@
     return self;
 }
 
+- (void)dealloc {
+    dispatch_release(_sem);
+}
+
 + (KSPromise *)when:(NSArray *)promises {
     KSPromise *promise = [[KSPromise alloc] init];
     promise.parentPromises = [NSMutableArray array];
