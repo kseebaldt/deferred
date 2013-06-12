@@ -1,4 +1,18 @@
 #import "KSPromise.h"
+#import <TargetConditionals.h>
+
+#if TARGET_OS_IPHONE
+#   if __IPHONE_OS_VERSION_MIN_REQUIRED < 60000
+#       define KS_DISPATCH_RELEASE(q) (dispatch_release(q))
+#   endif
+#else
+#   if MAC_OS_X_VERSION_MIN_REQUIRED < 1080
+#       define KS_DISPATCH_RELEASE(q) (dispatch_release(q))
+#   endif
+#endif
+#ifndef KS_DISPATCH_RELEASE
+#   define KS_DISPATCH_RELEASE(q)
+#endif
 
 @interface KSPromiseCallbacks : NSObject
 @property (copy, nonatomic) promiseValueCallback fulfilledCallback;
@@ -25,7 +39,10 @@
 
 @end
 
-@interface KSPromise ()
+@interface KSPromise () {
+    dispatch_semaphore_t _sem;
+}
+
 @property (strong, nonatomic) NSMutableArray *callbacks;
 @property (strong, nonatomic) NSMutableArray *parentPromises;
 
@@ -36,7 +53,6 @@
 @property (assign, nonatomic) BOOL rejected;
 @property (assign, nonatomic) BOOL cancelled;
 
-@property (assign, atomic) dispatch_semaphore_t sem;
 @end
 
 @implementation KSPromise
@@ -51,7 +67,7 @@
 }
 
 - (void)dealloc {
-    dispatch_release(_sem);
+    KS_DISPATCH_RELEASE(_sem);
 }
 
 + (KSPromise *)when:(NSArray *)promises {
