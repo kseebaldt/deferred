@@ -73,8 +73,8 @@
 + (KSPromise *)when:(NSArray *)promises {
     KSPromise *promise = [[KSPromise alloc] init];
     promise.parentPromises = [NSMutableArray array];
+    [promise.parentPromises addObjectsFromArray:promises];
     for (KSPromise *joinedPromise in promises) {
-        [promise.parentPromises addObject:joinedPromise];
         [joinedPromise then:^id(id value) {
             [promise joinedPromiseFulfilled:joinedPromise];
             return value;
