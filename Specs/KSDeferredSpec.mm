@@ -34,70 +34,119 @@ describe(@"KSDeferred", ^{
         beforeEach(^{
             deferred2 = [KSDeferred defer];
             promise2 = deferred2.promise;
-            joinedPromise = [KSPromise when:[NSArray arrayWithObjects:promise, promise2, nil]];
-
-            fulfilled = rejected = NO;
-
-            [joinedPromise then:^id(id value) {
-                fulfilled = YES;
-                return value;
-            } error:^id(NSError *error) {
-                rejected = YES;
-                return error;
-            }];
         });
 
-        describe(@"when the first promise is resolved", ^{
+        context(@"when joined promises get resolved or rejected after join", ^{
             beforeEach(^{
-                [deferred resolveWithValue:@"SUCCESS1"];
+                joinedPromise = [KSPromise when:[NSArray arrayWithObjects:promise, promise2, nil]];
+                
+                fulfilled = rejected = NO;
+                
+                [joinedPromise then:^id(id value) {
+                    fulfilled = YES;
+                    return value;
+                } error:^id(NSError *error) {
+                    rejected = YES;
+                    return error;
+                }];
             });
 
-            it(@"should not resolve the joined promise", ^{
-                fulfilled should_not be_truthy;
-                rejected should_not be_truthy;
-            });
-
-            describe(@"when both promises are resolved", ^{
+            describe(@"when the first promise is resolved", ^{
                 beforeEach(^{
-                    [deferred2 resolveWithValue:@"SUCCESS2"];
+                    [deferred resolveWithValue:@"SUCCESS1"];
                 });
-
-                it(@"should call the resolved callback", ^{
-                    fulfilled should be_truthy;
+                
+                it(@"should not resolve the joined promise", ^{
+                    fulfilled should_not be_truthy;
+                    rejected should_not be_truthy;
                 });
-
-                it(@"should be able to read the resolved values of the joined promises", ^{
-                    [joinedPromise.value objectAtIndex:0] should equal(@"SUCCESS1");
-                    [joinedPromise.value objectAtIndex:1] should equal(@"SUCCESS2");
+                
+                describe(@"when both promises are resolved", ^{
+                    beforeEach(^{
+                        [deferred2 resolveWithValue:@"SUCCESS2"];
+                    });
+                    
+                    it(@"should call the resolved callback", ^{
+                        fulfilled should be_truthy;
+                    });
+                    
+                    it(@"should be able to read the resolved values of the joined promises", ^{
+                        [joinedPromise.value objectAtIndex:0] should equal(@"SUCCESS1");
+                        [joinedPromise.value objectAtIndex:1] should equal(@"SUCCESS2");
+                    });
+                    
                 });
-
+                
+                describe(@"when a promise is rejected and all joined promises have been fulfilled", ^{
+                    beforeEach(^{
+                        [deferred2 rejectWithError:[NSError errorWithDomain:@"MyError" code:123 userInfo:nil]];
+                    });
+                    
+                    it(@"should call the rejected callback", ^{
+                        rejected should be_truthy;
+                    });
+                    
+                    it(@"should be able to read the resolved values of the joined promises", ^{
+                        joinedPromise.error.domain should equal(@"KSPromiseJoinError");
+                        NSArray *errors = [joinedPromise.error.userInfo objectForKey:@"errors"];
+                        errors.count should equal(1);
+                        [[errors lastObject] domain] should equal(@"MyError");
+                    });
+                    
+                });
             });
 
-            describe(@"when a promise is rejected and all joined promises have been fulfilled", ^{
+            describe(@"when the first promise is rejected", ^{
                 beforeEach(^{
                     [deferred2 rejectWithError:[NSError errorWithDomain:@"MyError" code:123 userInfo:nil]];
                 });
-
-                it(@"should call the rejected callback", ^{
-                    rejected should be_truthy;
+                
+                it(@"should not reject the joined promise", ^{
+                    fulfilled should_not be_truthy;
+                    rejected should_not be_truthy;
                 });
-
-                it(@"should be able to read the resolved values of the joined promises", ^{
-                    joinedPromise.error.domain should equal(@"KSPromiseJoinError");
-                    NSArray *errors = [joinedPromise.error.userInfo objectForKey:@"errors"];
-                    errors.count should equal(1);
-                    [[errors lastObject] domain] should equal(@"MyError");
-                });
-
             });
         });
 
-        describe(@"when the first promise is rejected", ^{
+        describe(@"when the first promise is resolved before joined", ^{
             beforeEach(^{
-                [deferred2 rejectWithError:[NSError errorWithDomain:@"MyError" code:123 userInfo:nil]];
+                [deferred resolveWithValue:@"SUCCESS1"];
+                joinedPromise = [KSPromise when:[NSArray arrayWithObjects:promise, promise2, nil]];
+                
+                fulfilled = rejected = NO;
+                
+                [joinedPromise then:^id(id value) {
+                    fulfilled = YES;
+                    return value;
+                } error:^id(NSError *error) {
+                    rejected = YES;
+                    return error;
+                }];
             });
-
-            it(@"should not reject the joined promise", ^{
+            
+            it(@"should not resolve joinedPromise", ^{
+                fulfilled should_not be_truthy;
+                rejected should_not be_truthy;
+            });
+        });
+        
+        describe(@"when the first promise is rejected before joined", ^{
+            beforeEach(^{
+                [deferred rejectWithError:[NSError errorWithDomain:@"MyError" code:123 userInfo:nil]];
+                joinedPromise = [KSPromise when:[NSArray arrayWithObjects:promise, promise2, nil]];
+                
+                fulfilled = rejected = NO;
+                
+                [joinedPromise then:^id(id value) {
+                    fulfilled = YES;
+                    return value;
+                } error:^id(NSError *error) {
+                    rejected = YES;
+                    return error;
+                }];
+            });
+            
+            it(@"should not resolve joinedPromise", ^{
                 fulfilled should_not be_truthy;
                 rejected should_not be_truthy;
             });
