@@ -94,6 +94,10 @@ describe(@"KSDeferred", ^{
                     });
                     
                 });
+
+                it(@"should be marked as fulfilled", ^{
+                    joinedPromise.fulfilled should be_truthy;
+                });
             });
 
             describe(@"when the first promise is rejected", ^{
@@ -104,6 +108,10 @@ describe(@"KSDeferred", ^{
                 it(@"should not reject the joined promise", ^{
                     fulfilled should_not be_truthy;
                     rejected should_not be_truthy;
+                });
+
+                it(@"should be marked as rejected", ^{
+                    joinedPromise.rejected should be_truthy;
                 });
             });
         });
