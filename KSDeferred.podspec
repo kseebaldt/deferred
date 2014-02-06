@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name         = "Deferred"
+  s.name         = "KSDeferred"
   s.version      = "0.2.0"
   s.summary      = "Async library inspired by CommonJS Promises/A spec."
   s.homepage     = "https://github.com/kseebaldt/deferred"
