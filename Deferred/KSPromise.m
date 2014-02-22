@@ -176,7 +176,15 @@
 }
 
 - (void)resolvePromise:(KSPromise *)promise withValue:(id)value {
-    if ([value isKindOfClass:[NSError class]]) {
+    if ([value isKindOfClass:[KSPromise class]]) {
+        [value then:^id(id value) {
+            [promise resolveWithValue:value];
+            return value;
+        } error:^id(NSError *error) {
+            [promise rejectWithError:error];
+            return error;
+        }];
+    } else if ([value isKindOfClass:[NSError class]]) {
         [promise rejectWithError:value];
     } else {
         [promise resolveWithValue:value];
