@@ -96,7 +96,7 @@ describe(@"KSDeferred", ^{
                 });
 
                 it(@"should be marked as fulfilled", ^{
-                    joinedPromise.fulfilled should be_truthy;
+                    promise.fulfilled should be_truthy;
                 });
             });
 
@@ -111,7 +111,7 @@ describe(@"KSDeferred", ^{
                 });
 
                 it(@"should be marked as rejected", ^{
-                    joinedPromise.rejected should be_truthy;
+                    promise2.rejected should be_truthy;
                 });
             });
         });
