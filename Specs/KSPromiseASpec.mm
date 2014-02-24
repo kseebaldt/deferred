@@ -504,6 +504,96 @@ describe(@"KSPromiseA", ^{
             });
         });
     });
+    
+    describe(@"[Promises/A] Returning a promise", ^{
+        __block KSDeferred *returnedDeferred;
+        NSError *returnedPromiseError = [NSError errorWithDomain:@"Promise Spec" code:1 userInfo:nil];
+        
+        beforeEach(^{
+            returnedDeferred = [KSDeferred defer];
+        });
+        
+        describe(@"from a fulfillment handler", ^{
+            beforeEach(^{
+                [deferred resolveWithValue:@"A"];
+            });
+            
+            describe(@"when the returned promise is resolved", ^{
+                it(@"should call the next fulfillment handler with the returned promise's value", ^{
+                    
+                    __block BOOL done = NO;
+                    [[promise then:^id(id value) {
+                        return returnedDeferred.promise;
+                    } error:nil] then:^id(id value) {
+                        value should equal(@"B");
+                        done = YES;
+                        return value;
+                    } error:nil];
+                    
+                    done should equal(NO);
+                    [returnedDeferred resolveWithValue:@"B"];
+                    done should equal(YES);
+                });
+            });
+            
+            describe(@"when the returned promise is rejected", ^{
+                it(@"should call the next rejection handler with the returned promise's error", ^{
+                    __block BOOL done = NO;
+                    [[promise then:^id(id value) {
+                        return returnedDeferred.promise;
+                    } error:nil] then:nil error:^id(NSError *error) {
+                        error should equal(returnedPromiseError);
+                        done = YES;
+                        return error;
+                    }];
+                    
+                    done should equal(NO);
+                    [returnedDeferred rejectWithError:returnedPromiseError];
+                    done should equal(YES);
+                });
+            });
+        });
+        
+        describe(@"from a rejection handler", ^{
+            beforeEach(^{
+                [deferred rejectWithError:[NSError errorWithDomain:@"Promise Spec" code:2 userInfo:nil]];
+            });
+            
+            describe(@"when the returned promise is resolved", ^{
+                it(@"should call the next fulfillment handler with the returned promise's value", ^{
+                    __block BOOL done = NO;
+                    [[promise then:nil error:^id(NSError *error) {
+                        return returnedDeferred.promise;
+                    }] then:^id(id value) {
+                        value should equal(@"B");
+                        done = YES;
+                        return value;
+                    } error:nil];
+                    
+                    done should equal(NO);
+                    [returnedDeferred resolveWithValue:@"B"];
+                    done should equal(YES);
+                });
+            });
+            
+            describe(@"when the returned promise is rejected", ^{
+                it(@"should call the next rejection handler with the returned promise's error", ^{
+                    __block BOOL done = NO;
+                    [[promise then:nil error:^id(NSError *error) {
+                        return returnedDeferred.promise;
+                    }] then:nil error:^id(NSError *error) {
+                        error should equal(returnedPromiseError);
+                        done = YES;
+                        return error;
+                    }];
+                    
+                    done should equal(NO);
+                    [returnedDeferred rejectWithError:returnedPromiseError];
+                    done should equal(YES);
+                });
+            });
+        });
+    });
 
 });
 

@@ -33,6 +33,21 @@ http://wiki.commonjs.org/wiki/Promises/A
         # error is error returned from first promise
     }];
 
+## Returning a promise from a callback to chain async work
+
+    KSPromise *chained = [promise then:^id(id value) {
+        KSDeferred *nextDeferred = [KSDeferred defer];
+        return nextDeferred.promise;
+    } error:^id(NSError *e) {
+        return e;
+    }];
+
+    [chained then:^id(id value) {
+        # value is value the returned promise resolves with
+    } error:^id(NSError *e) {
+        # error is error the returned promise rejects with
+    }];
+
 ## Resolving a promise
     [deferred resolveWithValue:@"VALUE"];
 
