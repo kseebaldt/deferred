@@ -9,6 +9,8 @@
 + (KSNetworkResponse *)networkResponseWithURLResponse:(NSURLResponse *)response data:(NSData *)data;
 @end
 
+FOUNDATION_EXPORT NSString *const kKSNetworkClientErrorData;
+
 @interface KSNetworkClient : NSObject
 - (KSPromise *)sendAsynchronousRequest:(NSURLRequest *)request queue:(NSOperationQueue *)queue;
 @end
