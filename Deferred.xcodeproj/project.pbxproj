@@ -382,7 +382,7 @@
 		E18A7B0C15674D9B0083D745 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0510;
 			};
 			buildConfigurationList = E18A7B0F15674D9B0083D745 /* Build configuration list for PBXProject "Deferred" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -577,7 +577,6 @@
 		E18A7B2315674D9B0083D745 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				DSTROOT = /tmp/Futures.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Deferred/Deferred-Prefix.pch";
@@ -590,7 +589,6 @@
 		E18A7B2415674D9B0083D745 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				DSTROOT = /tmp/Futures.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Deferred/Deferred-Prefix.pch";
