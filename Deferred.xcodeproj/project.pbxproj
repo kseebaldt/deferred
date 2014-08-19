@@ -7,6 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE3C6E4D19A3533B004BECE4 /* KSURLConnectionClient.h in Headers */ = {isa = PBXBuildFile; fileRef = AE3C6E4B19A3533B004BECE4 /* KSURLConnectionClient.h */; };
+		AE3C6E4E19A3533B004BECE4 /* KSURLConnectionClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AE3C6E4C19A3533B004BECE4 /* KSURLConnectionClient.m */; };
+		AE3C6E5D19A354B9004BECE4 /* KSNetworkClientSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = E10B703416F11CEA00957DA4 /* KSNetworkClientSpec.mm */; };
+		AE3C6E5E19A354B9004BECE4 /* KSNetworkClientSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = E10B703416F11CEA00957DA4 /* KSNetworkClientSpec.mm */; };
+		AE3C6E5F19A354CA004BECE4 /* KSURLConnectionClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AE3C6E4C19A3533B004BECE4 /* KSURLConnectionClient.m */; };
+		AE3C6E6019A354CB004BECE4 /* KSURLConnectionClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AE3C6E4C19A3533B004BECE4 /* KSURLConnectionClient.m */; };
+		AE3C6E6319A354E5004BECE4 /* KSURLSessionClient.h in Headers */ = {isa = PBXBuildFile; fileRef = AE3C6E6119A354E5004BECE4 /* KSURLSessionClient.h */; };
+		AE3C6E6419A354E5004BECE4 /* KSURLSessionClient.h in Headers */ = {isa = PBXBuildFile; fileRef = AE3C6E6119A354E5004BECE4 /* KSURLSessionClient.h */; };
+		AE3C6E6519A354E5004BECE4 /* KSURLSessionClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AE3C6E6219A354E5004BECE4 /* KSURLSessionClient.m */; };
+		AE3C6E6619A354E5004BECE4 /* KSURLSessionClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AE3C6E6219A354E5004BECE4 /* KSURLSessionClient.m */; };
+		AE3C6E6719A354E5004BECE4 /* KSURLSessionClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AE3C6E6219A354E5004BECE4 /* KSURLSessionClient.m */; };
+		AE3C6E6919A35697004BECE4 /* KSURLSessionClientSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = AE3C6E6819A35697004BECE4 /* KSURLSessionClientSpec.mm */; };
+		AE3C6E6A19A35697004BECE4 /* KSURLSessionClientSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = AE3C6E6819A35697004BECE4 /* KSURLSessionClientSpec.mm */; };
+		AE3C6E6B19A35697004BECE4 /* KSURLSessionClientSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = AE3C6E6819A35697004BECE4 /* KSURLSessionClientSpec.mm */; };
+		AE3C6E6F19A356CA004BECE4 /* KSNetworkClientSpecURLProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = AE3C6E6D19A356CA004BECE4 /* KSNetworkClientSpecURLProtocol.h */; };
+		AE3C6E7019A356CA004BECE4 /* KSNetworkClientSpecURLProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = AE3C6E6D19A356CA004BECE4 /* KSNetworkClientSpecURLProtocol.h */; };
+		AE3C6E7119A356CA004BECE4 /* KSNetworkClientSpecURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = AE3C6E6E19A356CA004BECE4 /* KSNetworkClientSpecURLProtocol.m */; };
+		AE3C6E7219A356CA004BECE4 /* KSNetworkClientSpecURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = AE3C6E6E19A356CA004BECE4 /* KSNetworkClientSpecURLProtocol.m */; };
+		AE3C6E7319A356CA004BECE4 /* KSNetworkClientSpecURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = AE3C6E6E19A356CA004BECE4 /* KSNetworkClientSpecURLProtocol.m */; };
 		E10B702716F11AF800957DA4 /* KSNetworkClient.h in Headers */ = {isa = PBXBuildFile; fileRef = E10B702516F11AF800957DA4 /* KSNetworkClient.h */; };
 		E10B702816F11AF800957DA4 /* KSNetworkClient.h in Headers */ = {isa = PBXBuildFile; fileRef = E10B702516F11AF800957DA4 /* KSNetworkClient.h */; };
 		E10B702916F11AF800957DA4 /* KSNetworkClient.m in Sources */ = {isa = PBXBuildFile; fileRef = E10B702616F11AF800957DA4 /* KSNetworkClient.m */; };
@@ -34,6 +53,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		AE3C6E5919A3533C004BECE4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E18A7B5715674FC50083D745 /* Cedar.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AE02E7E4184EABCD00414F19;
+			remoteInfo = iOSFrameworkSpecs;
+		};
+		AE3C6E5B19A3533C004BECE4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E18A7B5715674FC50083D745 /* Cedar.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1F45A3DD180E4796003C1E36;
+			remoteInfo = XCUnitAppTests;
+		};
 		E18A7B6B15674FC70083D745 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E18A7B5715674FC50083D745 /* Cedar.xcodeproj */;
@@ -112,6 +145,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		AE3C6E4B19A3533B004BECE4 /* KSURLConnectionClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSURLConnectionClient.h; sourceTree = "<group>"; };
+		AE3C6E4C19A3533B004BECE4 /* KSURLConnectionClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSURLConnectionClient.m; sourceTree = "<group>"; };
+		AE3C6E6119A354E5004BECE4 /* KSURLSessionClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSURLSessionClient.h; sourceTree = "<group>"; };
+		AE3C6E6219A354E5004BECE4 /* KSURLSessionClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSURLSessionClient.m; sourceTree = "<group>"; };
+		AE3C6E6819A35697004BECE4 /* KSURLSessionClientSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = KSURLSessionClientSpec.mm; sourceTree = "<group>"; };
+		AE3C6E6D19A356CA004BECE4 /* KSNetworkClientSpecURLProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSNetworkClientSpecURLProtocol.h; sourceTree = "<group>"; };
+		AE3C6E6E19A356CA004BECE4 /* KSNetworkClientSpecURLProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSNetworkClientSpecURLProtocol.m; sourceTree = "<group>"; };
 		E10B702516F11AF800957DA4 /* KSNetworkClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSNetworkClient.h; sourceTree = "<group>"; };
 		E10B702616F11AF800957DA4 /* KSNetworkClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSNetworkClient.m; sourceTree = "<group>"; };
 		E10B703416F11CEA00957DA4 /* KSNetworkClientSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = KSNetworkClientSpec.mm; sourceTree = "<group>"; };
@@ -166,6 +206,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AE3C6E6C19A356AA004BECE4 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				AE3C6E6D19A356CA004BECE4 /* KSNetworkClientSpecURLProtocol.h */,
+				AE3C6E6E19A356CA004BECE4 /* KSNetworkClientSpecURLProtocol.m */,
+			);
+			name = Support;
+			sourceTree = "<group>";
+		};
 		E18A7B0A15674D9B0083D745 = {
 			isa = PBXGroup;
 			children = (
@@ -208,6 +257,10 @@
 				E1E5C51416CAE6F000C1385F /* KSPromise.m */,
 				E10B702516F11AF800957DA4 /* KSNetworkClient.h */,
 				E10B702616F11AF800957DA4 /* KSNetworkClient.m */,
+				AE3C6E4B19A3533B004BECE4 /* KSURLConnectionClient.h */,
+				AE3C6E4C19A3533B004BECE4 /* KSURLConnectionClient.m */,
+				AE3C6E6119A354E5004BECE4 /* KSURLSessionClient.h */,
+				AE3C6E6219A354E5004BECE4 /* KSURLSessionClient.m */,
 			);
 			path = Deferred;
 			sourceTree = "<group>";
@@ -265,12 +318,14 @@
 		E18A7B4715674ED10083D745 /* Specs */ = {
 			isa = PBXGroup;
 			children = (
+				AE3C6E6C19A356AA004BECE4 /* Support */,
 				E18A7B4A15674ED10083D745 /* Supporting Files */,
 				E18A7B4815674ED10083D745 /* main.m */,
 				E18A7B5315674F350083D745 /* KSDeferredSpec.mm */,
 				E1E5C51A16CAE71500C1385F /* KSPromiseASpec.mm */,
 				E17F799E16F04D1800BAD8D0 /* KSDeferredDeprecatedSpec.mm */,
 				E10B703416F11CEA00957DA4 /* KSNetworkClientSpec.mm */,
+				AE3C6E6819A35697004BECE4 /* KSURLSessionClientSpec.mm */,
 			);
 			path = Specs;
 			sourceTree = "<group>";
@@ -291,8 +346,10 @@
 				E18A7B7015674FC70083D745 /* FocusedSpecs */,
 				E18A7B7215674FC70083D745 /* libCedar-StaticLib.a */,
 				E18A7B7415674FC70083D745 /* iOSSpecs.app */,
+				AE3C6E5A19A3533C004BECE4 /* iOSFrameworkSpecs.app */,
 				E18A7B7615674FC70083D745 /* OCUnitApp.app */,
 				E18A7B7815674FC70083D745 /* OCUnitAppTests.octest */,
+				AE3C6E5C19A3533C004BECE4 /* XCUnitAppTests.xctest */,
 				E18A7B7A15674FC70083D745 /* OCUnitAppLogicTests.octest */,
 			);
 			name = Products;
@@ -306,6 +363,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E15F47471570786900080763 /* KSDeferred.h in Headers */,
+				AE3C6E4D19A3533B004BECE4 /* KSURLConnectionClient.h in Headers */,
+				AE3C6E6F19A356CA004BECE4 /* KSNetworkClientSpecURLProtocol.h in Headers */,
+				AE3C6E6319A354E5004BECE4 /* KSURLSessionClient.h in Headers */,
 				E1E5C51516CAE6F000C1385F /* KSPromise.h in Headers */,
 				E10B702716F11AF800957DA4 /* KSNetworkClient.h in Headers */,
 			);
@@ -317,7 +377,9 @@
 			files = (
 				E15F47481570786900080763 /* KSDeferred.h in Headers */,
 				E1E5C51616CAE6F000C1385F /* KSPromise.h in Headers */,
+				AE3C6E6419A354E5004BECE4 /* KSURLSessionClient.h in Headers */,
 				E10B702816F11AF800957DA4 /* KSNetworkClient.h in Headers */,
+				AE3C6E7019A356CA004BECE4 /* KSNetworkClientSpecURLProtocol.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,6 +472,20 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		AE3C6E5A19A3533C004BECE4 /* iOSFrameworkSpecs.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = iOSFrameworkSpecs.app;
+			remoteRef = AE3C6E5919A3533C004BECE4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		AE3C6E5C19A3533C004BECE4 /* XCUnitAppTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = XCUnitAppTests.xctest;
+			remoteRef = AE3C6E5B19A3533C004BECE4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		E18A7B6C15674FC70083D745 /* Cedar.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
@@ -474,8 +550,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				E15F47491570786900080763 /* KSDeferred.m in Sources */,
+				AE3C6E5E19A354B9004BECE4 /* KSNetworkClientSpec.mm in Sources */,
 				E1E5C51716CAE6F000C1385F /* KSPromise.m in Sources */,
+				AE3C6E6919A35697004BECE4 /* KSURLSessionClientSpec.mm in Sources */,
+				AE3C6E7119A356CA004BECE4 /* KSNetworkClientSpecURLProtocol.m in Sources */,
+				AE3C6E4E19A3533B004BECE4 /* KSURLConnectionClient.m in Sources */,
 				E10B702916F11AF800957DA4 /* KSNetworkClient.m in Sources */,
+				AE3C6E6519A354E5004BECE4 /* KSURLSessionClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,6 +567,11 @@
 				E15F474A1570786900080763 /* KSDeferred.m in Sources */,
 				E1E5C51816CAE6F000C1385F /* KSPromise.m in Sources */,
 				E10B702A16F11AF800957DA4 /* KSNetworkClient.m in Sources */,
+				AE3C6E6A19A35697004BECE4 /* KSURLSessionClientSpec.mm in Sources */,
+				AE3C6E7219A356CA004BECE4 /* KSNetworkClientSpecURLProtocol.m in Sources */,
+				AE3C6E5D19A354B9004BECE4 /* KSNetworkClientSpec.mm in Sources */,
+				AE3C6E6019A354CB004BECE4 /* KSURLConnectionClient.m in Sources */,
+				AE3C6E6619A354E5004BECE4 /* KSURLSessionClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -493,12 +579,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE3C6E7319A356CA004BECE4 /* KSNetworkClientSpecURLProtocol.m in Sources */,
 				E18A7B4915674ED10083D745 /* main.m in Sources */,
 				E18A7B5615674F350083D745 /* KSDeferredSpec.mm in Sources */,
 				E15F474B1570786900080763 /* KSDeferred.m in Sources */,
 				E1E5C51916CAE6F000C1385F /* KSPromise.m in Sources */,
 				E1E5C51B16CAE71500C1385F /* KSPromiseASpec.mm in Sources */,
+				AE3C6E6B19A35697004BECE4 /* KSURLSessionClientSpec.mm in Sources */,
 				E17F799F16F04D1800BAD8D0 /* KSDeferredDeprecatedSpec.mm in Sources */,
+				AE3C6E5F19A354CA004BECE4 /* KSURLConnectionClient.m in Sources */,
+				AE3C6E6719A354E5004BECE4 /* KSURLSessionClient.m in Sources */,
 				E10B702B16F11AF800957DA4 /* KSNetworkClient.m in Sources */,
 				E10B703516F11CEA00957DA4 /* KSNetworkClientSpec.mm in Sources */,
 			);

@@ -1,23 +1,23 @@
 #import <Cedar/Cedar.h>
-#import "KSNetworkClient.h"
+#import "KSURLSessionClient.h"
 #import "KSPromise.h"
 #import "KSNetworkClientSpecURLProtocol.h"
 
 using namespace Cedar::Matchers;
 using namespace Cedar::Doubles;
 
-SPEC_BEGIN(KSNetworkClientSpec)
+SPEC_BEGIN(KSURLSessionClientSpec)
 
-describe(@"KSNetworkClient", ^{
-    __block KSNetworkClient *client;
+describe(@"KSURLSessionClient", ^{
+    __block id<KSNetworkClient> client;
     __block NSOperationQueue *queue;
-
+    
     beforeEach(^{
-        client = [[KSNetworkClient alloc] init];
+        client = [[KSURLSessionClient alloc] init];
         queue = [[NSOperationQueue alloc] init];
         [NSURLProtocol registerClass:[KSNetworkClientSpecURLProtocol class]];
     });
-
+    
     it(@"should resolve the promise on success", ^{
         NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:@"pass://foo"]];
         KSPromise *promise = [client sendAsynchronousRequest:request queue:queue];
@@ -33,7 +33,7 @@ describe(@"KSNetworkClient", ^{
         NSString *value = [[NSString alloc] initWithData:[promise.value data] encoding:NSUTF8StringEncoding];
         value should equal(@"pass");
     });
-
+    
     it(@"should reject the promise on error", ^{
         NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:@"fail://bar"]];
         KSPromise *promise = [client sendAsynchronousRequest:request queue:queue];
