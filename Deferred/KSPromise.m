@@ -142,6 +142,7 @@
 #pragma mark - Resolving and Rejecting
 
 - (void)resolveWithValue:(id)value {
+    NSAssert(!self.completed, @"A fulfilled promise can not be resolved again.");
     if (self.completed || self.cancelled) return;
     self.value = value;
     self.fulfilled = YES;
@@ -159,6 +160,7 @@
 }
 
 - (void)rejectWithError:(NSError *)error {
+    NSAssert(!self.completed, @"A fulfilled promise can not be rejected again.");
     if (self.completed || self.cancelled) return;
     self.error = error;
     self.rejected = YES;
