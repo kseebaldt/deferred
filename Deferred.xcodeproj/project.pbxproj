@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		AE3C6E4D19A3533B004BECE4 /* KSURLConnectionClient.h in Headers */ = {isa = PBXBuildFile; fileRef = AE3C6E4B19A3533B004BECE4 /* KSURLConnectionClient.h */; };
 		AE3C6E4E19A3533B004BECE4 /* KSURLConnectionClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AE3C6E4C19A3533B004BECE4 /* KSURLConnectionClient.m */; };
-		AE3C6E5D19A354B9004BECE4 /* KSNetworkClientSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = E10B703416F11CEA00957DA4 /* KSNetworkClientSpec.mm */; };
-		AE3C6E5E19A354B9004BECE4 /* KSNetworkClientSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = E10B703416F11CEA00957DA4 /* KSNetworkClientSpec.mm */; };
 		AE3C6E5F19A354CA004BECE4 /* KSURLConnectionClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AE3C6E4C19A3533B004BECE4 /* KSURLConnectionClient.m */; };
 		AE3C6E6019A354CB004BECE4 /* KSURLConnectionClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AE3C6E4C19A3533B004BECE4 /* KSURLConnectionClient.m */; };
 		AE3C6E6319A354E5004BECE4 /* KSURLSessionClient.h in Headers */ = {isa = PBXBuildFile; fileRef = AE3C6E6119A354E5004BECE4 /* KSURLSessionClient.h */; };
@@ -18,8 +16,6 @@
 		AE3C6E6519A354E5004BECE4 /* KSURLSessionClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AE3C6E6219A354E5004BECE4 /* KSURLSessionClient.m */; };
 		AE3C6E6619A354E5004BECE4 /* KSURLSessionClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AE3C6E6219A354E5004BECE4 /* KSURLSessionClient.m */; };
 		AE3C6E6719A354E5004BECE4 /* KSURLSessionClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AE3C6E6219A354E5004BECE4 /* KSURLSessionClient.m */; };
-		AE3C6E6919A35697004BECE4 /* KSURLSessionClientSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = AE3C6E6819A35697004BECE4 /* KSURLSessionClientSpec.mm */; };
-		AE3C6E6A19A35697004BECE4 /* KSURLSessionClientSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = AE3C6E6819A35697004BECE4 /* KSURLSessionClientSpec.mm */; };
 		AE3C6E6B19A35697004BECE4 /* KSURLSessionClientSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = AE3C6E6819A35697004BECE4 /* KSURLSessionClientSpec.mm */; };
 		AE3C6E6F19A356CA004BECE4 /* KSNetworkClientSpecURLProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = AE3C6E6D19A356CA004BECE4 /* KSNetworkClientSpecURLProtocol.h */; };
 		AE3C6E7019A356CA004BECE4 /* KSNetworkClientSpecURLProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = AE3C6E6D19A356CA004BECE4 /* KSNetworkClientSpecURLProtocol.h */; };
@@ -550,9 +546,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E15F47491570786900080763 /* KSDeferred.m in Sources */,
-				AE3C6E5E19A354B9004BECE4 /* KSNetworkClientSpec.mm in Sources */,
 				E1E5C51716CAE6F000C1385F /* KSPromise.m in Sources */,
-				AE3C6E6919A35697004BECE4 /* KSURLSessionClientSpec.mm in Sources */,
 				AE3C6E7119A356CA004BECE4 /* KSNetworkClientSpecURLProtocol.m in Sources */,
 				AE3C6E4E19A3533B004BECE4 /* KSURLConnectionClient.m in Sources */,
 				E10B702916F11AF800957DA4 /* KSNetworkClient.m in Sources */,
@@ -567,9 +561,7 @@
 				E15F474A1570786900080763 /* KSDeferred.m in Sources */,
 				E1E5C51816CAE6F000C1385F /* KSPromise.m in Sources */,
 				E10B702A16F11AF800957DA4 /* KSNetworkClient.m in Sources */,
-				AE3C6E6A19A35697004BECE4 /* KSURLSessionClientSpec.mm in Sources */,
 				AE3C6E7219A356CA004BECE4 /* KSNetworkClientSpecURLProtocol.m in Sources */,
-				AE3C6E5D19A354B9004BECE4 /* KSNetworkClientSpec.mm in Sources */,
 				AE3C6E6019A354CB004BECE4 /* KSURLConnectionClient.m in Sources */,
 				AE3C6E6619A354E5004BECE4 /* KSURLSessionClient.m in Sources */,
 			);
