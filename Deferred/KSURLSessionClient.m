@@ -21,9 +21,8 @@
 
 - (KSPromise *)sendAsynchronousRequest:(NSURLRequest *)request queue:(NSOperationQueue *)queue {
     KSDeferred *deferred = [KSDeferred defer];
-    
-    NSURLSession *session = [NSURLSession sharedSession];
-    [[session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+
+    [[self.session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         [queue addOperationWithBlock:^{
             if (error) {
                 [deferred rejectWithError:error];
