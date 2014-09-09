@@ -24,12 +24,14 @@
     
     NSURLSession *session = [NSURLSession sharedSession];
     [[session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-        if (error) {
-            [deferred rejectWithError:error];
-        } else {
-            [deferred resolveWithValue:[KSNetworkResponse networkResponseWithURLResponse:response
-                                                                                    data:data]];
-        }
+        [queue addOperationWithBlock:^{
+            if (error) {
+                [deferred rejectWithError:error];
+            } else {
+                [deferred resolveWithValue:[KSNetworkResponse networkResponseWithURLResponse:response
+                                                                                        data:data]];
+            }
+        }];
     }] resume];
 
     return deferred.promise;
