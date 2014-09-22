@@ -1,4 +1,4 @@
-#import "CDRSpecHelper.h"
+#import <Cedar/CDRSpecHelper.h>
 #import "KSNetworkClient.h"
 #import "KSPromise.h"
 

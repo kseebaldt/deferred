@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B8A40B9719BE489400C66E79 /* Cedar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E18A7B6C15674FC70083D745 /* Cedar.framework */; };
+		B896626719D0E7A900AB398B /* Cedar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E18A7B6C15674FC70083D745 /* Cedar.framework */; };
 		E10B702716F11AF800957DA4 /* KSNetworkClient.h in Headers */ = {isa = PBXBuildFile; fileRef = E10B702516F11AF800957DA4 /* KSNetworkClient.h */; };
 		E10B702816F11AF800957DA4 /* KSNetworkClient.h in Headers */ = {isa = PBXBuildFile; fileRef = E10B702516F11AF800957DA4 /* KSNetworkClient.h */; };
 		E10B702916F11AF800957DA4 /* KSNetworkClient.m in Sources */ = {isa = PBXBuildFile; fileRef = E10B702616F11AF800957DA4 /* KSNetworkClient.m */; };
@@ -34,6 +34,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		B896626519D0E7A500AB398B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E18A7B5715674FC50083D745 /* Cedar.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = AEEE1FB511DC271300029872;
+			remoteInfo = Cedar;
+		};
 		B8A40B8E19BE477D00C66E79 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E18A7B5715674FC50083D745 /* Cedar.xcodeproj */;
@@ -47,13 +54,6 @@
 			proxyType = 2;
 			remoteGlobalIDString = 1F45A3DD180E4796003C1E36;
 			remoteInfo = XCUnitAppTests;
-		};
-		B8A40B9519BE488C00C66E79 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E18A7B5715674FC50083D745 /* Cedar.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = AEEE1FB511DC271300029872;
-			remoteInfo = Cedar;
 		};
 		E18A7B6B15674FC70083D745 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -172,8 +172,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B896626719D0E7A900AB398B /* Cedar.framework in Frameworks */,
 				E18A7B4615674ED10083D745 /* Foundation.framework in Frameworks */,
-				B8A40B9719BE489400C66E79 /* Cedar.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,7 +385,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				B8A40B9619BE488C00C66E79 /* PBXTargetDependency */,
+				B896626619D0E7A500AB398B /* PBXTargetDependency */,
 			);
 			name = Specs;
 			productName = Specs;
@@ -537,10 +537,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		B8A40B9619BE488C00C66E79 /* PBXTargetDependency */ = {
+		B896626619D0E7A500AB398B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Cedar;
-			targetProxy = B8A40B9519BE488C00C66E79 /* PBXContainerItemProxy */;
+			targetProxy = B896626519D0E7A500AB398B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
