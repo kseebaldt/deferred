@@ -1,6 +1,7 @@
 #import "KSPromise.h"
 #import <TargetConditionals.h>
 
+
 #if TARGET_OS_IPHONE
 #   if __IPHONE_OS_VERSION_MIN_REQUIRED < 60000
 #       define KS_DISPATCH_RELEASE(q) (dispatch_release(q))
@@ -27,19 +28,22 @@
 
 @implementation KSPromiseCallbacks
 
-- (id)initWithFulfilledCallback:(promiseValueCallback)fulfilledCallback errorCallback:(promiseErrorCallback)errorCallback {
+- (id)initWithFulfilledCallback:(promiseValueCallback)fulfilledCallback
+                  errorCallback:(promiseErrorCallback)errorCallback
+                    cancellable:(id<KSCancellable>)cancellable {
     self = [super init];
     if (self) {
         self.fulfilledCallback = fulfilledCallback;
         self.errorCallback = errorCallback;
         self.childPromise = [[KSPromise alloc] init];
+        [self.childPromise addCancellable:cancellable];
     }
     return self;
 }
 
 @end
 
-@interface KSPromise () {
+@interface KSPromise () <KSCancellable> {
     dispatch_semaphore_t _sem;
 }
 
@@ -53,6 +57,8 @@
 @property (assign, nonatomic) BOOL rejected;
 @property (assign, nonatomic) BOOL cancelled;
 
+@property (strong, nonatomic) NSHashTable *cancellables;
+
 @end
 
 @implementation KSPromise
@@ -61,6 +67,7 @@
     self = [super init];
     if (self) {
         self.callbacks = [NSMutableArray array];
+        self.cancellables = [NSHashTable weakObjectsHashTable];
         _sem = dispatch_semaphore_create(0);
     }
     return self;
@@ -75,6 +82,9 @@
     promise.parentPromises = [NSMutableArray array];
     [promise.parentPromises addObjectsFromArray:promises];
     for (KSPromise *joinedPromise in promises) {
+        for (id<KSCancellable> cancellable in joinedPromise.cancellables) {
+            [promise addCancellable:cancellable];
+        }
         [joinedPromise then:^id(id value) {
             [promise joinedPromiseFulfilled:joinedPromise];
             return value;
@@ -95,7 +105,8 @@
     if (self.cancelled) return nil;
     if (![self completed]) {
         KSPromiseCallbacks *callbacks = [[KSPromiseCallbacks alloc] initWithFulfilledCallback:fulfilledCallback
-                                                                                errorCallback:errorCallback];
+                                                                                errorCallback:errorCallback
+                                                                                  cancellable:self];
         [self.callbacks addObject:callbacks];
         return callbacks.childPromise;
     }
@@ -113,12 +124,21 @@
         }
     }
     KSPromise *promise = [[KSPromise alloc] init];
+    [promise addCancellable:self];
     [self resolvePromise:promise withValue:nextValue];
     return promise;
 }
 
+- (void)addCancellable:(id<KSCancellable>)cancellable
+{
+    [self.cancellables addObject:cancellable];
+}
+
 - (void)cancel {
     self.cancelled = YES;
+    for (id<KSCancellable> cancellable in self.cancellables) {
+        [cancellable cancel];
+    }
     [self.callbacks removeAllObjects];
 }
 

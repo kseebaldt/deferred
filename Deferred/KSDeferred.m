@@ -5,6 +5,11 @@
 - (void)rejectWithError:(NSError *)error;
 @end
 
+@interface KSDeferred () <KSCancellable>
+@property (copy, nonatomic) void (^cancelledBlock)(void);
+@property (nonatomic) BOOL cancelled;
+@end
+
 @implementation KSDeferred
 
 @synthesize promise = _promise;
@@ -17,19 +22,39 @@
     self = [super init];
     if (self) {
         self.promise = [[KSPromise alloc] init];
+        [self.promise addCancellable:self];
     }
     return self;
 }
 
 - (void)resolveWithValue:(id)value {
-    [self.promise resolveWithValue:value];
+    if (!self.cancelled) {
+        [self.promise resolveWithValue:value];
+    }
 }
 
 - (void)rejectWithError:(NSError *)error {
-    [self.promise rejectWithError:error];
+    if (!self.cancelled) {
+        [self.promise rejectWithError:error];
+    }
+}
+
+- (void)whenCancelled:(void (^)(void))cancelledBlock
+{
+    self.cancelledBlock = cancelledBlock;
 }
 
 - (void)fullfillWithValue:(id)value {
+}
+
+- (void)cancel
+{
+    if (!self.cancelled) {
+        self.cancelled = YES;
+        if (self.cancelledBlock) {
+            self.cancelledBlock();
+        }
+    }
 }
 
 @end
