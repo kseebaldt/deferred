@@ -10,7 +10,7 @@ using namespace Cedar::Doubles::Arguments;
 SPEC_BEGIN(KSURLSessionClientSpec)
 
 describe(@"KSURLSessionClient", ^{
-    __block id<KSNetworkClient> client;
+    __block KSURLSessionClient *client;
     __block NSOperationQueue *queue;
     __block NSURLSession *session;
 
@@ -18,14 +18,16 @@ describe(@"KSURLSessionClient", ^{
         queue = [[NSOperationQueue alloc] init];
     });
 
-    sharedExamplesFor(@"a URL session client", ^(NSDictionary *) {
+    context(@"when created without a session", ^{
+        beforeEach(^{
+            session = [NSURLSession sharedSession];
+            [NSURLProtocol registerClass:[KSNetworkClientSpecURLProtocol class]];
+
+            client = [[KSURLSessionClient alloc] init];
+        });
+
         it(@"should use the right session", ^{
-            spy_on(session);
-
-            NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:@"pass://foo"]];
-            [client sendAsynchronousRequest:request queue:queue];
-
-            session should have_received(@selector(dataTaskWithRequest:completionHandler:)).with(request, anything);
+            client.session should be_same_instance_as([NSURLSession sharedSession]);
         });
 
         it(@"should resolve the promise on success", ^{
@@ -71,27 +73,21 @@ describe(@"KSURLSessionClient", ^{
         });
     });
 
-    context(@"when created without a session", ^{
-        beforeEach(^{
-            session = [NSURLSession sharedSession];
-            [NSURLProtocol registerClass:[KSNetworkClientSpecURLProtocol class]];
-
-            client = [[KSURLSessionClient alloc] init];
-        });
-
-        itShouldBehaveLike(@"a URL session client");
-    });
-
-    context(@"when created with a session", ^{
+    context(@"when created with a provided session", ^{
         beforeEach(^{
             NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
             configuration.protocolClasses = @[[KSNetworkClientSpecURLProtocol class]];
-            session = [NSURLSession sessionWithConfiguration:configuration];
+            session = nice_fake_for([NSURLSession class]);
 
             client = [[KSURLSessionClient alloc] initWithURLSession:session];
         });
 
-        itShouldBehaveLike(@"a URL session client");
+        it(@"should use the right session", ^{
+            NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:@"pass://foo"]];
+            [client sendAsynchronousRequest:request queue:queue];
+
+            session should have_received(@selector(dataTaskWithRequest:completionHandler:)).with(request, anything);
+        });
     });
 });
 
