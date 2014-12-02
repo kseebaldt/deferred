@@ -22,6 +22,7 @@
 		AE3C6E7119A356CA004BECE4 /* KSNetworkClientSpecURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = AE3C6E6E19A356CA004BECE4 /* KSNetworkClientSpecURLProtocol.m */; };
 		AE3C6E7219A356CA004BECE4 /* KSNetworkClientSpecURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = AE3C6E6E19A356CA004BECE4 /* KSNetworkClientSpecURLProtocol.m */; };
 		AE3C6E7319A356CA004BECE4 /* KSNetworkClientSpecURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = AE3C6E6E19A356CA004BECE4 /* KSNetworkClientSpecURLProtocol.m */; };
+		B866F9F91A27A86400484F68 /* KSPromiseCancellationSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = B866F9F81A27A86400484F68 /* KSPromiseCancellationSpec.mm */; };
 		E10B702716F11AF800957DA4 /* KSNetworkClient.h in Headers */ = {isa = PBXBuildFile; fileRef = E10B702516F11AF800957DA4 /* KSNetworkClient.h */; };
 		E10B702816F11AF800957DA4 /* KSNetworkClient.h in Headers */ = {isa = PBXBuildFile; fileRef = E10B702516F11AF800957DA4 /* KSNetworkClient.h */; };
 		E10B702916F11AF800957DA4 /* KSNetworkClient.m in Sources */ = {isa = PBXBuildFile; fileRef = E10B702616F11AF800957DA4 /* KSNetworkClient.m */; };
@@ -62,6 +63,27 @@
 			proxyType = 2;
 			remoteGlobalIDString = 1F45A3DD180E4796003C1E36;
 			remoteInfo = XCUnitAppTests;
+		};
+		B8617CBB1A2D986A00B40713 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E18A7B5715674FC50083D745 /* Cedar.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AE248F9819DCD52500092C14;
+			remoteInfo = "Cedar OS X Host App";
+		};
+		B8617CBD1A2D986A00B40713 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E18A7B5715674FC50083D745 /* Cedar.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AE248FAA19DCD52500092C14;
+			remoteInfo = "Cedar OS X Host AppTests";
+		};
+		B8617CBF1A2D986A00B40713 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E18A7B5715674FC50083D745 /* Cedar.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AEB8818719DCD62D00F081BA;
+			remoteInfo = "Cedar OS X Failing Test Bundle";
 		};
 		E18A7B6B15674FC70083D745 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -112,13 +134,6 @@
 			remoteGlobalIDString = 96B5FA11144A81A8000A6A5D;
 			remoteInfo = OCUnitAppTests;
 		};
-		E18A7B7915674FC70083D745 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E18A7B5715674FC50083D745 /* Cedar.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 96158A86144A915E005895CE;
-			remoteInfo = OCUnitAppLogicTests;
-		};
 		E18A7B7F156750330083D745 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E18A7B5715674FC50083D745 /* Cedar.xcodeproj */;
@@ -148,11 +163,13 @@
 		AE3C6E6819A35697004BECE4 /* KSURLSessionClientSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = KSURLSessionClientSpec.mm; sourceTree = "<group>"; };
 		AE3C6E6D19A356CA004BECE4 /* KSNetworkClientSpecURLProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSNetworkClientSpecURLProtocol.h; sourceTree = "<group>"; };
 		AE3C6E6E19A356CA004BECE4 /* KSNetworkClientSpecURLProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSNetworkClientSpecURLProtocol.m; sourceTree = "<group>"; };
+		B866F9ED1A27A82D00484F68 /* KSCancellable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = KSCancellable.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		B866F9F81A27A86400484F68 /* KSPromiseCancellationSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = KSPromiseCancellationSpec.mm; sourceTree = "<group>"; };
 		E10B702516F11AF800957DA4 /* KSNetworkClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSNetworkClient.h; sourceTree = "<group>"; };
 		E10B702616F11AF800957DA4 /* KSNetworkClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSNetworkClient.m; sourceTree = "<group>"; };
 		E10B703416F11CEA00957DA4 /* KSNetworkClientSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = KSNetworkClientSpec.mm; sourceTree = "<group>"; };
-		E15F47451570786900080763 /* KSDeferred.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSDeferred.h; sourceTree = "<group>"; };
-		E15F47461570786900080763 /* KSDeferred.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSDeferred.m; sourceTree = "<group>"; };
+		E15F47451570786900080763 /* KSDeferred.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = KSDeferred.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		E15F47461570786900080763 /* KSDeferred.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = KSDeferred.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		E17F799E16F04D1800BAD8D0 /* KSDeferredDeprecatedSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = KSDeferredDeprecatedSpec.mm; sourceTree = "<group>"; };
 		E18A7B1515674D9B0083D745 /* libDeferred.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDeferred.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E18A7B1815674D9B0083D745 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -168,8 +185,8 @@
 		E18A7B4B15674ED10083D745 /* Specs-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Specs-Prefix.pch"; sourceTree = "<group>"; };
 		E18A7B5315674F350083D745 /* KSDeferredSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = KSDeferredSpec.mm; sourceTree = "<group>"; };
 		E18A7B5715674FC50083D745 /* Cedar.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Cedar.xcodeproj; sourceTree = "<group>"; };
-		E1E5C51316CAE6F000C1385F /* KSPromise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSPromise.h; sourceTree = "<group>"; };
-		E1E5C51416CAE6F000C1385F /* KSPromise.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSPromise.m; sourceTree = "<group>"; };
+		E1E5C51316CAE6F000C1385F /* KSPromise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = KSPromise.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		E1E5C51416CAE6F000C1385F /* KSPromise.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = KSPromise.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		E1E5C51A16CAE71500C1385F /* KSPromiseASpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = KSPromiseASpec.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -247,6 +264,7 @@
 			isa = PBXGroup;
 			children = (
 				E18A7B1B15674D9B0083D745 /* Supporting Files */,
+				B866F9ED1A27A82D00484F68 /* KSCancellable.h */,
 				E15F47451570786900080763 /* KSDeferred.h */,
 				E15F47461570786900080763 /* KSDeferred.m */,
 				E1E5C51316CAE6F000C1385F /* KSPromise.h */,
@@ -322,6 +340,7 @@
 				E17F799E16F04D1800BAD8D0 /* KSDeferredDeprecatedSpec.mm */,
 				E10B703416F11CEA00957DA4 /* KSNetworkClientSpec.mm */,
 				AE3C6E6819A35697004BECE4 /* KSURLSessionClientSpec.mm */,
+				B866F9F81A27A86400484F68 /* KSPromiseCancellationSpec.mm */,
 			);
 			path = Specs;
 			sourceTree = "<group>";
@@ -338,15 +357,17 @@
 			isa = PBXGroup;
 			children = (
 				E18A7B6C15674FC70083D745 /* Cedar.framework */,
-				E18A7B6E15674FC70083D745 /* Specs */,
-				E18A7B7015674FC70083D745 /* FocusedSpecs */,
+				E18A7B6E15674FC70083D745 /* Cedar OS X Specs */,
+				E18A7B7015674FC70083D745 /* Cedar OS X FocusedSpecs */,
 				E18A7B7215674FC70083D745 /* libCedar-StaticLib.a */,
-				E18A7B7415674FC70083D745 /* iOSSpecs.app */,
-				AE3C6E5A19A3533C004BECE4 /* iOSFrameworkSpecs.app */,
-				E18A7B7615674FC70083D745 /* OCUnitApp.app */,
-				E18A7B7815674FC70083D745 /* OCUnitAppTests.octest */,
+				E18A7B7415674FC70083D745 /* Cedar iOS Specs.app */,
+				AE3C6E5A19A3533C004BECE4 /* Cedar iOS FrameworkSpecs.app */,
+				E18A7B7615674FC70083D745 /* Cedar iOS Host App.app */,
+				E18A7B7815674FC70083D745 /* Cedar iOS SenTestingKit Tests.octest */,
 				AE3C6E5C19A3533C004BECE4 /* XCUnitAppTests.xctest */,
-				E18A7B7A15674FC70083D745 /* OCUnitAppLogicTests.octest */,
+				B8617CBC1A2D986A00B40713 /* Cedar OS X Host App.app */,
+				B8617CBE1A2D986A00B40713 /* Cedar OS X Host AppTests.xctest */,
+				B8617CC01A2D986A00B40713 /* Cedar OS X Failing Test Bundle.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -468,10 +489,10 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		AE3C6E5A19A3533C004BECE4 /* iOSFrameworkSpecs.app */ = {
+		AE3C6E5A19A3533C004BECE4 /* Cedar iOS FrameworkSpecs.app */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.application;
-			path = iOSFrameworkSpecs.app;
+			path = "Cedar iOS FrameworkSpecs.app";
 			remoteRef = AE3C6E5919A3533C004BECE4 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -482,6 +503,27 @@
 			remoteRef = AE3C6E5B19A3533C004BECE4 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		B8617CBC1A2D986A00B40713 /* Cedar OS X Host App.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "Cedar OS X Host App.app";
+			remoteRef = B8617CBB1A2D986A00B40713 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B8617CBE1A2D986A00B40713 /* Cedar OS X Host AppTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Cedar OS X Host AppTests.xctest";
+			remoteRef = B8617CBD1A2D986A00B40713 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B8617CC01A2D986A00B40713 /* Cedar OS X Failing Test Bundle.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Cedar OS X Failing Test Bundle.octest";
+			remoteRef = B8617CBF1A2D986A00B40713 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		E18A7B6C15674FC70083D745 /* Cedar.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
@@ -489,17 +531,17 @@
 			remoteRef = E18A7B6B15674FC70083D745 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		E18A7B6E15674FC70083D745 /* Specs */ = {
+		E18A7B6E15674FC70083D745 /* Cedar OS X Specs */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.executable";
-			path = Specs;
+			path = "Cedar OS X Specs";
 			remoteRef = E18A7B6D15674FC70083D745 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		E18A7B7015674FC70083D745 /* FocusedSpecs */ = {
+		E18A7B7015674FC70083D745 /* Cedar OS X FocusedSpecs */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.executable";
-			path = FocusedSpecs;
+			path = "Cedar OS X FocusedSpecs";
 			remoteRef = E18A7B6F15674FC70083D745 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -510,32 +552,25 @@
 			remoteRef = E18A7B7115674FC70083D745 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		E18A7B7415674FC70083D745 /* iOSSpecs.app */ = {
+		E18A7B7415674FC70083D745 /* Cedar iOS Specs.app */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.application;
-			path = iOSSpecs.app;
+			path = "Cedar iOS Specs.app";
 			remoteRef = E18A7B7315674FC70083D745 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		E18A7B7615674FC70083D745 /* OCUnitApp.app */ = {
+		E18A7B7615674FC70083D745 /* Cedar iOS Host App.app */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.application;
-			path = OCUnitApp.app;
+			path = "Cedar iOS Host App.app";
 			remoteRef = E18A7B7515674FC70083D745 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		E18A7B7815674FC70083D745 /* OCUnitAppTests.octest */ = {
+		E18A7B7815674FC70083D745 /* Cedar iOS SenTestingKit Tests.octest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
-			path = OCUnitAppTests.octest;
+			path = "Cedar iOS SenTestingKit Tests.octest";
 			remoteRef = E18A7B7715674FC70083D745 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		E18A7B7A15674FC70083D745 /* OCUnitAppLogicTests.octest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = OCUnitAppLogicTests.octest;
-			remoteRef = E18A7B7915674FC70083D745 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -580,6 +615,7 @@
 				AE3C6E6B19A35697004BECE4 /* KSURLSessionClientSpec.mm in Sources */,
 				E17F799F16F04D1800BAD8D0 /* KSDeferredDeprecatedSpec.mm in Sources */,
 				AE3C6E5F19A354CA004BECE4 /* KSURLConnectionClient.m in Sources */,
+				B866F9F91A27A86400484F68 /* KSPromiseCancellationSpec.mm in Sources */,
 				AE3C6E6719A354E5004BECE4 /* KSURLSessionClient.m in Sources */,
 				E10B702B16F11AF800957DA4 /* KSNetworkClient.m in Sources */,
 				E10B703516F11CEA00957DA4 /* KSNetworkClientSpec.mm in Sources */,

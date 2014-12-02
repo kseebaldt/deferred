@@ -1,4 +1,6 @@
 #import "KSPromise.h"
+#import "KSCancellable.h"
+
 
 @interface KSDeferred : NSObject
 
@@ -8,5 +10,6 @@
 
 - (void)resolveWithValue:(id)value;
 - (void)rejectWithError:(NSError *)error;
+- (void)whenCancelled:(void (^)(void))cancelledBlock;
 
 @end
