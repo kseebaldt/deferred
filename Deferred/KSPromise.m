@@ -48,7 +48,7 @@
 }
 
 @property (strong, nonatomic) NSMutableArray *callbacks;
-@property (strong, nonatomic) NSMutableArray *parentPromises;
+@property (copy, nonatomic) NSArray *parentPromises;
 
 @property (strong, nonatomic, readwrite) id value;
 @property (strong, nonatomic, readwrite) NSError *error;
@@ -79,8 +79,7 @@
 
 + (KSPromise *)when:(NSArray *)promises {
     KSPromise *promise = [[KSPromise alloc] init];
-    promise.parentPromises = [NSMutableArray array];
-    [promise.parentPromises addObjectsFromArray:promises];
+    promise.parentPromises = promises;
     for (KSPromise *joinedPromise in promises) {
         for (id<KSCancellable> cancellable in joinedPromise.cancellables) {
             [promise addCancellable:cancellable];
