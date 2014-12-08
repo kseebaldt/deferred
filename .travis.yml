@@ -1,0 +1,5 @@
+language: objective-c
+script:
+  - xcodebuild -project Deferred.xcodeproj -scheme Deferred clean build test -destination platform='iOS Simulator',OS='8.1',name='iPhone 5s'
+  - xcodebuild -project Deferred.xcodeproj -scheme Deferred-OSX clean build test
+
