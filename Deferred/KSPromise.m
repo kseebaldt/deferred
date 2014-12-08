@@ -265,9 +265,11 @@
     for (KSPromise *joinedPromise in self.parentPromises) {
         fulfilled = fulfilled && joinedPromise.completed;
         if (joinedPromise.rejected) {
-            [errors addObject:joinedPromise.error];
+            id error = joinedPromise.error ? joinedPromise.error : [NSNull null];
+            [errors addObject:error];
         } else if (joinedPromise.fulfilled) {
-            [values addObject:joinedPromise.value];
+            id value = joinedPromise.value ? joinedPromise.value : [NSNull null];
+            [values addObject:value];
         }
     }
     if (fulfilled) {

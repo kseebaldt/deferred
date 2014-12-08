@@ -74,9 +74,18 @@ describe(@"KSDeferred", ^{
                         [joinedPromise.value objectAtIndex:0] should equal(@"SUCCESS1");
                         [joinedPromise.value objectAtIndex:1] should equal(@"SUCCESS2");
                     });
-                    
                 });
-                
+
+                describe(@"when both promises are resolved, one without a value", ^{
+                    beforeEach(^{
+                        [deferred2 resolveWithValue:nil];
+                    });
+
+                    it(@"should coerce the nil value to NSNull", ^{
+                        [joinedPromise.value objectAtIndex:1] should equal([NSNull null]);
+                    });
+                });
+
                 describe(@"when a promise is rejected and all joined promises have been fulfilled", ^{
                     beforeEach(^{
                         [deferred2 rejectWithError:[NSError errorWithDomain:@"MyError" code:123 userInfo:nil]];
@@ -92,7 +101,17 @@ describe(@"KSDeferred", ^{
                         errors.count should equal(1);
                         [[errors lastObject] domain] should equal(@"MyError");
                     });
-                    
+                });
+
+              describe(@"when a promise is rejected without an error and all joined promises have been fulfilled", ^{
+                    beforeEach(^{
+                        [deferred2 rejectWithError:nil];
+                    });
+
+                    it(@"should insert a null object into the joined promises error list", ^{
+                        NSArray *errors = joinedPromise.error.userInfo[@"errors"];
+                        [errors lastObject] should equal([NSNull null]);
+                    });
                 });
 
                 it(@"should be marked as fulfilled", ^{
