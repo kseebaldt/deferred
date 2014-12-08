@@ -1,4 +1,3 @@
-#import <Cedar/CDRSpecHelper.h>
 #import "KSDeferred.h"
 #import "KSPromise.h"
 

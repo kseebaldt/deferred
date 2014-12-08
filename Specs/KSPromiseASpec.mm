@@ -1,4 +1,3 @@
-#import <Cedar/Cedar.h>
 #import "KSDeferred.h"
 #import "KSPromise.h"
 

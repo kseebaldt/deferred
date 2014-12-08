@@ -9,44 +9,55 @@
 /* Begin PBXBuildFile section */
 		AE3C6E4D19A3533B004BECE4 /* KSURLConnectionClient.h in Headers */ = {isa = PBXBuildFile; fileRef = AE3C6E4B19A3533B004BECE4 /* KSURLConnectionClient.h */; };
 		AE3C6E4E19A3533B004BECE4 /* KSURLConnectionClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AE3C6E4C19A3533B004BECE4 /* KSURLConnectionClient.m */; };
-		AE3C6E5F19A354CA004BECE4 /* KSURLConnectionClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AE3C6E4C19A3533B004BECE4 /* KSURLConnectionClient.m */; };
 		AE3C6E6019A354CB004BECE4 /* KSURLConnectionClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AE3C6E4C19A3533B004BECE4 /* KSURLConnectionClient.m */; };
 		AE3C6E6319A354E5004BECE4 /* KSURLSessionClient.h in Headers */ = {isa = PBXBuildFile; fileRef = AE3C6E6119A354E5004BECE4 /* KSURLSessionClient.h */; };
 		AE3C6E6419A354E5004BECE4 /* KSURLSessionClient.h in Headers */ = {isa = PBXBuildFile; fileRef = AE3C6E6119A354E5004BECE4 /* KSURLSessionClient.h */; };
 		AE3C6E6519A354E5004BECE4 /* KSURLSessionClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AE3C6E6219A354E5004BECE4 /* KSURLSessionClient.m */; };
 		AE3C6E6619A354E5004BECE4 /* KSURLSessionClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AE3C6E6219A354E5004BECE4 /* KSURLSessionClient.m */; };
-		AE3C6E6719A354E5004BECE4 /* KSURLSessionClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AE3C6E6219A354E5004BECE4 /* KSURLSessionClient.m */; };
-		AE3C6E6B19A35697004BECE4 /* KSURLSessionClientSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = AE3C6E6819A35697004BECE4 /* KSURLSessionClientSpec.mm */; };
 		AE3C6E6F19A356CA004BECE4 /* KSNetworkClientSpecURLProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = AE3C6E6D19A356CA004BECE4 /* KSNetworkClientSpecURLProtocol.h */; };
 		AE3C6E7019A356CA004BECE4 /* KSNetworkClientSpecURLProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = AE3C6E6D19A356CA004BECE4 /* KSNetworkClientSpecURLProtocol.h */; };
-		AE3C6E7119A356CA004BECE4 /* KSNetworkClientSpecURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = AE3C6E6E19A356CA004BECE4 /* KSNetworkClientSpecURLProtocol.m */; };
-		AE3C6E7219A356CA004BECE4 /* KSNetworkClientSpecURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = AE3C6E6E19A356CA004BECE4 /* KSNetworkClientSpecURLProtocol.m */; };
-		AE3C6E7319A356CA004BECE4 /* KSNetworkClientSpecURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = AE3C6E6E19A356CA004BECE4 /* KSNetworkClientSpecURLProtocol.m */; };
-		B866F9F91A27A86400484F68 /* KSPromiseCancellationSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = B866F9F81A27A86400484F68 /* KSPromiseCancellationSpec.mm */; };
+		AE68316E1A365CF600B1B815 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE68316D1A365CF600B1B815 /* XCTest.framework */; };
+		AE68316F1A365CF600B1B815 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E18A7B3115674EC20083D745 /* Cocoa.framework */; };
+		AE6831741A365CF600B1B815 /* Deferred-OSXSpecs-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AE6831731A365CF600B1B815 /* Deferred-OSXSpecs-Info.plist */; };
+		AE6831791A365CF800B1B815 /* Cedar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE6831781A365CF800B1B815 /* Cedar.framework */; };
+		AE68317A1A365CF800B1B815 /* libDeferred-OSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E18A7B3015674EC20083D745 /* libDeferred-OSX.a */; };
+		AE68318C1A365D0800B1B815 /* KSDeferredSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = E18A7B5315674F350083D745 /* KSDeferredSpec.mm */; };
+		AE68318D1A365D0800B1B815 /* KSPromiseASpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = E1E5C51A16CAE71500C1385F /* KSPromiseASpec.mm */; };
+		AE68318E1A365D0800B1B815 /* KSDeferredDeprecatedSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = E17F799E16F04D1800BAD8D0 /* KSDeferredDeprecatedSpec.mm */; };
+		AE68318F1A365D0800B1B815 /* KSNetworkClientSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = E10B703416F11CEA00957DA4 /* KSNetworkClientSpec.mm */; };
+		AE6831901A365D0800B1B815 /* KSURLSessionClientSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = AE3C6E6819A35697004BECE4 /* KSURLSessionClientSpec.mm */; };
+		AE6831911A365D0800B1B815 /* KSPromiseCancellationSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = B866F9F81A27A86400484F68 /* KSPromiseCancellationSpec.mm */; };
+		AE6831921A365D8000B1B815 /* KSNetworkClientSpecURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = AE3C6E6E19A356CA004BECE4 /* KSNetworkClientSpecURLProtocol.m */; };
+		AE68319C1A365DC600B1B815 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE68316D1A365CF600B1B815 /* XCTest.framework */; };
+		AE68319E1A365DC600B1B815 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE68319D1A365DC600B1B815 /* CoreGraphics.framework */; };
+		AE6831A01A365DC600B1B815 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE68319F1A365DC600B1B815 /* UIKit.framework */; };
+		AE6831A11A365DC600B1B815 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E18A7B1815674D9B0083D745 /* Foundation.framework */; };
+		AE6831A61A365DC600B1B815 /* DeferredSpecs-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AE6831A51A365DC600B1B815 /* DeferredSpecs-Info.plist */; };
+		AE6831AB1A365DC700B1B815 /* Cedar-iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE6831AA1A365DC700B1B815 /* Cedar-iOS.framework */; };
+		AE6831AC1A365DC700B1B815 /* libDeferred.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E18A7B1515674D9B0083D745 /* libDeferred.a */; };
+		AE6831B21A365DD500B1B815 /* KSNetworkClientSpecURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = AE3C6E6E19A356CA004BECE4 /* KSNetworkClientSpecURLProtocol.m */; };
+		AE6831B31A365DD500B1B815 /* KSDeferredSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = E18A7B5315674F350083D745 /* KSDeferredSpec.mm */; };
+		AE6831B41A365DD500B1B815 /* KSPromiseASpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = E1E5C51A16CAE71500C1385F /* KSPromiseASpec.mm */; };
+		AE6831B51A365DD500B1B815 /* KSDeferredDeprecatedSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = E17F799E16F04D1800BAD8D0 /* KSDeferredDeprecatedSpec.mm */; };
+		AE6831B61A365DD500B1B815 /* KSNetworkClientSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = E10B703416F11CEA00957DA4 /* KSNetworkClientSpec.mm */; };
+		AE6831B71A365DD500B1B815 /* KSURLSessionClientSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = AE3C6E6819A35697004BECE4 /* KSURLSessionClientSpec.mm */; };
+		AE6831B81A365DD500B1B815 /* KSPromiseCancellationSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = B866F9F81A27A86400484F68 /* KSPromiseCancellationSpec.mm */; };
+		AE6831BB1A36691A00B1B815 /* KSDeferredWaitForValueSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = AE6831BA1A36691A00B1B815 /* KSDeferredWaitForValueSpec.mm */; };
+		AE6831BC1A36691A00B1B815 /* KSDeferredWaitForValueSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = AE6831BA1A36691A00B1B815 /* KSDeferredWaitForValueSpec.mm */; };
 		E10B702716F11AF800957DA4 /* KSNetworkClient.h in Headers */ = {isa = PBXBuildFile; fileRef = E10B702516F11AF800957DA4 /* KSNetworkClient.h */; };
 		E10B702816F11AF800957DA4 /* KSNetworkClient.h in Headers */ = {isa = PBXBuildFile; fileRef = E10B702516F11AF800957DA4 /* KSNetworkClient.h */; };
 		E10B702916F11AF800957DA4 /* KSNetworkClient.m in Sources */ = {isa = PBXBuildFile; fileRef = E10B702616F11AF800957DA4 /* KSNetworkClient.m */; };
 		E10B702A16F11AF800957DA4 /* KSNetworkClient.m in Sources */ = {isa = PBXBuildFile; fileRef = E10B702616F11AF800957DA4 /* KSNetworkClient.m */; };
-		E10B702B16F11AF800957DA4 /* KSNetworkClient.m in Sources */ = {isa = PBXBuildFile; fileRef = E10B702616F11AF800957DA4 /* KSNetworkClient.m */; };
-		E10B703516F11CEA00957DA4 /* KSNetworkClientSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = E10B703416F11CEA00957DA4 /* KSNetworkClientSpec.mm */; };
 		E15F47471570786900080763 /* KSDeferred.h in Headers */ = {isa = PBXBuildFile; fileRef = E15F47451570786900080763 /* KSDeferred.h */; };
 		E15F47481570786900080763 /* KSDeferred.h in Headers */ = {isa = PBXBuildFile; fileRef = E15F47451570786900080763 /* KSDeferred.h */; };
 		E15F47491570786900080763 /* KSDeferred.m in Sources */ = {isa = PBXBuildFile; fileRef = E15F47461570786900080763 /* KSDeferred.m */; };
 		E15F474A1570786900080763 /* KSDeferred.m in Sources */ = {isa = PBXBuildFile; fileRef = E15F47461570786900080763 /* KSDeferred.m */; };
-		E15F474B1570786900080763 /* KSDeferred.m in Sources */ = {isa = PBXBuildFile; fileRef = E15F47461570786900080763 /* KSDeferred.m */; };
-		E17F799F16F04D1800BAD8D0 /* KSDeferredDeprecatedSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = E17F799E16F04D1800BAD8D0 /* KSDeferredDeprecatedSpec.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E18A7B1915674D9B0083D745 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E18A7B1815674D9B0083D745 /* Foundation.framework */; };
 		E18A7B3215674EC20083D745 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E18A7B3115674EC20083D745 /* Cocoa.framework */; };
-		E18A7B4615674ED10083D745 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E18A7B1815674D9B0083D745 /* Foundation.framework */; };
-		E18A7B4915674ED10083D745 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E18A7B4815674ED10083D745 /* main.m */; };
-		E18A7B5615674F350083D745 /* KSDeferredSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = E18A7B5315674F350083D745 /* KSDeferredSpec.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		E18A7B811567503C0083D745 /* Cedar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E18A7B6C15674FC70083D745 /* Cedar.framework */; };
 		E1E5C51516CAE6F000C1385F /* KSPromise.h in Headers */ = {isa = PBXBuildFile; fileRef = E1E5C51316CAE6F000C1385F /* KSPromise.h */; };
 		E1E5C51616CAE6F000C1385F /* KSPromise.h in Headers */ = {isa = PBXBuildFile; fileRef = E1E5C51316CAE6F000C1385F /* KSPromise.h */; };
 		E1E5C51716CAE6F000C1385F /* KSPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E5C51416CAE6F000C1385F /* KSPromise.m */; };
 		E1E5C51816CAE6F000C1385F /* KSPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E5C51416CAE6F000C1385F /* KSPromise.m */; };
-		E1E5C51916CAE6F000C1385F /* KSPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E5C51416CAE6F000C1385F /* KSPromise.m */; };
-		E1E5C51B16CAE71500C1385F /* KSPromiseASpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = E1E5C51A16CAE71500C1385F /* KSPromiseASpec.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +74,20 @@
 			proxyType = 2;
 			remoteGlobalIDString = 1F45A3DD180E4796003C1E36;
 			remoteInfo = XCUnitAppTests;
+		};
+		AE68317B1A365CF800B1B815 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E18A7B0C15674D9B0083D745 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E18A7B2F15674EC20083D745;
+			remoteInfo = "Deferred-OSX";
+		};
+		AE6831AD1A365DC700B1B815 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E18A7B0C15674D9B0083D745 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E18A7B1415674D9B0083D745;
+			remoteInfo = Deferred;
 		};
 		B8617CBB1A2D986A00B40713 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -134,26 +159,7 @@
 			remoteGlobalIDString = 96B5FA11144A81A8000A6A5D;
 			remoteInfo = OCUnitAppTests;
 		};
-		E18A7B7F156750330083D745 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E18A7B5715674FC50083D745 /* Cedar.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = AEEE1FB511DC271300029872;
-			remoteInfo = Cedar;
-		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		E18A7B4215674ED10083D745 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 1;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		AE3C6E4B19A3533B004BECE4 /* KSURLConnectionClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSURLConnectionClient.h; sourceTree = "<group>"; };
@@ -163,6 +169,19 @@
 		AE3C6E6819A35697004BECE4 /* KSURLSessionClientSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = KSURLSessionClientSpec.mm; sourceTree = "<group>"; };
 		AE3C6E6D19A356CA004BECE4 /* KSNetworkClientSpecURLProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSNetworkClientSpecURLProtocol.h; sourceTree = "<group>"; };
 		AE3C6E6E19A356CA004BECE4 /* KSNetworkClientSpecURLProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSNetworkClientSpecURLProtocol.m; sourceTree = "<group>"; };
+		AE68316C1A365CF600B1B815 /* Deferred-OSXSpecs.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Deferred-OSXSpecs.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE68316D1A365CF600B1B815 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		AE6831721A365CF600B1B815 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE6831731A365CF600B1B815 /* Deferred-OSXSpecs-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Deferred-OSXSpecs-Info.plist"; sourceTree = "<group>"; };
+		AE6831781A365CF800B1B815 /* Cedar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cedar.framework; path = Frameworks/Cedar.framework; sourceTree = "<group>"; };
+		AE68319B1A365DC600B1B815 /* DeferredSpecs.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeferredSpecs.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE68319D1A365DC600B1B815 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = /System/Library/Frameworks/CoreGraphics.framework; sourceTree = "<absolute>"; };
+		AE68319F1A365DC600B1B815 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		AE6831A41A365DC600B1B815 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE6831A51A365DC600B1B815 /* DeferredSpecs-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DeferredSpecs-Info.plist"; sourceTree = "<group>"; };
+		AE6831AA1A365DC700B1B815 /* Cedar-iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "Cedar-iOS.framework"; path = "Frameworks/Cedar-iOS.framework"; sourceTree = "<group>"; };
+		AE6831B91A36602500B1B815 /* OSXSpecs-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OSXSpecs-Prefix.pch"; sourceTree = "<group>"; };
+		AE6831BA1A36691A00B1B815 /* KSDeferredWaitForValueSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = KSDeferredWaitForValueSpec.mm; sourceTree = "<group>"; };
 		B866F9ED1A27A82D00484F68 /* KSCancellable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = KSCancellable.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		B866F9F81A27A86400484F68 /* KSPromiseCancellationSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = KSPromiseCancellationSpec.mm; sourceTree = "<group>"; };
 		E10B702516F11AF800957DA4 /* KSNetworkClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSNetworkClient.h; sourceTree = "<group>"; };
@@ -180,8 +199,6 @@
 		E18A7B3515674EC20083D745 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		E18A7B3615674EC20083D745 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E18A7B3915674EC20083D745 /* Deferred-OSX-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Deferred-OSX-Prefix.pch"; sourceTree = "<group>"; };
-		E18A7B4415674ED10083D745 /* Specs */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Specs; sourceTree = BUILT_PRODUCTS_DIR; };
-		E18A7B4815674ED10083D745 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E18A7B4B15674ED10083D745 /* Specs-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Specs-Prefix.pch"; sourceTree = "<group>"; };
 		E18A7B5315674F350083D745 /* KSDeferredSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = KSDeferredSpec.mm; sourceTree = "<group>"; };
 		E18A7B5715674FC50083D745 /* Cedar.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Cedar.xcodeproj; sourceTree = "<group>"; };
@@ -191,6 +208,44 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		AE6831651A365CF600B1B815 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE68316F1A365CF600B1B815 /* Cocoa.framework in Frameworks */,
+				AE68316E1A365CF600B1B815 /* XCTest.framework in Frameworks */,
+				AE6831791A365CF800B1B815 /* Cedar.framework in Frameworks */,
+				AE68317A1A365CF800B1B815 /* libDeferred-OSX.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE6831681A365CF600B1B815 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE6831941A365DC600B1B815 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE6831AC1A365DC700B1B815 /* libDeferred.a in Frameworks */,
+				AE68319E1A365DC600B1B815 /* CoreGraphics.framework in Frameworks */,
+				AE6831A01A365DC600B1B815 /* UIKit.framework in Frameworks */,
+				AE6831AB1A365DC700B1B815 /* Cedar-iOS.framework in Frameworks */,
+				AE68319C1A365DC600B1B815 /* XCTest.framework in Frameworks */,
+				AE6831A11A365DC600B1B815 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE6831971A365DC600B1B815 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E18A7B1215674D9B0083D745 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -207,15 +262,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E18A7B4115674ED10083D745 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E18A7B811567503C0083D745 /* Cedar.framework in Frameworks */,
-				E18A7B4615674ED10083D745 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -228,6 +274,42 @@
 			name = Support;
 			sourceTree = "<group>";
 		};
+		AE6831701A365CF600B1B815 /* Deferred-OSXSpecs */ = {
+			isa = PBXGroup;
+			children = (
+				AE6831731A365CF600B1B815 /* Deferred-OSXSpecs-Info.plist */,
+				AE6831781A365CF800B1B815 /* Cedar.framework */,
+				AE6831711A365CF600B1B815 /* Supporting Files */,
+			);
+			path = "Deferred-OSXSpecs";
+			sourceTree = "<group>";
+		};
+		AE6831711A365CF600B1B815 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AE6831721A365CF600B1B815 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AE6831A21A365DC600B1B815 /* DeferredSpecs */ = {
+			isa = PBXGroup;
+			children = (
+				AE6831A51A365DC600B1B815 /* DeferredSpecs-Info.plist */,
+				AE6831AA1A365DC700B1B815 /* Cedar-iOS.framework */,
+				AE6831A31A365DC600B1B815 /* Supporting Files */,
+			);
+			path = DeferredSpecs;
+			sourceTree = "<group>";
+		};
+		AE6831A31A365DC600B1B815 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AE6831A41A365DC600B1B815 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		E18A7B0A15674D9B0083D745 = {
 			isa = PBXGroup;
 			children = (
@@ -235,6 +317,8 @@
 				E18A7B4715674ED10083D745 /* Specs */,
 				E18A7B3715674EC20083D745 /* Deferred-OSX */,
 				E18A7B2915674E570083D745 /* Vendor */,
+				AE6831701A365CF600B1B815 /* Deferred-OSXSpecs */,
+				AE6831A21A365DC600B1B815 /* DeferredSpecs */,
 				E18A7B1715674D9B0083D745 /* Frameworks */,
 				E18A7B1615674D9B0083D745 /* Products */,
 			);
@@ -245,7 +329,8 @@
 			children = (
 				E18A7B1515674D9B0083D745 /* libDeferred.a */,
 				E18A7B3015674EC20083D745 /* libDeferred-OSX.a */,
-				E18A7B4415674ED10083D745 /* Specs */,
+				AE68316C1A365CF600B1B815 /* Deferred-OSXSpecs.xctest */,
+				AE68319B1A365DC600B1B815 /* DeferredSpecs.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -255,6 +340,9 @@
 			children = (
 				E18A7B1815674D9B0083D745 /* Foundation.framework */,
 				E18A7B3115674EC20083D745 /* Cocoa.framework */,
+				AE68316D1A365CF600B1B815 /* XCTest.framework */,
+				AE68319D1A365DC600B1B815 /* CoreGraphics.framework */,
+				AE68319F1A365DC600B1B815 /* UIKit.framework */,
 				E18A7B3315674EC20083D745 /* Other Frameworks */,
 			);
 			name = Frameworks;
@@ -334,13 +422,13 @@
 			children = (
 				AE3C6E6C19A356AA004BECE4 /* Support */,
 				E18A7B4A15674ED10083D745 /* Supporting Files */,
-				E18A7B4815674ED10083D745 /* main.m */,
 				E18A7B5315674F350083D745 /* KSDeferredSpec.mm */,
 				E1E5C51A16CAE71500C1385F /* KSPromiseASpec.mm */,
 				E17F799E16F04D1800BAD8D0 /* KSDeferredDeprecatedSpec.mm */,
 				E10B703416F11CEA00957DA4 /* KSNetworkClientSpec.mm */,
 				AE3C6E6819A35697004BECE4 /* KSURLSessionClientSpec.mm */,
 				B866F9F81A27A86400484F68 /* KSPromiseCancellationSpec.mm */,
+				AE6831BA1A36691A00B1B815 /* KSDeferredWaitForValueSpec.mm */,
 			);
 			path = Specs;
 			sourceTree = "<group>";
@@ -348,6 +436,7 @@
 		E18A7B4A15674ED10083D745 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				AE6831B91A36602500B1B815 /* OSXSpecs-Prefix.pch */,
 				E18A7B4B15674ED10083D745 /* Specs-Prefix.pch */,
 			);
 			name = "Supporting Files";
@@ -403,6 +492,50 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		AE68316B1A365CF600B1B815 /* Deferred-OSXSpecs */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AE68318B1A365CF800B1B815 /* Build configuration list for PBXNativeTarget "Deferred-OSXSpecs" */;
+			buildPhases = (
+				AE6831641A365CF600B1B815 /* Sources */,
+				AE6831651A365CF600B1B815 /* Frameworks */,
+				AE6831661A365CF600B1B815 /* Resources */,
+				AE6831671A365CF600B1B815 /* Sources */,
+				AE6831681A365CF600B1B815 /* Frameworks */,
+				AE6831691A365CF600B1B815 /* Resources */,
+				AE68316A1A365CF600B1B815 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AE68317C1A365CF800B1B815 /* PBXTargetDependency */,
+			);
+			name = "Deferred-OSXSpecs";
+			productName = "Deferred-OSXSpecs";
+			productReference = AE68316C1A365CF600B1B815 /* Deferred-OSXSpecs.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AE68319A1A365DC600B1B815 /* DeferredSpecs */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AE6831AF1A365DC700B1B815 /* Build configuration list for PBXNativeTarget "DeferredSpecs" */;
+			buildPhases = (
+				AE6831931A365DC600B1B815 /* Sources */,
+				AE6831941A365DC600B1B815 /* Frameworks */,
+				AE6831951A365DC600B1B815 /* Resources */,
+				AE6831961A365DC600B1B815 /* Sources */,
+				AE6831971A365DC600B1B815 /* Frameworks */,
+				AE6831981A365DC600B1B815 /* Resources */,
+				AE6831991A365DC600B1B815 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AE6831AE1A365DC700B1B815 /* PBXTargetDependency */,
+			);
+			name = DeferredSpecs;
+			productName = DeferredSpecs;
+			productReference = AE68319B1A365DC600B1B815 /* DeferredSpecs.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		E18A7B1415674D9B0083D745 /* Deferred */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E18A7B2215674D9B0083D745 /* Build configuration list for PBXNativeTarget "Deferred" */;
@@ -437,24 +570,6 @@
 			productReference = E18A7B3015674EC20083D745 /* libDeferred-OSX.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		E18A7B4315674ED10083D745 /* Specs */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E18A7B4E15674ED10083D745 /* Build configuration list for PBXNativeTarget "Specs" */;
-			buildPhases = (
-				E18A7B4015674ED10083D745 /* Sources */,
-				E18A7B4115674ED10083D745 /* Frameworks */,
-				E18A7B4215674ED10083D745 /* CopyFiles */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				E18A7B80156750330083D745 /* PBXTargetDependency */,
-			);
-			name = Specs;
-			productName = Specs;
-			productReference = E18A7B4415674ED10083D745 /* Specs */;
-			productType = "com.apple.product-type.tool";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -462,6 +577,14 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0600;
+				TargetAttributes = {
+					AE68316B1A365CF600B1B815 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					AE68319A1A365DC600B1B815 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+				};
 			};
 			buildConfigurationList = E18A7B0F15674D9B0083D745 /* Build configuration list for PBXProject "Deferred" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -482,8 +605,9 @@
 			projectRoot = "";
 			targets = (
 				E18A7B1415674D9B0083D745 /* Deferred */,
+				AE68319A1A365DC600B1B815 /* DeferredSpecs */,
 				E18A7B2F15674EC20083D745 /* Deferred-OSX */,
-				E18A7B4315674ED10083D745 /* Specs */,
+				AE68316B1A365CF600B1B815 /* Deferred-OSXSpecs */,
 			);
 		};
 /* End PBXProject section */
@@ -575,14 +699,119 @@
 		};
 /* End PBXReferenceProxy section */
 
+/* Begin PBXResourcesBuildPhase section */
+		AE6831661A365CF600B1B815 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE6831741A365CF600B1B815 /* Deferred-OSXSpecs-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE6831691A365CF600B1B815 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE6831951A365DC600B1B815 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE6831A61A365DC600B1B815 /* DeferredSpecs-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE6831981A365DC600B1B815 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		AE68316A1A365CF600B1B815 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cp -R \"${TARGET_NAME}\"/Frameworks/Cedar.framework \"${BUILT_PRODUCTS_DIR}\"";
+		};
+		AE6831991A365DC600B1B815 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n            \"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n            ";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		AE6831641A365CF600B1B815 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE6831BC1A36691A00B1B815 /* KSDeferredWaitForValueSpec.mm in Sources */,
+				AE68318D1A365D0800B1B815 /* KSPromiseASpec.mm in Sources */,
+				AE6831901A365D0800B1B815 /* KSURLSessionClientSpec.mm in Sources */,
+				AE68318F1A365D0800B1B815 /* KSNetworkClientSpec.mm in Sources */,
+				AE6831921A365D8000B1B815 /* KSNetworkClientSpecURLProtocol.m in Sources */,
+				AE68318E1A365D0800B1B815 /* KSDeferredDeprecatedSpec.mm in Sources */,
+				AE68318C1A365D0800B1B815 /* KSDeferredSpec.mm in Sources */,
+				AE6831911A365D0800B1B815 /* KSPromiseCancellationSpec.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE6831671A365CF600B1B815 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE6831931A365DC600B1B815 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE6831BB1A36691A00B1B815 /* KSDeferredWaitForValueSpec.mm in Sources */,
+				AE6831B61A365DD500B1B815 /* KSNetworkClientSpec.mm in Sources */,
+				AE6831B81A365DD500B1B815 /* KSPromiseCancellationSpec.mm in Sources */,
+				AE6831B31A365DD500B1B815 /* KSDeferredSpec.mm in Sources */,
+				AE6831B51A365DD500B1B815 /* KSDeferredDeprecatedSpec.mm in Sources */,
+				AE6831B71A365DD500B1B815 /* KSURLSessionClientSpec.mm in Sources */,
+				AE6831B21A365DD500B1B815 /* KSNetworkClientSpecURLProtocol.m in Sources */,
+				AE6831B41A365DD500B1B815 /* KSPromiseASpec.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE6831961A365DC600B1B815 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E18A7B1115674D9B0083D745 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				E15F47491570786900080763 /* KSDeferred.m in Sources */,
 				E1E5C51716CAE6F000C1385F /* KSPromise.m in Sources */,
-				AE3C6E7119A356CA004BECE4 /* KSNetworkClientSpecURLProtocol.m in Sources */,
 				AE3C6E4E19A3533B004BECE4 /* KSURLConnectionClient.m in Sources */,
 				E10B702916F11AF800957DA4 /* KSNetworkClient.m in Sources */,
 				AE3C6E6519A354E5004BECE4 /* KSURLSessionClient.m in Sources */,
@@ -596,43 +825,158 @@
 				E15F474A1570786900080763 /* KSDeferred.m in Sources */,
 				E1E5C51816CAE6F000C1385F /* KSPromise.m in Sources */,
 				E10B702A16F11AF800957DA4 /* KSNetworkClient.m in Sources */,
-				AE3C6E7219A356CA004BECE4 /* KSNetworkClientSpecURLProtocol.m in Sources */,
 				AE3C6E6019A354CB004BECE4 /* KSURLConnectionClient.m in Sources */,
 				AE3C6E6619A354E5004BECE4 /* KSURLSessionClient.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E18A7B4015674ED10083D745 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AE3C6E7319A356CA004BECE4 /* KSNetworkClientSpecURLProtocol.m in Sources */,
-				E18A7B4915674ED10083D745 /* main.m in Sources */,
-				E18A7B5615674F350083D745 /* KSDeferredSpec.mm in Sources */,
-				E15F474B1570786900080763 /* KSDeferred.m in Sources */,
-				E1E5C51916CAE6F000C1385F /* KSPromise.m in Sources */,
-				E1E5C51B16CAE71500C1385F /* KSPromiseASpec.mm in Sources */,
-				AE3C6E6B19A35697004BECE4 /* KSURLSessionClientSpec.mm in Sources */,
-				E17F799F16F04D1800BAD8D0 /* KSDeferredDeprecatedSpec.mm in Sources */,
-				AE3C6E5F19A354CA004BECE4 /* KSURLConnectionClient.m in Sources */,
-				B866F9F91A27A86400484F68 /* KSPromiseCancellationSpec.mm in Sources */,
-				AE3C6E6719A354E5004BECE4 /* KSURLSessionClient.m in Sources */,
-				E10B702B16F11AF800957DA4 /* KSNetworkClient.m in Sources */,
-				E10B703516F11CEA00957DA4 /* KSNetworkClientSpec.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		E18A7B80156750330083D745 /* PBXTargetDependency */ = {
+		AE68317C1A365CF800B1B815 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = Cedar;
-			targetProxy = E18A7B7F156750330083D745 /* PBXContainerItemProxy */;
+			target = E18A7B2F15674EC20083D745 /* Deferred-OSX */;
+			targetProxy = AE68317B1A365CF800B1B815 /* PBXContainerItemProxy */;
+		};
+		AE6831AE1A365DC700B1B815 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E18A7B1415674D9B0083D745 /* Deferred */;
+			targetProxy = AE6831AD1A365DC700B1B815 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		AE68317D1A365CF800B1B815 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+					"$(PROJECT_DIR)/Deferred-OSXSpecs/Frameworks",
+				);
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Specs/OSXSpecs-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "Deferred-OSXSpecs/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		AE68317E1A365CF800B1B815 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+					"$(PROJECT_DIR)/Deferred-OSXSpecs/Frameworks",
+				);
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Specs/OSXSpecs-Prefix.pch";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "Deferred-OSXSpecs/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+		AE6831B01A365DC700B1B815 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(PROJECT_DIR)/DeferredSpecs/Frameworks",
+				);
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Specs/Specs-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = DeferredSpecs/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+					"-lstdc++",
+					"$(inherited)",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		AE6831B11A365DC700B1B815 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				ENABLE_NS_ASSERTIONS = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(PROJECT_DIR)/DeferredSpecs/Frameworks",
+				);
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Specs/Specs-Prefix.pch";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = DeferredSpecs/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+					"-lstdc++",
+					"$(inherited)",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
 		E18A7B2015674D9B0083D745 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -758,41 +1102,25 @@
 			};
 			name = Release;
 		};
-		E18A7B4F15674ED10083D745 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Specs/Specs-Prefix.pch";
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
-				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-			};
-			name = Debug;
-		};
-		E18A7B5015674ED10083D745 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Specs/Specs-Prefix.pch";
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		AE68318B1A365CF800B1B815 /* Build configuration list for PBXNativeTarget "Deferred-OSXSpecs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE68317D1A365CF800B1B815 /* Debug */,
+				AE68317E1A365CF800B1B815 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		AE6831AF1A365DC700B1B815 /* Build configuration list for PBXNativeTarget "DeferredSpecs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE6831B01A365DC700B1B815 /* Debug */,
+				AE6831B11A365DC700B1B815 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		E18A7B0F15674D9B0083D745 /* Build configuration list for PBXProject "Deferred" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -816,15 +1144,6 @@
 			buildConfigurations = (
 				E18A7B3E15674EC20083D745 /* Debug */,
 				E18A7B3F15674EC20083D745 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		E18A7B4E15674ED10083D745 /* Build configuration list for PBXNativeTarget "Specs" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E18A7B4F15674ED10083D745 /* Debug */,
-				E18A7B5015674ED10083D745 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
