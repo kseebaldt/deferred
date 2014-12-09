@@ -1,4 +1,5 @@
 Async library inspired by CommonJS Promises/A spec
+[![Build Status](https://travis-ci.org/kseebaldt/deferred.svg?branch=master)](https://travis-ci.org/kseebaldt/deferred)
 
 http://wiki.commonjs.org/wiki/Promises/A
 
