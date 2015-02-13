@@ -3,6 +3,12 @@ Async library inspired by CommonJS Promises/A spec
 
 http://wiki.commonjs.org/wiki/Promises/A
 
+## Installation
+Via [Cocoapods](http://cocoapods.org):
+```ruby
+pod 'KSDeferred'
+```
+
 # Examples
 
 ## Creating a deferred object and returning its promise 
