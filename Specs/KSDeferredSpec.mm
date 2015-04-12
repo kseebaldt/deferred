@@ -49,7 +49,7 @@ describe(@"KSDeferred", ^{
                 }];
             });
 
-            describe(@"when the first promise is resolved", ^{
+            context(@"when the first promise is resolved", ^{
                 beforeEach(^{
                     [deferred resolveWithValue:@"SUCCESS1"];
                 });
@@ -59,7 +59,7 @@ describe(@"KSDeferred", ^{
                     rejected should_not be_truthy;
                 });
                 
-                describe(@"when both promises are resolved", ^{
+                context(@"when both promises are resolved", ^{
                     beforeEach(^{
                         [deferred2 resolveWithValue:@"SUCCESS2"];
                     });
@@ -74,7 +74,7 @@ describe(@"KSDeferred", ^{
                     });
                 });
 
-                describe(@"when both promises are resolved, one without a value", ^{
+                context(@"when both promises are resolved, one without a value", ^{
                     beforeEach(^{
                         [deferred2 resolveWithValue:nil];
                     });
@@ -84,7 +84,7 @@ describe(@"KSDeferred", ^{
                     });
                 });
 
-                describe(@"when a promise is rejected and all joined promises have been fulfilled", ^{
+                context(@"when a promise is rejected and all joined promises have been fulfilled", ^{
                     beforeEach(^{
                         [deferred2 rejectWithError:[NSError errorWithDomain:@"MyError" code:123 userInfo:nil]];
                     });
@@ -93,21 +93,28 @@ describe(@"KSDeferred", ^{
                         rejected should be_truthy;
                     });
                     
-                    it(@"should be able to read the resolved values of the joined promises", ^{
-                        joinedPromise.error.domain should equal(@"KSPromiseJoinError");
-                        NSArray *errors = [joinedPromise.error.userInfo objectForKey:@"errors"];
+                    it(@"should be able to read the rejected errors of the joined promises", ^{
+                        joinedPromise.error.domain should equal(KSPromiseWhenErrorDomain);
+                        NSArray *errors = [joinedPromise.error.userInfo objectForKey:KSPromiseWhenErrorErrorsKey];
                         errors.count should equal(1);
                         [[errors lastObject] domain] should equal(@"MyError");
                     });
+
+                    it(@"should be able to read the resolved values of the joined promises", ^{
+                        joinedPromise.error.domain should equal(KSPromiseWhenErrorDomain);
+                        NSArray *values = [joinedPromise.error.userInfo objectForKey:KSPromiseWhenErrorValuesKey];
+                        values.count should equal(1);
+                        values.lastObject should equal(@"SUCCESS1");
+                    });
                 });
 
-              describe(@"when a promise is rejected without an error and all joined promises have been fulfilled", ^{
+              context(@"when a promise is rejected without an error and all joined promises have been fulfilled", ^{
                     beforeEach(^{
                         [deferred2 rejectWithError:nil];
                     });
 
                     it(@"should insert a null object into the joined promises error list", ^{
-                        NSArray *errors = joinedPromise.error.userInfo[@"errors"];
+                        NSArray *errors = joinedPromise.error.userInfo[KSPromiseWhenErrorErrorsKey];
                         [errors lastObject] should equal([NSNull null]);
                     });
                 });
@@ -117,7 +124,7 @@ describe(@"KSDeferred", ^{
                 });
             });
 
-            describe(@"when the first promise is rejected", ^{
+            context(@"when the first promise is rejected", ^{
                 beforeEach(^{
                     [deferred2 rejectWithError:[NSError errorWithDomain:@"MyError" code:123 userInfo:nil]];
                 });
@@ -133,7 +140,7 @@ describe(@"KSDeferred", ^{
             });
         });
 
-        describe(@"when the first promise is resolved before joined", ^{
+        context(@"when the first promise is resolved before joined", ^{
             beforeEach(^{
                 [deferred resolveWithValue:@"SUCCESS1"];
                 joinedPromise = [KSPromise when:[NSArray arrayWithObjects:promise, promise2, nil]];
@@ -155,7 +162,7 @@ describe(@"KSDeferred", ^{
             });
         });
         
-        describe(@"when the first promise is rejected before joined", ^{
+        context(@"when the first promise is rejected before joined", ^{
             beforeEach(^{
                 [deferred rejectWithError:[NSError errorWithDomain:@"MyError" code:123 userInfo:nil]];
                 joinedPromise = [KSPromise when:[NSArray arrayWithObjects:promise, promise2, nil]];

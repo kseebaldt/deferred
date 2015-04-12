@@ -15,7 +15,9 @@
 #   define KS_DISPATCH_RELEASE(q)
 #endif
 
+
 @interface KSPromiseCallbacks : NSObject
+
 @property (copy, nonatomic) promiseValueCallback fulfilledCallback;
 @property (copy, nonatomic) promiseErrorCallback errorCallback;
 
@@ -24,7 +26,14 @@
 @property (copy, nonatomic) deferredCallback deprecatedCompleteCallback;
 
 @property (strong, nonatomic) KSPromise *childPromise;
+
 @end
+
+
+NSString *const KSPromiseWhenErrorDomain = @"KSPromiseJoinError";
+NSString *const KSPromiseWhenErrorErrorsKey = @"KSPromiseWhenErrorErrorsKey";
+NSString *const KSPromiseWhenErrorValuesKey = @"KSPromiseWhenErrorValuesKey";
+
 
 @implementation KSPromiseCallbacks
 
@@ -274,7 +283,12 @@
     }
     if (fulfilled) {
         if (errors.count > 0) {
-            [self rejectWithError:[NSError errorWithDomain:@"KSPromiseJoinError" code:1 userInfo:[NSDictionary dictionaryWithObject:errors forKey:@"errors"]]];
+            NSDictionary *userInfo = @{KSPromiseWhenErrorErrorsKey: errors,
+                                       KSPromiseWhenErrorValuesKey: values};
+            NSError *whenError = [NSError errorWithDomain:KSPromiseWhenErrorDomain
+                                                     code:1
+                                                 userInfo:userInfo];
+            [self rejectWithError:whenError];
         } else {
             [self resolveWithValue:values];
         }
