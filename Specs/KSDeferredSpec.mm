@@ -93,11 +93,18 @@ describe(@"KSDeferred", ^{
                         rejected should be_truthy;
                     });
                     
-                    it(@"should be able to read the resolved values of the joined promises", ^{
+                    it(@"should be able to read the rejected errors of the joined promises", ^{
                         joinedPromise.error.domain should equal(KSPromiseWhenErrorDomain);
-                        NSArray *errors = [joinedPromise.error.userInfo objectForKey:@"errors"];
+                        NSArray *errors = [joinedPromise.error.userInfo objectForKey:KSPromiseWhenErrorErrorsKey];
                         errors.count should equal(1);
                         [[errors lastObject] domain] should equal(@"MyError");
+                    });
+
+                    it(@"should be able to read the resolved values of the joined promises", ^{
+                        joinedPromise.error.domain should equal(KSPromiseWhenErrorDomain);
+                        NSArray *values = [joinedPromise.error.userInfo objectForKey:KSPromiseWhenErrorValuesKey];
+                        values.count should equal(1);
+                        values.lastObject should equal(@"SUCCESS1");
                     });
                 });
 
@@ -107,7 +114,7 @@ describe(@"KSDeferred", ^{
                     });
 
                     it(@"should insert a null object into the joined promises error list", ^{
-                        NSArray *errors = joinedPromise.error.userInfo[@"errors"];
+                        NSArray *errors = joinedPromise.error.userInfo[KSPromiseWhenErrorErrorsKey];
                         [errors lastObject] should equal([NSNull null]);
                     });
                 });

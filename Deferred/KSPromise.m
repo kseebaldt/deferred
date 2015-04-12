@@ -31,6 +31,8 @@
 
 
 NSString *const KSPromiseWhenErrorDomain = @"KSPromiseJoinError";
+NSString *const KSPromiseWhenErrorErrorsKey = @"KSPromiseWhenErrorErrorsKey";
+NSString *const KSPromiseWhenErrorValuesKey = @"KSPromiseWhenErrorValuesKey";
 
 
 @implementation KSPromiseCallbacks
@@ -281,9 +283,11 @@ NSString *const KSPromiseWhenErrorDomain = @"KSPromiseJoinError";
     }
     if (fulfilled) {
         if (errors.count > 0) {
+            NSDictionary *userInfo = @{KSPromiseWhenErrorErrorsKey: errors,
+                                       KSPromiseWhenErrorValuesKey: values};
             NSError *whenError = [NSError errorWithDomain:KSPromiseWhenErrorDomain
                                                      code:1
-                                                 userInfo:@{@"errors": errors}];
+                                                 userInfo:userInfo];
             [self rejectWithError:whenError];
         } else {
             [self resolveWithValue:values];

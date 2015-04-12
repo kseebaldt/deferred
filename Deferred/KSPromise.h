@@ -9,6 +9,8 @@ typedef id(^promiseErrorCallback)(NSError *error);
 typedef void(^deferredCallback)(KSPromise *p);
 
 FOUNDATION_EXPORT NSString *const KSPromiseWhenErrorDomain;
+FOUNDATION_EXPORT NSString *const KSPromiseWhenErrorErrorsKey;
+FOUNDATION_EXPORT NSString *const KSPromiseWhenErrorValuesKey;
 
 @interface KSPromise : NSObject<KSCancellable>
 @property (strong, nonatomic, readonly) id value;
