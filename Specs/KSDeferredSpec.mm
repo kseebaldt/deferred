@@ -94,7 +94,7 @@ describe(@"KSDeferred", ^{
                     });
                     
                     it(@"should be able to read the resolved values of the joined promises", ^{
-                        joinedPromise.error.domain should equal(@"KSPromiseJoinError");
+                        joinedPromise.error.domain should equal(KSPromiseWhenErrorDomain);
                         NSArray *errors = [joinedPromise.error.userInfo objectForKey:@"errors"];
                         errors.count should equal(1);
                         [[errors lastObject] domain] should equal(@"MyError");
