@@ -268,6 +268,10 @@ NSString *const KSPromiseWhenErrorValuesKey = @"KSPromiseWhenErrorValuesKey";
 
 #pragma mark - Private methods
 - (void)joinedPromiseFulfilled:(KSPromise *)promise {
+    if ([self completed]) {
+        return;
+    }
+    
     BOOL fulfilled = YES;
     NSMutableArray *errors = [NSMutableArray array];
     NSMutableArray *values = [NSMutableArray array];

@@ -183,6 +183,65 @@ describe(@"KSDeferred", ^{
                 rejected should_not be_truthy;
             });
         });
+
+        context(@"when all promises are resolved before joined", ^{
+            beforeEach(^{
+                [deferred resolveWithValue:@"SUCCESS1"];
+                [deferred2 resolveWithValue:@"SUCCESS2"];
+
+                joinedPromise = [KSPromise when:@[promise, promise2]];
+
+                fulfilled = rejected = NO;
+
+                [joinedPromise then:^id(id value) {
+                    fulfilled = YES;
+                    return value;
+                } error:^id(NSError *error) {
+                    rejected = YES;
+                    return error;
+                }];
+            });
+
+            it(@"should immediately resolve", ^{
+                fulfilled should be_truthy;
+                [joinedPromise.value objectAtIndex:0] should equal(@"SUCCESS1");
+                [joinedPromise.value objectAtIndex:1] should equal(@"SUCCESS2");
+            });
+        });
+
+        context(@"when all promises are resolved or rejected before joined", ^{
+            beforeEach(^{
+                [deferred resolveWithValue:@"SUCCESS"];
+                [deferred2 rejectWithError:[NSError errorWithDomain:@"MyError" code:123 userInfo:nil]];
+
+                joinedPromise = [KSPromise when:@[promise, promise2]];
+
+                fulfilled = rejected = NO;
+
+                [joinedPromise then:^id(id value) {
+                    fulfilled = YES;
+                    return value;
+                } error:^id(NSError *error) {
+                    rejected = YES;
+                    return error;
+                }];
+            });
+
+            it(@"should immediately reject", ^{
+                fulfilled should_not be_truthy;
+                rejected should be_truthy;
+
+                joinedPromise.error.domain should equal(KSPromiseWhenErrorDomain);
+                NSArray *errors = joinedPromise.error.userInfo[KSPromiseWhenErrorErrorsKey];
+                errors.count should equal(1);
+                [errors.lastObject domain] should equal(@"MyError");
+
+                joinedPromise.error.domain should equal(KSPromiseWhenErrorDomain);
+                NSArray *values = joinedPromise.error.userInfo[KSPromiseWhenErrorValuesKey];
+                values.count should equal(1);
+                values.lastObject should equal(@"SUCCESS");
+            });
+        });
     });
 });
 
