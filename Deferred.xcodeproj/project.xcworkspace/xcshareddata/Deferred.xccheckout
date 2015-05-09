@@ -23,6 +23,8 @@
 		<string>../..</string>
 		<key>9C17E6AC4A93E78FE05F88AE0011DD4EAD50139D</key>
 		<string>../..Vendor/Cedar</string>
+		<key>BD182833A92E41E72D7F0A41FFF913B9A05EA307</key>
+		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/kseebaldt/deferred.git</string>
@@ -32,6 +34,14 @@
 	<string>1CFA5E39000C9E0F1E45DC2809C41EAE90E73356</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>BD182833A92E41E72D7F0A41FFF913B9A05EA307</string>
+			<key>IDESourceControlWCCName</key>
+			<string></string>
+		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>

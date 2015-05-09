@@ -576,7 +576,7 @@
 		E18A7B0C15674D9B0083D745 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0600;
+				LastUpgradeCheck = 0630;
 				TargetAttributes = {
 					AE68316B1A365CF600B1B815 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -993,6 +993,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -1027,6 +1028,7 @@
 				COPY_PHASE_STRIP = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -1112,6 +1114,7 @@
 				AE68317E1A365CF800B1B815 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AE6831AF1A365DC700B1B815 /* Build configuration list for PBXNativeTarget "DeferredSpecs" */ = {
 			isa = XCConfigurationList;
@@ -1120,6 +1123,7 @@
 				AE6831B11A365DC700B1B815 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E18A7B0F15674D9B0083D745 /* Build configuration list for PBXProject "Deferred" */ = {
 			isa = XCConfigurationList;
