@@ -16,6 +16,30 @@
 		AE3C6E6619A354E5004BECE4 /* KSURLSessionClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AE3C6E6219A354E5004BECE4 /* KSURLSessionClient.m */; };
 		AE3C6E6F19A356CA004BECE4 /* KSNetworkClientSpecURLProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = AE3C6E6D19A356CA004BECE4 /* KSNetworkClientSpecURLProtocol.h */; };
 		AE3C6E7019A356CA004BECE4 /* KSNetworkClientSpecURLProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = AE3C6E6D19A356CA004BECE4 /* KSNetworkClientSpecURLProtocol.h */; };
+		AE48646F1B0668A2005DB302 /* Deferred-iOS-Framework.h in Headers */ = {isa = PBXBuildFile; fileRef = AE48646E1B0668A2005DB302 /* Deferred-iOS-Framework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AE4864831B0668C1005DB302 /* KSDeferred.m in Sources */ = {isa = PBXBuildFile; fileRef = E15F47461570786900080763 /* KSDeferred.m */; };
+		AE4864841B0668C1005DB302 /* KSPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E5C51416CAE6F000C1385F /* KSPromise.m */; };
+		AE4864851B0668C1005DB302 /* KSNetworkClient.m in Sources */ = {isa = PBXBuildFile; fileRef = E10B702616F11AF800957DA4 /* KSNetworkClient.m */; };
+		AE4864861B0668C1005DB302 /* KSURLConnectionClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AE3C6E4C19A3533B004BECE4 /* KSURLConnectionClient.m */; };
+		AE4864871B0668C1005DB302 /* KSURLSessionClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AE3C6E6219A354E5004BECE4 /* KSURLSessionClient.m */; };
+		AE4864881B0668CB005DB302 /* KSCancellable.h in Headers */ = {isa = PBXBuildFile; fileRef = B866F9ED1A27A82D00484F68 /* KSCancellable.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AE4864891B0668CB005DB302 /* KSDeferred.h in Headers */ = {isa = PBXBuildFile; fileRef = E15F47451570786900080763 /* KSDeferred.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AE48648A1B0668CB005DB302 /* KSPromise.h in Headers */ = {isa = PBXBuildFile; fileRef = E1E5C51316CAE6F000C1385F /* KSPromise.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AE48648B1B0668CB005DB302 /* KSNetworkClient.h in Headers */ = {isa = PBXBuildFile; fileRef = E10B702516F11AF800957DA4 /* KSNetworkClient.h */; };
+		AE48648C1B0668CB005DB302 /* KSURLConnectionClient.h in Headers */ = {isa = PBXBuildFile; fileRef = AE3C6E4B19A3533B004BECE4 /* KSURLConnectionClient.h */; };
+		AE48648D1B0668CB005DB302 /* KSURLSessionClient.h in Headers */ = {isa = PBXBuildFile; fileRef = AE3C6E6119A354E5004BECE4 /* KSURLSessionClient.h */; };
+		AE4864981B066A11005DB302 /* Deferred-OSX-Framework.h in Headers */ = {isa = PBXBuildFile; fileRef = AE4864971B066A11005DB302 /* Deferred-OSX-Framework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AE4864AC1B066A67005DB302 /* KSDeferred.m in Sources */ = {isa = PBXBuildFile; fileRef = E15F47461570786900080763 /* KSDeferred.m */; };
+		AE4864AD1B066A67005DB302 /* KSPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E5C51416CAE6F000C1385F /* KSPromise.m */; };
+		AE4864AE1B066A67005DB302 /* KSNetworkClient.m in Sources */ = {isa = PBXBuildFile; fileRef = E10B702616F11AF800957DA4 /* KSNetworkClient.m */; };
+		AE4864AF1B066A67005DB302 /* KSURLConnectionClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AE3C6E4C19A3533B004BECE4 /* KSURLConnectionClient.m */; };
+		AE4864B01B066A67005DB302 /* KSURLSessionClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AE3C6E6219A354E5004BECE4 /* KSURLSessionClient.m */; };
+		AE4864B11B066A6E005DB302 /* KSCancellable.h in Headers */ = {isa = PBXBuildFile; fileRef = B866F9ED1A27A82D00484F68 /* KSCancellable.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AE4864B21B066A6E005DB302 /* KSDeferred.h in Headers */ = {isa = PBXBuildFile; fileRef = E15F47451570786900080763 /* KSDeferred.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AE4864B31B066A6E005DB302 /* KSPromise.h in Headers */ = {isa = PBXBuildFile; fileRef = E1E5C51316CAE6F000C1385F /* KSPromise.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AE4864B41B066A6E005DB302 /* KSNetworkClient.h in Headers */ = {isa = PBXBuildFile; fileRef = E10B702516F11AF800957DA4 /* KSNetworkClient.h */; };
+		AE4864B51B066A6E005DB302 /* KSURLConnectionClient.h in Headers */ = {isa = PBXBuildFile; fileRef = AE3C6E4B19A3533B004BECE4 /* KSURLConnectionClient.h */; };
+		AE4864B61B066A6E005DB302 /* KSURLSessionClient.h in Headers */ = {isa = PBXBuildFile; fileRef = AE3C6E6119A354E5004BECE4 /* KSURLSessionClient.h */; };
 		AE68316E1A365CF600B1B815 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE68316D1A365CF600B1B815 /* XCTest.framework */; };
 		AE68316F1A365CF600B1B815 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E18A7B3115674EC20083D745 /* Cocoa.framework */; };
 		AE6831741A365CF600B1B815 /* Deferred-OSXSpecs-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AE6831731A365CF600B1B815 /* Deferred-OSXSpecs-Info.plist */; };
@@ -169,6 +193,12 @@
 		AE3C6E6819A35697004BECE4 /* KSURLSessionClientSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = KSURLSessionClientSpec.mm; sourceTree = "<group>"; };
 		AE3C6E6D19A356CA004BECE4 /* KSNetworkClientSpecURLProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSNetworkClientSpecURLProtocol.h; sourceTree = "<group>"; };
 		AE3C6E6E19A356CA004BECE4 /* KSNetworkClientSpecURLProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSNetworkClientSpecURLProtocol.m; sourceTree = "<group>"; };
+		AE48646A1B0668A2005DB302 /* KSDeferred.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KSDeferred.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE48646D1B0668A2005DB302 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE48646E1B0668A2005DB302 /* Deferred-iOS-Framework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Deferred-iOS-Framework.h"; sourceTree = "<group>"; };
+		AE4864931B066A10005DB302 /* KSDeferred.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KSDeferred.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE4864961B066A11005DB302 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE4864971B066A11005DB302 /* Deferred-OSX-Framework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Deferred-OSX-Framework.h"; sourceTree = "<group>"; };
 		AE68316C1A365CF600B1B815 /* Deferred-OSXSpecs.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Deferred-OSXSpecs.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE68316D1A365CF600B1B815 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		AE6831721A365CF600B1B815 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -208,6 +238,20 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		AE4864661B0668A2005DB302 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE48648F1B066A10005DB302 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AE6831651A365CF600B1B815 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -274,6 +318,40 @@
 			name = Support;
 			sourceTree = "<group>";
 		};
+		AE48646B1B0668A2005DB302 /* Deferred-iOS-Framework */ = {
+			isa = PBXGroup;
+			children = (
+				AE48646E1B0668A2005DB302 /* Deferred-iOS-Framework.h */,
+				AE48646C1B0668A2005DB302 /* Supporting Files */,
+			);
+			path = "Deferred-iOS-Framework";
+			sourceTree = "<group>";
+		};
+		AE48646C1B0668A2005DB302 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AE48646D1B0668A2005DB302 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AE4864941B066A11005DB302 /* Deferred-OSX-Framework */ = {
+			isa = PBXGroup;
+			children = (
+				AE4864971B066A11005DB302 /* Deferred-OSX-Framework.h */,
+				AE4864951B066A11005DB302 /* Supporting Files */,
+			);
+			path = "Deferred-OSX-Framework";
+			sourceTree = "<group>";
+		};
+		AE4864951B066A11005DB302 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AE4864961B066A11005DB302 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		AE6831701A365CF600B1B815 /* Deferred-OSXSpecs */ = {
 			isa = PBXGroup;
 			children = (
@@ -319,6 +397,8 @@
 				E18A7B2915674E570083D745 /* Vendor */,
 				AE6831701A365CF600B1B815 /* Deferred-OSXSpecs */,
 				AE6831A21A365DC600B1B815 /* DeferredSpecs */,
+				AE48646B1B0668A2005DB302 /* Deferred-iOS-Framework */,
+				AE4864941B066A11005DB302 /* Deferred-OSX-Framework */,
 				E18A7B1715674D9B0083D745 /* Frameworks */,
 				E18A7B1615674D9B0083D745 /* Products */,
 			);
@@ -331,6 +411,8 @@
 				E18A7B3015674EC20083D745 /* libDeferred-OSX.a */,
 				AE68316C1A365CF600B1B815 /* Deferred-OSXSpecs.xctest */,
 				AE68319B1A365DC600B1B815 /* DeferredSpecs.xctest */,
+				AE48646A1B0668A2005DB302 /* KSDeferred.framework */,
+				AE4864931B066A10005DB302 /* KSDeferred.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -464,6 +546,34 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		AE4864671B0668A2005DB302 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE48646F1B0668A2005DB302 /* Deferred-iOS-Framework.h in Headers */,
+				AE4864881B0668CB005DB302 /* KSCancellable.h in Headers */,
+				AE4864891B0668CB005DB302 /* KSDeferred.h in Headers */,
+				AE48648A1B0668CB005DB302 /* KSPromise.h in Headers */,
+				AE48648B1B0668CB005DB302 /* KSNetworkClient.h in Headers */,
+				AE48648C1B0668CB005DB302 /* KSURLConnectionClient.h in Headers */,
+				AE48648D1B0668CB005DB302 /* KSURLSessionClient.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE4864901B066A10005DB302 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE4864981B066A11005DB302 /* Deferred-OSX-Framework.h in Headers */,
+				AE4864B11B066A6E005DB302 /* KSCancellable.h in Headers */,
+				AE4864B21B066A6E005DB302 /* KSDeferred.h in Headers */,
+				AE4864B31B066A6E005DB302 /* KSPromise.h in Headers */,
+				AE4864B41B066A6E005DB302 /* KSNetworkClient.h in Headers */,
+				AE4864B51B066A6E005DB302 /* KSURLConnectionClient.h in Headers */,
+				AE4864B61B066A6E005DB302 /* KSURLSessionClient.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E18A7B1315674D9B0083D745 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -492,6 +602,42 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		AE4864691B0668A2005DB302 /* Deferred-iOS-Framework */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AE4864811B0668A3005DB302 /* Build configuration list for PBXNativeTarget "Deferred-iOS-Framework" */;
+			buildPhases = (
+				AE4864651B0668A2005DB302 /* Sources */,
+				AE4864661B0668A2005DB302 /* Frameworks */,
+				AE4864671B0668A2005DB302 /* Headers */,
+				AE4864681B0668A2005DB302 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Deferred-iOS-Framework";
+			productName = "Deferred-iOS-Framework";
+			productReference = AE48646A1B0668A2005DB302 /* KSDeferred.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		AE4864921B066A10005DB302 /* Deferred-OSX-Framework */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AE4864A61B066A11005DB302 /* Build configuration list for PBXNativeTarget "Deferred-OSX-Framework" */;
+			buildPhases = (
+				AE48648E1B066A10005DB302 /* Sources */,
+				AE48648F1B066A10005DB302 /* Frameworks */,
+				AE4864901B066A10005DB302 /* Headers */,
+				AE4864911B066A10005DB302 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Deferred-OSX-Framework";
+			productName = "Deferred-OSX-Framework";
+			productReference = AE4864931B066A10005DB302 /* KSDeferred.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		AE68316B1A365CF600B1B815 /* Deferred-OSXSpecs */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = AE68318B1A365CF800B1B815 /* Build configuration list for PBXNativeTarget "Deferred-OSXSpecs" */;
@@ -578,6 +724,12 @@
 			attributes = {
 				LastUpgradeCheck = 0630;
 				TargetAttributes = {
+					AE4864691B0668A2005DB302 = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+					AE4864921B066A10005DB302 = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
 					AE68316B1A365CF600B1B815 = {
 						CreatedOnToolsVersion = 6.1.1;
 					};
@@ -608,6 +760,8 @@
 				AE68319A1A365DC600B1B815 /* DeferredSpecs */,
 				E18A7B2F15674EC20083D745 /* Deferred-OSX */,
 				AE68316B1A365CF600B1B815 /* Deferred-OSXSpecs */,
+				AE4864691B0668A2005DB302 /* Deferred-iOS-Framework */,
+				AE4864921B066A10005DB302 /* Deferred-OSX-Framework */,
 			);
 		};
 /* End PBXProject section */
@@ -700,6 +854,20 @@
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
+		AE4864681B0668A2005DB302 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE4864911B066A10005DB302 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AE6831661A365CF600B1B815 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -762,6 +930,30 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		AE4864651B0668A2005DB302 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE4864831B0668C1005DB302 /* KSDeferred.m in Sources */,
+				AE4864841B0668C1005DB302 /* KSPromise.m in Sources */,
+				AE4864851B0668C1005DB302 /* KSNetworkClient.m in Sources */,
+				AE4864861B0668C1005DB302 /* KSURLConnectionClient.m in Sources */,
+				AE4864871B0668C1005DB302 /* KSURLSessionClient.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE48648E1B066A10005DB302 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE4864AC1B066A67005DB302 /* KSDeferred.m in Sources */,
+				AE4864AD1B066A67005DB302 /* KSPromise.m in Sources */,
+				AE4864AE1B066A67005DB302 /* KSNetworkClient.m in Sources */,
+				AE4864AF1B066A67005DB302 /* KSURLConnectionClient.m in Sources */,
+				AE4864B01B066A67005DB302 /* KSURLSessionClient.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AE6831641A365CF600B1B815 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -846,6 +1038,140 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		AE48647D1B0668A3005DB302 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "Deferred-iOS-Framework/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = KSDeferred;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		AE48647E1B0668A3005DB302 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "Deferred-iOS-Framework/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = KSDeferred;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		AE4864A71B066A11005DB302 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "Deferred-OSX-Framework/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = KSDeferred;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		AE4864A81B066A11005DB302 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = NO;
+				FRAMEWORK_VERSION = A;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "Deferred-OSX-Framework/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = KSDeferred;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		AE68317D1A365CF800B1B815 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1107,6 +1433,22 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		AE4864811B0668A3005DB302 /* Build configuration list for PBXNativeTarget "Deferred-iOS-Framework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE48647D1B0668A3005DB302 /* Debug */,
+				AE48647E1B0668A3005DB302 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		AE4864A61B066A11005DB302 /* Build configuration list for PBXNativeTarget "Deferred-OSX-Framework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE4864A71B066A11005DB302 /* Debug */,
+				AE4864A81B066A11005DB302 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		AE68318B1A365CF800B1B815 /* Build configuration list for PBXNativeTarget "Deferred-OSXSpecs" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

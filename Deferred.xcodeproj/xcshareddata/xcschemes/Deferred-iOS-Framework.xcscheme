@@ -14,37 +14,23 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E18A7B4315674ED10083D745"
-               BuildableName = "Specs"
-               BlueprintName = "Specs"
+               BlueprintIdentifier = "AE4864691B0668A2005DB302"
+               BuildableName = "KSDeferred.framework"
+               BlueprintName = "Deferred-iOS-Framework"
                ReferencedContainer = "container:Deferred.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
             buildForTesting = "YES"
             buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AE68316B1A365CF600B1B815"
-               BuildableName = "Deferred-OSXSpecs.xctest"
-               BlueprintName = "Deferred-OSXSpecs"
-               ReferencedContainer = "container:Deferred.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AE68319A1A365DC600B1B815"
-               BuildableName = "DeferredSpecs.xctest"
-               BlueprintName = "DeferredSpecs"
+               BlueprintIdentifier = "AE14ED6D1B066547000DABF2"
+               BuildableName = "deferred-ios-frameworkTests.xctest"
+               BlueprintName = "deferred-ios-frameworkTests"
                ReferencedContainer = "container:Deferred.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -56,13 +42,23 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "AE14ED6D1B066547000DABF2"
+               BuildableName = "deferred-ios-frameworkTests.xctest"
+               BlueprintName = "deferred-ios-frameworkTests"
+               ReferencedContainer = "container:Deferred.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E18A7B4315674ED10083D745"
-            BuildableName = "Specs"
-            BlueprintName = "Specs"
+            BlueprintIdentifier = "AE4864691B0668A2005DB302"
+            BuildableName = "KSDeferred.framework"
+            BlueprintName = "Deferred-iOS-Framework"
             ReferencedContainer = "container:Deferred.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -76,16 +72,15 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E18A7B4315674ED10083D745"
-            BuildableName = "Specs"
-            BlueprintName = "Specs"
+            BlueprintIdentifier = "AE4864691B0668A2005DB302"
+            BuildableName = "KSDeferred.framework"
+            BlueprintName = "Deferred-iOS-Framework"
             ReferencedContainer = "container:Deferred.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -95,16 +90,15 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E18A7B4315674ED10083D745"
-            BuildableName = "Specs"
-            BlueprintName = "Specs"
+            BlueprintIdentifier = "AE4864691B0668A2005DB302"
+            BuildableName = "KSDeferred.framework"
+            BlueprintName = "Deferred-iOS-Framework"
             ReferencedContainer = "container:Deferred.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
