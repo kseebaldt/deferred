@@ -16,7 +16,6 @@
 		AE3C6E6619A354E5004BECE4 /* KSURLSessionClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AE3C6E6219A354E5004BECE4 /* KSURLSessionClient.m */; };
 		AE3C6E6F19A356CA004BECE4 /* KSNetworkClientSpecURLProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = AE3C6E6D19A356CA004BECE4 /* KSNetworkClientSpecURLProtocol.h */; };
 		AE3C6E7019A356CA004BECE4 /* KSNetworkClientSpecURLProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = AE3C6E6D19A356CA004BECE4 /* KSNetworkClientSpecURLProtocol.h */; };
-		AE48646F1B0668A2005DB302 /* Deferred-iOS-Framework.h in Headers */ = {isa = PBXBuildFile; fileRef = AE48646E1B0668A2005DB302 /* Deferred-iOS-Framework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AE4864831B0668C1005DB302 /* KSDeferred.m in Sources */ = {isa = PBXBuildFile; fileRef = E15F47461570786900080763 /* KSDeferred.m */; };
 		AE4864841B0668C1005DB302 /* KSPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E5C51416CAE6F000C1385F /* KSPromise.m */; };
 		AE4864851B0668C1005DB302 /* KSNetworkClient.m in Sources */ = {isa = PBXBuildFile; fileRef = E10B702616F11AF800957DA4 /* KSNetworkClient.m */; };
@@ -28,7 +27,6 @@
 		AE48648B1B0668CB005DB302 /* KSNetworkClient.h in Headers */ = {isa = PBXBuildFile; fileRef = E10B702516F11AF800957DA4 /* KSNetworkClient.h */; };
 		AE48648C1B0668CB005DB302 /* KSURLConnectionClient.h in Headers */ = {isa = PBXBuildFile; fileRef = AE3C6E4B19A3533B004BECE4 /* KSURLConnectionClient.h */; };
 		AE48648D1B0668CB005DB302 /* KSURLSessionClient.h in Headers */ = {isa = PBXBuildFile; fileRef = AE3C6E6119A354E5004BECE4 /* KSURLSessionClient.h */; };
-		AE4864981B066A11005DB302 /* Deferred-OSX-Framework.h in Headers */ = {isa = PBXBuildFile; fileRef = AE4864971B066A11005DB302 /* Deferred-OSX-Framework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AE4864AC1B066A67005DB302 /* KSDeferred.m in Sources */ = {isa = PBXBuildFile; fileRef = E15F47461570786900080763 /* KSDeferred.m */; };
 		AE4864AD1B066A67005DB302 /* KSPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E5C51416CAE6F000C1385F /* KSPromise.m */; };
 		AE4864AE1B066A67005DB302 /* KSNetworkClient.m in Sources */ = {isa = PBXBuildFile; fileRef = E10B702616F11AF800957DA4 /* KSNetworkClient.m */; };
@@ -195,10 +193,8 @@
 		AE3C6E6E19A356CA004BECE4 /* KSNetworkClientSpecURLProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSNetworkClientSpecURLProtocol.m; sourceTree = "<group>"; };
 		AE48646A1B0668A2005DB302 /* KSDeferred.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KSDeferred.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE48646D1B0668A2005DB302 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AE48646E1B0668A2005DB302 /* Deferred-iOS-Framework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Deferred-iOS-Framework.h"; sourceTree = "<group>"; };
 		AE4864931B066A10005DB302 /* KSDeferred.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KSDeferred.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE4864961B066A11005DB302 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AE4864971B066A11005DB302 /* Deferred-OSX-Framework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Deferred-OSX-Framework.h"; sourceTree = "<group>"; };
 		AE68316C1A365CF600B1B815 /* Deferred-OSXSpecs.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Deferred-OSXSpecs.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE68316D1A365CF600B1B815 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		AE6831721A365CF600B1B815 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -321,7 +317,6 @@
 		AE48646B1B0668A2005DB302 /* Deferred-iOS-Framework */ = {
 			isa = PBXGroup;
 			children = (
-				AE48646E1B0668A2005DB302 /* Deferred-iOS-Framework.h */,
 				AE48646C1B0668A2005DB302 /* Supporting Files */,
 			);
 			path = "Deferred-iOS-Framework";
@@ -338,7 +333,6 @@
 		AE4864941B066A11005DB302 /* Deferred-OSX-Framework */ = {
 			isa = PBXGroup;
 			children = (
-				AE4864971B066A11005DB302 /* Deferred-OSX-Framework.h */,
 				AE4864951B066A11005DB302 /* Supporting Files */,
 			);
 			path = "Deferred-OSX-Framework";
@@ -550,7 +544,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE48646F1B0668A2005DB302 /* Deferred-iOS-Framework.h in Headers */,
 				AE4864881B0668CB005DB302 /* KSCancellable.h in Headers */,
 				AE4864891B0668CB005DB302 /* KSDeferred.h in Headers */,
 				AE48648A1B0668CB005DB302 /* KSPromise.h in Headers */,
@@ -564,7 +557,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE4864981B066A11005DB302 /* Deferred-OSX-Framework.h in Headers */,
 				AE4864B11B066A6E005DB302 /* KSCancellable.h in Headers */,
 				AE4864B21B066A6E005DB302 /* KSDeferred.h in Headers */,
 				AE4864B31B066A6E005DB302 /* KSPromise.h in Headers */,
@@ -1440,6 +1432,7 @@
 				AE48647E1B0668A3005DB302 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AE4864A61B066A11005DB302 /* Build configuration list for PBXNativeTarget "Deferred-OSX-Framework" */ = {
 			isa = XCConfigurationList;
@@ -1448,6 +1441,7 @@
 				AE4864A81B066A11005DB302 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AE68318B1A365CF800B1B815 /* Build configuration list for PBXNativeTarget "Deferred-OSXSpecs" */ = {
 			isa = XCConfigurationList;
