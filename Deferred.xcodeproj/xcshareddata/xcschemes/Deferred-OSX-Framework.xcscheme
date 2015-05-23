@@ -46,9 +46,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AE48649C1B066A11005DB302"
-               BuildableName = "Deferred-OSX-FrameworkTests.xctest"
-               BlueprintName = "Deferred-OSX-FrameworkTests"
+               BlueprintIdentifier = "AE68316B1A365CF600B1B815"
+               BuildableName = "Deferred-OSXSpecs.xctest"
+               BlueprintName = "Deferred-OSXSpecs"
                ReferencedContainer = "container:Deferred.xcodeproj">
             </BuildableReference>
          </TestableReference>
