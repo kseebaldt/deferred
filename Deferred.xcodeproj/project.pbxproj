@@ -1030,6 +1030,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				INFOPLIST_FILE = DeferredSpecs/Info.plist;
@@ -1064,6 +1065,7 @@
 					"$(PROJECT_DIR)/DeferredSpecs/Frameworks",
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Specs/Specs-Prefix.pch";
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				INFOPLIST_FILE = DeferredSpecs/Info.plist;

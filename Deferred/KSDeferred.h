@@ -1,6 +1,8 @@
 #import "KSPromise.h"
 #import "KSCancellable.h"
-
+#import "KSNetworkClient.h"
+#import "KSURLConnectionClient.h"
+#import "KSURLSessionClient.h"
 
 @interface KSDeferred : NSObject
 
