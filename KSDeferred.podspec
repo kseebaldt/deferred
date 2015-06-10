@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.homepage     = "https://github.com/kseebaldt/deferred"
   s.license      = 'MIT'
   s.author       = { "Kurtis Seebaldt" => "kseebaldt@gmail.com" }
-  s.source       = { :git => "https://github.com/kseebaldt/deferred.git", :tag => "0.2.0" }
+  s.source       = { :git => "https://github.com/kseebaldt/deferred.git", :tag => "0.2.1" }
   s.requires_arc = true
 
   s.ios.deployment_target = '5.1'
