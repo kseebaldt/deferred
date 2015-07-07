@@ -1,11 +1,13 @@
 #import <Foundation/Foundation.h>
 #import "KSCancellable.h"
-
+#import "KSNullabilityCompat.h"
 
 @class KSPromise;
 
-typedef id(^promiseValueCallback)(id value);
-typedef id(^promiseErrorCallback)(NSError *error);
+NS_ASSUME_NONNULL_BEGIN
+
+typedef __nonnull id(^promiseValueCallback)(id value);
+typedef __nonnull id(^promiseErrorCallback)(NSError *error);
 typedef void(^deferredCallback)(KSPromise *p);
 
 FOUNDATION_EXPORT NSString *const KSPromiseWhenErrorDomain;
@@ -13,17 +15,17 @@ FOUNDATION_EXPORT NSString *const KSPromiseWhenErrorErrorsKey;
 FOUNDATION_EXPORT NSString *const KSPromiseWhenErrorValuesKey;
 
 @interface KSPromise : NSObject<KSCancellable>
-@property (strong, nonatomic, readonly) id value;
-@property (strong, nonatomic, readonly) NSError *error;
+@property (strong, nonatomic, readonly, nullable) id value;
+@property (strong, nonatomic, readonly, nullable) NSError *error;
 @property (assign, nonatomic, readonly) BOOL fulfilled;
 @property (assign, nonatomic, readonly) BOOL rejected;
 @property (assign, nonatomic, readonly) BOOL cancelled;
 
 + (KSPromise *)when:(NSArray *)promises;
-- (KSPromise *)then:(promiseValueCallback)fulfilledCallback error:(promiseErrorCallback)errorCallback;
+- (KSPromise *)then:(nullable promiseValueCallback)fulfilledCallback error:(nullable promiseErrorCallback)errorCallback;
 
 - (id)waitForValue;
-- (id)waitForValueWithTimeout:(NSTimeInterval)timeout;
+- (nullable id)waitForValueWithTimeout:(NSTimeInterval)timeout;
 
 - (void)addCancellable:(id<KSCancellable>)cancellable;
 
@@ -34,3 +36,5 @@ FOUNDATION_EXPORT NSString *const KSPromiseWhenErrorValuesKey;
 - (void)whenFulfilled:(deferredCallback)complete DEPRECATED_ATTRIBUTE;
 
 @end
+
+NS_ASSUME_NONNULL_END
