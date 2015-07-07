@@ -7,13 +7,13 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface KSDeferred : NSObject
+@interface KSDeferred<ObjectType> : NSObject
 
-@property (strong, nonatomic) KSPromise *promise;
+@property (strong, nonatomic) KSPromise<ObjectType> *promise;
 
 + (instancetype)defer;
 
-- (void)resolveWithValue:(nullable id)value;
+- (void)resolveWithValue:(nullable ObjectType)value;
 - (void)rejectWithError:(nullable NSError *)error;
 - (void)whenCancelled:(void (^)(void))cancelledBlock;
 

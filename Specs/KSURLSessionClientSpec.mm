@@ -31,11 +31,11 @@ describe(@"KSURLSessionClient", ^{
 
         it(@"should resolve the promise on success", ^{
             NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:@"pass://foo"]];
-            KSPromise *promise = [client sendAsynchronousRequest:request queue:queue];
+            KSPromise<KSNetworkResponse *> *promise = [client sendAsynchronousRequest:request queue:queue];
             __block NSOperationQueue *successQueue = nil;
 
             dispatch_semaphore_t sema = dispatch_semaphore_create(0);
-            [promise then:^id(id value) {
+            [promise then:^id(KSNetworkResponse *value) {
                 successQueue = [NSOperationQueue currentQueue];
                 dispatch_semaphore_signal(sema);
                 return value;
@@ -53,11 +53,11 @@ describe(@"KSURLSessionClient", ^{
 
         it(@"should reject the promise on error", ^{
             NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:@"fail://bar"]];
-            KSPromise *promise = [client sendAsynchronousRequest:request queue:queue];
+            KSPromise<KSNetworkResponse *> *promise = [client sendAsynchronousRequest:request queue:queue];
             __block NSOperationQueue *errorQueue = nil;
 
             dispatch_semaphore_t sema = dispatch_semaphore_create(0);
-            [promise then:^id(id value) {
+            [promise then:^id(KSNetworkResponse * value) {
                 dispatch_semaphore_signal(sema);
                 return value;
             } error:^id(NSError *error) {
