@@ -1,6 +1,9 @@
 #import <Foundation/Foundation.h>
+#import "KSNullabilityCompat.h"
 
 @class KSPromise;
+
+NS_ASSUME_NONNULL_BEGIN
 
 @interface KSNetworkResponse : NSObject
 @property (strong, nonatomic, readonly) NSURLResponse *response;
@@ -19,3 +22,4 @@
 @interface KSNetworkClient : NSObject <KSNetworkClient>
 @end
 
+NS_ASSUME_NONNULL_END
