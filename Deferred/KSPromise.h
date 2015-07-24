@@ -6,8 +6,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef __nonnull id(^promiseValueCallback)(id value);
-typedef __nonnull id(^promiseErrorCallback)(NSError *error);
+typedef __nullable id(^promiseValueCallback)(__nullable id value);
+typedef __nullable id(^promiseErrorCallback)( NSError * __nullable error);
 typedef void(^deferredCallback)(KSPromise *p);
 
 FOUNDATION_EXPORT NSString *const KSPromiseWhenErrorDomain;
