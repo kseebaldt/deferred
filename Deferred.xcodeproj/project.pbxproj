@@ -11,6 +11,10 @@
 		34244A281B4BA59C008A0DF0 /* KSNullabilityCompat.h in Headers */ = {isa = PBXBuildFile; fileRef = 34244A261B4BA559008A0DF0 /* KSNullabilityCompat.h */; };
 		34244A291B4BA59D008A0DF0 /* KSNullabilityCompat.h in Headers */ = {isa = PBXBuildFile; fileRef = 34244A261B4BA559008A0DF0 /* KSNullabilityCompat.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		34244A2A1B4BA59D008A0DF0 /* KSNullabilityCompat.h in Headers */ = {isa = PBXBuildFile; fileRef = 34244A261B4BA559008A0DF0 /* KSNullabilityCompat.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3445670C1B66A94C009D4516 /* KSGenericsCompat.h in Headers */ = {isa = PBXBuildFile; fileRef = 3432C7A41B669E590044B115 /* KSGenericsCompat.h */; };
+		3445670D1B66A94D009D4516 /* KSGenericsCompat.h in Headers */ = {isa = PBXBuildFile; fileRef = 3432C7A41B669E590044B115 /* KSGenericsCompat.h */; };
+		3445670E1B66A94D009D4516 /* KSGenericsCompat.h in Headers */ = {isa = PBXBuildFile; fileRef = 3432C7A41B669E590044B115 /* KSGenericsCompat.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3445670F1B66A94E009D4516 /* KSGenericsCompat.h in Headers */ = {isa = PBXBuildFile; fileRef = 3432C7A41B669E590044B115 /* KSGenericsCompat.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AE3C6E4D19A3533B004BECE4 /* KSURLConnectionClient.h in Headers */ = {isa = PBXBuildFile; fileRef = AE3C6E4B19A3533B004BECE4 /* KSURLConnectionClient.h */; };
 		AE3C6E4E19A3533B004BECE4 /* KSURLConnectionClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AE3C6E4C19A3533B004BECE4 /* KSURLConnectionClient.m */; };
 		AE3C6E6019A354CB004BECE4 /* KSURLConnectionClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AE3C6E4C19A3533B004BECE4 /* KSURLConnectionClient.m */; };
@@ -105,6 +109,7 @@
 
 /* Begin PBXFileReference section */
 		34244A261B4BA559008A0DF0 /* KSNullabilityCompat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KSNullabilityCompat.h; sourceTree = "<group>"; };
+		3432C7A41B669E590044B115 /* KSGenericsCompat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KSGenericsCompat.h; sourceTree = "<group>"; };
 		AE3C6E4B19A3533B004BECE4 /* KSURLConnectionClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSURLConnectionClient.h; sourceTree = "<group>"; };
 		AE3C6E4C19A3533B004BECE4 /* KSURLConnectionClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSURLConnectionClient.m; sourceTree = "<group>"; };
 		AE3C6E6119A354E5004BECE4 /* KSURLSessionClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSURLSessionClient.h; sourceTree = "<group>"; };
@@ -359,6 +364,7 @@
 				AE3C6E6119A354E5004BECE4 /* KSURLSessionClient.h */,
 				AE3C6E6219A354E5004BECE4 /* KSURLSessionClient.m */,
 				34244A261B4BA559008A0DF0 /* KSNullabilityCompat.h */,
+				3432C7A41B669E590044B115 /* KSGenericsCompat.h */,
 			);
 			path = Deferred;
 			sourceTree = "<group>";
@@ -431,6 +437,7 @@
 			files = (
 				AE4864881B0668CB005DB302 /* KSCancellable.h in Headers */,
 				AE4864891B0668CB005DB302 /* KSDeferred.h in Headers */,
+				3445670E1B66A94D009D4516 /* KSGenericsCompat.h in Headers */,
 				34244A291B4BA59D008A0DF0 /* KSNullabilityCompat.h in Headers */,
 				AE48648A1B0668CB005DB302 /* KSPromise.h in Headers */,
 				AE48648B1B0668CB005DB302 /* KSNetworkClient.h in Headers */,
@@ -445,6 +452,7 @@
 			files = (
 				AE4864B11B066A6E005DB302 /* KSCancellable.h in Headers */,
 				AE4864B21B066A6E005DB302 /* KSDeferred.h in Headers */,
+				3445670F1B66A94E009D4516 /* KSGenericsCompat.h in Headers */,
 				34244A2A1B4BA59D008A0DF0 /* KSNullabilityCompat.h in Headers */,
 				AE4864B31B066A6E005DB302 /* KSPromise.h in Headers */,
 				AE4864B41B066A6E005DB302 /* KSNetworkClient.h in Headers */,
@@ -459,6 +467,7 @@
 			files = (
 				E15F47471570786900080763 /* KSDeferred.h in Headers */,
 				AE3C6E4D19A3533B004BECE4 /* KSURLConnectionClient.h in Headers */,
+				3445670C1B66A94C009D4516 /* KSGenericsCompat.h in Headers */,
 				34244A271B4BA59C008A0DF0 /* KSNullabilityCompat.h in Headers */,
 				AE3C6E6F19A356CA004BECE4 /* KSNetworkClientSpecURLProtocol.h in Headers */,
 				AE3C6E6319A354E5004BECE4 /* KSURLSessionClient.h in Headers */,
@@ -475,6 +484,7 @@
 				E1E5C51616CAE6F000C1385F /* KSPromise.h in Headers */,
 				34244A281B4BA59C008A0DF0 /* KSNullabilityCompat.h in Headers */,
 				AE3C6E6419A354E5004BECE4 /* KSURLSessionClient.h in Headers */,
+				3445670D1B66A94D009D4516 /* KSGenericsCompat.h in Headers */,
 				E10B702816F11AF800957DA4 /* KSNetworkClient.h in Headers */,
 				AE3C6E7019A356CA004BECE4 /* KSNetworkClientSpecURLProtocol.h in Headers */,
 			);

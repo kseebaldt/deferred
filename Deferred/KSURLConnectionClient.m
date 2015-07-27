@@ -3,8 +3,8 @@
 
 @implementation KSNetworkClient
 
-- (KSPromise<KSNetworkResponse *> *)sendAsynchronousRequest:(NSURLRequest *)request queue:(NSOperationQueue *)queue {
-    KSDeferred<KSNetworkResponse *> *deferred = [KSDeferred defer];
+- (KSPromise KS_GENERIC(KSNetworkResponse *) *)sendAsynchronousRequest:(NSURLRequest *)request queue:(NSOperationQueue *)queue {
+    KSDeferred KS_GENERIC(KSNetworkResponse *) *deferred = [KSDeferred defer];
     [NSURLConnection sendAsynchronousRequest:request
                                        queue:queue
                            completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {

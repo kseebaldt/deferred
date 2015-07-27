@@ -19,7 +19,7 @@ describe(@"KSNetworkClient", ^{
 
     it(@"should resolve the promise on success", ^{
         NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:@"pass://foo"]];
-        KSPromise<KSNetworkResponse *> *promise = [client sendAsynchronousRequest:request queue:queue];
+        KSPromise KS_GENERIC(KSNetworkResponse *) *promise = [client sendAsynchronousRequest:request queue:queue];
         dispatch_semaphore_t sema = dispatch_semaphore_create(0);
         [promise then:^id(KSNetworkResponse *value) {
             dispatch_semaphore_signal(sema);
@@ -35,7 +35,7 @@ describe(@"KSNetworkClient", ^{
 
     it(@"should reject the promise on error", ^{
         NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:@"fail://bar"]];
-        KSPromise<KSNetworkResponse *> *promise = [client sendAsynchronousRequest:request queue:queue];
+        KSPromise KS_GENERIC(KSNetworkResponse *) *promise = [client sendAsynchronousRequest:request queue:queue];
         dispatch_semaphore_t sema = dispatch_semaphore_create(0);
         [promise then:^id(KSNetworkResponse *value) {
             dispatch_semaphore_signal(sema);

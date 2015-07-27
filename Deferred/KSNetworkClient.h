@@ -1,7 +1,8 @@
 #import <Foundation/Foundation.h>
 #import "KSNullabilityCompat.h"
+#import "KSGenericsCompat.h"
 
-@class KSPromise<ObjectType>;
+@class KSPromise KS_GENERIC(ObjectType);
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -14,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol KSNetworkClient <NSObject>
 
-- (KSPromise<KSNetworkResponse *> *)sendAsynchronousRequest:(NSURLRequest *)request queue:(NSOperationQueue *)queue;
+- (KSPromise KS_GENERIC(KSNetworkResponse *) *)sendAsynchronousRequest:(NSURLRequest *)request queue:(NSOperationQueue *)queue;
 
 @end
 
