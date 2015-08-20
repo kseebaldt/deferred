@@ -56,6 +56,16 @@ pod 'KSDeferred'
         # error is error the returned promise rejects with
     }];
 
+## Returning a promise that completes after an array of other promises have completed
+
+    KSDeferred *waitForMe1 = [KSDeferred deferred];
+    KSDeferred *waitForMe2 = [KSDeferred deferred];
+    
+    KSPromise *joinedPromise = [KSPromise when: @[
+        [waitForMe1 promise],
+        [waitForMe2 promise]
+    ]];
+
 ## Resolving a promise
     [deferred resolveWithValue:@"VALUE"];
 
