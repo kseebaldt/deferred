@@ -34,6 +34,27 @@ describe(@"KSDeferred", ^{
             promise2 = deferred2.promise;
         });
 
+        context(@"when the array of joined promises is empty", ^{
+            beforeEach(^{
+                joinedPromise = [KSPromise when:@[]];
+
+                fulfilled = rejected = NO;
+
+                [joinedPromise then:^id(id value) {
+                    fulfilled = YES;
+                    return value;
+                } error:^id(NSError *error) {
+                    rejected = YES;
+                    return error;
+                }];
+            });
+
+            it(@"should immediately resolve", ^{
+                fulfilled should be_truthy;
+                rejected should_not be_truthy;
+            });
+        });
+
         context(@"when joined promises get resolved or rejected after join", ^{
             beforeEach(^{
                 joinedPromise = [KSPromise when:[NSArray arrayWithObjects:promise, promise2, nil]];
