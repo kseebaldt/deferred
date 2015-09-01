@@ -53,6 +53,10 @@ describe(@"KSDeferred", ^{
                 fulfilled should be_truthy;
                 rejected should_not be_truthy;
             });
+
+            it(@"should resolve with an empty array", ^{
+                joinedPromise.value should equal(@[]);
+            });
         });
 
         context(@"when joined promises get resolved or rejected after join", ^{
