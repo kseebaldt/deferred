@@ -89,17 +89,23 @@ NSString *const KSPromiseWhenErrorValuesKey = @"KSPromiseWhenErrorValuesKey";
 + (KSPromise *)when:(NSArray *)promises {
     KSPromise *promise = [[KSPromise alloc] init];
     promise.parentPromises = promises;
-    for (KSPromise *joinedPromise in promises) {
-        for (id<KSCancellable> cancellable in joinedPromise.cancellables) {
-            [promise addCancellable:cancellable];
+
+    if ([promise.parentPromises count] == 0) {
+        [promise joinedPromiseFulfilled:nil];
+    }
+    else {
+        for (KSPromise *joinedPromise in promises) {
+            for (id<KSCancellable> cancellable in joinedPromise.cancellables) {
+                [promise addCancellable:cancellable];
+            }
+            [joinedPromise then:^id(id value) {
+                [promise joinedPromiseFulfilled:joinedPromise];
+                return value;
+            } error:^id(NSError *error) {
+                [promise joinedPromiseFulfilled:joinedPromise];
+                return error;
+            }];
         }
-        [joinedPromise then:^id(id value) {
-            [promise joinedPromiseFulfilled:joinedPromise];
-            return value;
-        } error:^id(NSError *error) {
-            [promise joinedPromiseFulfilled:joinedPromise];
-            return error;
-        }];
     }
     return promise;
 }
