@@ -7,38 +7,49 @@
 	<key>CDRBuildVersionSHA</key>
 	<string>bde36c2aca22e0b5fcd1291375478a20780ddc3f</string>
 	<key>CFBundleDevelopmentRegion</key>
-	<string>English</string>
+	<string>en</string>
 	<key>CFBundleExecutable</key>
 	<string>Cedar</string>
 	<key>CFBundleIdentifier</key>
 	<string>io.pivotal.Cedar</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>Cedar</string>
 	<key>CFBundlePackageType</key>
 	<string>FMWK</string>
 	<key>CFBundleShortVersionString</key>
-	<string>0.11.3</string>
+	<string>1.0</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleSupportedPlatforms</key>
 	<array>
-		<string>MacOSX</string>
+		<string>iPhoneOS</string>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>DTCompiler</key>
 	<string>com.apple.compilers.llvm.clang.1_0</string>
 	<key>DTPlatformBuild</key>
-	<string>7A218</string>
+	<string>13A340</string>
+	<key>DTPlatformName</key>
+	<string>iphoneos</string>
 	<key>DTPlatformVersion</key>
-	<string>GM</string>
+	<string>9.0</string>
 	<key>DTSDKBuild</key>
-	<string>15A278</string>
+	<string>13A340</string>
 	<key>DTSDKName</key>
-	<string>macosx10.11</string>
+	<string>iphoneos9.0</string>
 	<key>DTXcode</key>
 	<string>0700</string>
 	<key>DTXcodeBuild</key>
 	<string>7A218</string>
+	<key>MinimumOSVersion</key>
+	<string>8.0</string>
+	<key>UIDeviceFamily</key>
+	<array>
+		<integer>1</integer>
+		<integer>2</integer>
+	</array>
 </dict>
 </plist>

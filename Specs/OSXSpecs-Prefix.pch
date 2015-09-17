@@ -4,5 +4,7 @@
 
 #ifdef __OBJC__
     #import <Foundation/Foundation.h>
+#ifdef __cplusplus
     #import <Cedar/Cedar.h>
+#endif
 #endif

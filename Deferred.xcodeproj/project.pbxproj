@@ -15,6 +15,9 @@
 		3445670D1B66A94D009D4516 /* KSGenericsCompat.h in Headers */ = {isa = PBXBuildFile; fileRef = 3432C7A41B669E590044B115 /* KSGenericsCompat.h */; };
 		3445670E1B66A94D009D4516 /* KSGenericsCompat.h in Headers */ = {isa = PBXBuildFile; fileRef = 3432C7A41B669E590044B115 /* KSGenericsCompat.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3445670F1B66A94E009D4516 /* KSGenericsCompat.h in Headers */ = {isa = PBXBuildFile; fileRef = 3432C7A41B669E590044B115 /* KSGenericsCompat.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		34EDDD071BAB556A00A5D51A /* Cedar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE6831AA1A365DC700B1B815 /* Cedar.framework */; settings = {ASSET_TAGS = (); }; };
+		34EDDD0A1BAB561800A5D51A /* Cedar.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = AE6831AA1A365DC700B1B815 /* Cedar.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		34EDDD0C1BAB56D400A5D51A /* Cedar.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = AE6831781A365CF800B1B815 /* Cedar.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AE3C6E4D19A3533B004BECE4 /* KSURLConnectionClient.h in Headers */ = {isa = PBXBuildFile; fileRef = AE3C6E4B19A3533B004BECE4 /* KSURLConnectionClient.h */; };
 		AE3C6E4E19A3533B004BECE4 /* KSURLConnectionClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AE3C6E4C19A3533B004BECE4 /* KSURLConnectionClient.m */; };
 		AE3C6E6019A354CB004BECE4 /* KSURLConnectionClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AE3C6E4C19A3533B004BECE4 /* KSURLConnectionClient.m */; };
@@ -48,7 +51,6 @@
 		AE4864B61B066A6E005DB302 /* KSURLSessionClient.h in Headers */ = {isa = PBXBuildFile; fileRef = AE3C6E6119A354E5004BECE4 /* KSURLSessionClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AE68316E1A365CF600B1B815 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE68316D1A365CF600B1B815 /* XCTest.framework */; };
 		AE68316F1A365CF600B1B815 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E18A7B3115674EC20083D745 /* Cocoa.framework */; };
-		AE6831741A365CF600B1B815 /* Deferred-OSXSpecs-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AE6831731A365CF600B1B815 /* Deferred-OSXSpecs-Info.plist */; };
 		AE6831791A365CF800B1B815 /* Cedar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE6831781A365CF800B1B815 /* Cedar.framework */; };
 		AE68317A1A365CF800B1B815 /* libDeferred-OSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E18A7B3015674EC20083D745 /* libDeferred-OSX.a */; };
 		AE68318C1A365D0800B1B815 /* KSDeferredSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = E18A7B5315674F350083D745 /* KSDeferredSpec.mm */; };
@@ -59,11 +61,7 @@
 		AE6831911A365D0800B1B815 /* KSPromiseCancellationSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = B866F9F81A27A86400484F68 /* KSPromiseCancellationSpec.mm */; };
 		AE6831921A365D8000B1B815 /* KSNetworkClientSpecURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = AE3C6E6E19A356CA004BECE4 /* KSNetworkClientSpecURLProtocol.m */; };
 		AE68319C1A365DC600B1B815 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE68316D1A365CF600B1B815 /* XCTest.framework */; };
-		AE68319E1A365DC600B1B815 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE68319D1A365DC600B1B815 /* CoreGraphics.framework */; };
-		AE6831A01A365DC600B1B815 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE68319F1A365DC600B1B815 /* UIKit.framework */; };
 		AE6831A11A365DC600B1B815 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E18A7B1815674D9B0083D745 /* Foundation.framework */; };
-		AE6831A61A365DC600B1B815 /* DeferredSpecs-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AE6831A51A365DC600B1B815 /* DeferredSpecs-Info.plist */; };
-		AE6831AB1A365DC700B1B815 /* Cedar-iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE6831AA1A365DC700B1B815 /* Cedar-iOS.framework */; };
 		AE6831AC1A365DC700B1B815 /* libDeferred.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E18A7B1515674D9B0083D745 /* libDeferred.a */; };
 		AE6831B21A365DD500B1B815 /* KSNetworkClientSpecURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = AE3C6E6E19A356CA004BECE4 /* KSNetworkClientSpecURLProtocol.m */; };
 		AE6831B31A365DD500B1B815 /* KSDeferredSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = E18A7B5315674F350083D745 /* KSDeferredSpec.mm */; };
@@ -107,6 +105,29 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		34EDDD091BAB560A00A5D51A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				34EDDD0A1BAB561800A5D51A /* Cedar.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		34EDDD0B1BAB56CB00A5D51A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				34EDDD0C1BAB56D400A5D51A /* Cedar.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		34244A261B4BA559008A0DF0 /* KSNullabilityCompat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KSNullabilityCompat.h; sourceTree = "<group>"; };
 		3432C7A41B669E590044B115 /* KSGenericsCompat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KSGenericsCompat.h; sourceTree = "<group>"; };
@@ -131,7 +152,7 @@
 		AE68319F1A365DC600B1B815 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		AE6831A41A365DC600B1B815 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AE6831A51A365DC600B1B815 /* DeferredSpecs-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DeferredSpecs-Info.plist"; sourceTree = "<group>"; };
-		AE6831AA1A365DC700B1B815 /* Cedar-iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "Cedar-iOS.framework"; path = "Frameworks/Cedar-iOS.framework"; sourceTree = "<group>"; };
+		AE6831AA1A365DC700B1B815 /* Cedar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cedar.framework; path = Frameworks/Cedar.framework; sourceTree = "<group>"; };
 		AE6831B91A36602500B1B815 /* OSXSpecs-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OSXSpecs-Prefix.pch"; sourceTree = "<group>"; };
 		AE6831BA1A36691A00B1B815 /* KSDeferredWaitForValueSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = KSDeferredWaitForValueSpec.mm; sourceTree = "<group>"; };
 		B866F9ED1A27A82D00484F68 /* KSCancellable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = KSCancellable.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
@@ -184,30 +205,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AE6831681A365CF600B1B815 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		AE6831941A365DC600B1B815 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				AE6831AC1A365DC700B1B815 /* libDeferred.a in Frameworks */,
-				AE68319E1A365DC600B1B815 /* CoreGraphics.framework in Frameworks */,
-				AE6831A01A365DC600B1B815 /* UIKit.framework in Frameworks */,
-				AE6831AB1A365DC700B1B815 /* Cedar-iOS.framework in Frameworks */,
+				34EDDD071BAB556A00A5D51A /* Cedar.framework in Frameworks */,
 				AE68319C1A365DC600B1B815 /* XCTest.framework in Frameworks */,
 				AE6831A11A365DC600B1B815 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AE6831971A365DC600B1B815 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,7 +298,7 @@
 			isa = PBXGroup;
 			children = (
 				AE6831A51A365DC600B1B815 /* DeferredSpecs-Info.plist */,
-				AE6831AA1A365DC700B1B815 /* Cedar-iOS.framework */,
+				AE6831AA1A365DC700B1B815 /* Cedar.framework */,
 				AE6831A31A365DC600B1B815 /* Supporting Files */,
 			);
 			path = DeferredSpecs;
@@ -535,11 +540,7 @@
 			buildPhases = (
 				AE6831641A365CF600B1B815 /* Sources */,
 				AE6831651A365CF600B1B815 /* Frameworks */,
-				AE6831661A365CF600B1B815 /* Resources */,
-				AE6831671A365CF600B1B815 /* Sources */,
-				AE6831681A365CF600B1B815 /* Frameworks */,
-				AE6831691A365CF600B1B815 /* Resources */,
-				AE68316A1A365CF600B1B815 /* ShellScript */,
+				34EDDD0B1BAB56CB00A5D51A /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -557,11 +558,7 @@
 			buildPhases = (
 				AE6831931A365DC600B1B815 /* Sources */,
 				AE6831941A365DC600B1B815 /* Frameworks */,
-				AE6831951A365DC600B1B815 /* Resources */,
-				AE6831961A365DC600B1B815 /* Sources */,
-				AE6831971A365DC600B1B815 /* Frameworks */,
-				AE6831981A365DC600B1B815 /* Resources */,
-				AE6831991A365DC600B1B815 /* ShellScript */,
+				34EDDD091BAB560A00A5D51A /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -613,7 +610,7 @@
 		E18A7B0C15674D9B0083D745 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0630;
+				LastUpgradeCheck = 0700;
 				TargetAttributes = {
 					AE4864691B0668A2005DB302 = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -666,66 +663,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AE6831661A365CF600B1B815 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AE6831741A365CF600B1B815 /* Deferred-OSXSpecs-Info.plist in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AE6831691A365CF600B1B815 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AE6831951A365DC600B1B815 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AE6831A61A365DC600B1B815 /* DeferredSpecs-Info.plist in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AE6831981A365DC600B1B815 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		AE68316A1A365CF600B1B815 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "cp -R \"${TARGET_NAME}\"/Frameworks/Cedar.framework \"${BUILT_PRODUCTS_DIR}\"";
-		};
-		AE6831991A365DC600B1B815 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Run the unit tests in this test bundle.\n            \"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n            ";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AE4864651B0668A2005DB302 /* Sources */ = {
@@ -767,13 +705,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AE6831671A365CF600B1B815 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		AE6831931A365DC600B1B815 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -786,13 +717,6 @@
 				AE6831B71A365DD500B1B815 /* KSURLSessionClientSpec.mm in Sources */,
 				AE6831B21A365DD500B1B815 /* KSNetworkClientSpecURLProtocol.m in Sources */,
 				AE6831B41A365DD500B1B815 /* KSPromiseASpec.mm in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AE6831961A365DC600B1B815 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -860,9 +784,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				INFOPLIST_FILE = "Deferred-iOS-Framework/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = KSDeferred;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -893,9 +818,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				INFOPLIST_FILE = "Deferred-iOS-Framework/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = KSDeferred;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -931,6 +857,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = KSDeferred;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
@@ -964,6 +891,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = KSDeferred;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
@@ -997,6 +925,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fublaza.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				WRAPPER_EXTENSION = xctest;
@@ -1026,6 +955,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fublaza.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				WRAPPER_EXTENSION = xctest;
@@ -1065,6 +995,7 @@
 					"-lstdc++",
 					"$(inherited)",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fublaza.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -1100,6 +1031,7 @@
 					"-lstdc++",
 					"$(inherited)",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fublaza.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -1119,6 +1051,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
