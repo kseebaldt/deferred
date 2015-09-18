@@ -73,6 +73,21 @@ pod 'KSDeferred'
     NSError *someError;
     [deferred rejectWithError:someError];
 
+## Working with generics for improved type safety (Xcode 7 and higher)
+    KSDeferred<NSDate *> *deferred = [KSDeferred defer];
+    KSPromise<NSDate *> *promise = deferred.promise;
+
+    [deferred resolveWithValue:[NSDate date]];
+
+    [promise then:^id(NSDate *date) {
+        .. do something ..
+        return date;
+    } error:^id(NSError *e) {
+        .. handle error ..
+        return e;
+    }];
+
+
 ## Author
 
 * [Kurtis Seebaldt](mailto:kurtis@pivotallabs.com), Pivotal Labs

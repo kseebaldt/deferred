@@ -1,7 +1,7 @@
 #import "KSDeferred.h"
 
-@interface KSPromise (Deferred)
-- (void)resolveWithValue:(id)value;
+@interface KSPromise KS_GENERIC(ObjectType) (Deferred)
+- (void)resolveWithValue:(KS_GENERIC_TYPE(ObjectType))value;
 - (void)rejectWithError:(NSError *)error;
 @end
 

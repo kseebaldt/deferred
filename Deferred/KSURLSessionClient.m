@@ -19,8 +19,8 @@
     return self;
 }
 
-- (KSPromise *)sendAsynchronousRequest:(NSURLRequest *)request queue:(NSOperationQueue *)queue {
-    __block KSDeferred *deferred = [KSDeferred defer];
+- (KSPromise KS_GENERIC(KSNetworkResponse *) *)sendAsynchronousRequest:(NSURLRequest *)request queue:(NSOperationQueue *)queue {
+    __block KSDeferred KS_GENERIC(KSNetworkResponse *) *deferred = [KSDeferred defer];
 
     [[self.session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         [queue addOperationWithBlock:^{
