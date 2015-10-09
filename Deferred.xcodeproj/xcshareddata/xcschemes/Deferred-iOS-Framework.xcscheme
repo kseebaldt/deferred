@@ -20,20 +20,6 @@
                ReferencedContainer = "container:Deferred.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AE14ED6D1B066547000DABF2"
-               BuildableName = "deferred-ios-frameworkTests.xctest"
-               BlueprintName = "deferred-ios-frameworkTests"
-               ReferencedContainer = "container:Deferred.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -47,8 +33,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "AE68319A1A365DC600B1B815"
-               BuildableName = "DeferredSpecs.xctest"
-               BlueprintName = "DeferredSpecs"
+               BuildableName = "Deferred-iOSSpecs.xctest"
+               BlueprintName = "Deferred-iOSSpecs"
                ReferencedContainer = "container:Deferred.xcodeproj">
             </BuildableReference>
          </TestableReference>

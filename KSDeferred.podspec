@@ -10,6 +10,12 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '5.1'
   s.osx.deployment_target = '10.7'
+  s.watchos.deployment_target = '2.0'
+  s.watchos.exclude_files = "Deferred/KSURLConnectionClient.{h,m}"
+
+  if s.respond_to?(:tvos)
+    s.tvos.deployment_target = '9.0'
+  end
 
   s.source_files = 'Deferred', 'Deferred/**/*.{h,m}'
 end
