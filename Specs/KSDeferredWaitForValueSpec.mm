@@ -1,3 +1,4 @@
+#import <Cedar/Cedar.h>
 #import "KSDeferred.h"
 
 using namespace Cedar::Matchers;

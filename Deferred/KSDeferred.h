@@ -1,7 +1,9 @@
 #import "KSPromise.h"
 #import "KSCancellable.h"
 #import "KSNetworkClient.h"
+#if !TARGET_OS_WATCH
 #import "KSURLConnectionClient.h"
+#endif
 #import "KSURLSessionClient.h"
 #import "KSNullabilityCompat.h"
 #import "KSGenericsCompat.h"

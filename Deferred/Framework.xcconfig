@@ -1,0 +1,7 @@
+PRODUCT_NAME = KSDeferred
+PRODUCT_BUNDLE_IDENTIFIER = com.example.KSDeferred
+INFOPLIST_FILE = Deferred/Framework-Info.plist
+APPLICATION_EXTENSION_API_ONLY = YES
+LD_RUNPATH_SEARCH_PATHS = $(inherited) @executable_path/Frameworks @loader_path/Frameworks
+DYLIB_INSTALL_NAME_BASE = @rpath
+SKIP_INSTALL = YES
