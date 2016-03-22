@@ -22,6 +22,7 @@ typedef void(^deferredCallback)(KSPromise KS_GENERIC(ObjectType) *p);
 
 + (KSPromise *)when:(NSArray *)promises;
 - (KSPromise *)then:(nullable __nullable id(^)(__nullable KS_GENERIC_TYPE(ObjectType) value))fulfilledCallback error:(nullable promiseErrorCallback)errorCallback;
+- (KSPromise *)then:(nullable __nullable id(^)(__nullable KS_GENERIC_TYPE(ObjectType) value))fulfilledCallback;
 
 - (id)waitForValue;
 - (nullable id)waitForValueWithTimeout:(NSTimeInterval)timeout;

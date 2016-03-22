@@ -143,6 +143,10 @@ NSString *const KSPromiseWhenErrorValuesKey = @"KSPromiseWhenErrorValuesKey";
     return promise;
 }
 
+- (KSPromise *)then:(promiseValueCallback)fulfilledCallback {
+    return [self then:fulfilledCallback error:nil];
+}
+
 - (void)addCancellable:(id<KSCancellable>)cancellable
 {
     [self.cancellables addObject:cancellable];
