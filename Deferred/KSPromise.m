@@ -1,17 +1,9 @@
 #import "KSPromise.h"
-#import <TargetConditionals.h>
 
 
-#if TARGET_OS_IPHONE
-#   if __IPHONE_OS_VERSION_MIN_REQUIRED < 60000
-#       define KS_DISPATCH_RELEASE(q) (dispatch_release(q))
-#   endif
+#if OS_OBJECT_USE_OBJC_RETAIN_RELEASE == 0
+#   define KS_DISPATCH_RELEASE(q) (dispatch_release(q))
 #else
-#   if MAC_OS_X_VERSION_MIN_REQUIRED < 1080
-#       define KS_DISPATCH_RELEASE(q) (dispatch_release(q))
-#   endif
-#endif
-#ifndef KS_DISPATCH_RELEASE
 #   define KS_DISPATCH_RELEASE(q)
 #endif
 
