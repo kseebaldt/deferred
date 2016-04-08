@@ -12,10 +12,17 @@ pod 'KSDeferred'
 
 # Examples
 
-## Creating a deferred object and returning its promise 
+## Creating a promise
 ``` objc
-    KSDeferred *deferred = [KSDeferred defer];
-    return deferred.promise;
+	[KSPromise promise:^(resolveType resolve, rejectType reject) {
+        [obj doAsyncThing:^(id value, NSError *error) {
+			if (error) {
+				reject(error);
+			} else {
+				resolve(value);
+			}
+		}];
+    }];
 ```
 
 ## Adding callback to the promise
@@ -33,16 +40,22 @@ pod 'KSDeferred'
 ## Chaining promises
 
 ``` objc
-    KSPromise *chained = [promise then:^id(id value) {
-        return value;
-    } error:^id(NSError *e) {
-        return e;
+    KSPromise *step1 = [KSPromise promise:^(resolveType resolve, rejectType reject) {
+        [obj doAsyncThing:^(id value, NSError *error) {
+			if (error) {
+				reject(error);
+			} else {
+				resolve(value);
+			}
+		}];
     }];
 
-    [chained then:^id(id value) {
+    KSPromise *step2 = [step1 then:^id(id value) {
         # value is value returned from first promise
+		return [obj doSomethingWith:value];
     } error:^id(NSError *e) {
         # error is error returned from first promise
+		return e;
     }];
 ```
 
@@ -50,48 +63,37 @@ pod 'KSDeferred'
 
 ``` objc
     KSPromise *chained = [promise then:^id(id value) {
-        KSDeferred *nextDeferred = [KSDeferred defer];
-        return nextDeferred.promise;
+		KSPromise promise = [obj doAsyncThing];
+		return promise;
     } error:^id(NSError *e) {
         return e;
     }];
 
     [chained then:^id(id value) {
-        # value is value the returned promise resolves with
+        # value is value from doAsyncThing
     } error:^id(NSError *e) {
-        # error is error the returned promise rejects with
+        # error is error from doAsyncThing
     }];
 ```
 
 ## Returning a promise that completes after an array of other promises have completed
 
 ``` objc
-    KSDeferred *waitForMe1 = [KSDeferred deferred];
-    KSDeferred *waitForMe2 = [KSDeferred deferred];
+    KSPromise *waitForMe1 = ...;
+    KSPromise *waitForMe2 = ...;
     
     KSPromise *joinedPromise = [KSPromise when: @[
-        [waitForMe1 promise],
-        [waitForMe2 promise]
+        waitForMe1, waitForMe2
     ]];
-```
-
-## Resolving a promise
-``` objc
-    [deferred resolveWithValue:@"VALUE"];
-```
-
-## Rejecting a promise
-``` objc
-    NSError *someError;
-    [deferred rejectWithError:someError];
 ```
 
 ## Working with generics for improved type safety (Xcode 7 and higher)
 ``` objc
-    KSDeferred<NSDate *> *deferred = [KSDeferred defer];
-    KSPromise<NSDate *> *promise = deferred.promise;
-
-    [deferred resolveWithValue:[NSDate date]];
+    KSPromise<NSDate *> *promise = [KSPromise promise:^(resolveType resolve, rejectType reject) {
+        [obj doAsyncThing:^(id value, NSError *error) {
+			resolve([NSDate date]);
+		}];
+    }];
 
     [promise then:^id(NSDate *date) {
         .. do something ..
@@ -106,4 +108,4 @@ pod 'KSDeferred'
 
 * [Kurtis Seebaldt](mailto:kurtis@pivotallabs.com), Pivotal Labs
 
-Copyright (c) 2013 Kurtis Seebaldt. This software is licensed under the MIT License.
+Copyright (c) 2013-2016 Kurtis Seebaldt. This software is licensed under the MIT License.

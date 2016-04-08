@@ -1,5 +1,4 @@
 #import <Cedar/Cedar.h>
-#import "KSDeferred.h"
 #import "KSPromise.h"
 
 using namespace Cedar::Matchers;
@@ -26,22 +25,20 @@ using namespace Cedar::Doubles;
 SPEC_BEGIN(KSPromiseASpec)
 
 describe(@"KSPromiseA", ^{
-    __block KSDeferred *deferred;
     __block KSPromise *promise;
 
     beforeEach(^{
         NSAssertionHandler *assertionHandler = [[SpecAssertionHandler alloc] init];
         [[[NSThread currentThread] threadDictionary] setValue:assertionHandler
                                                        forKey:NSAssertionHandlerKey];
-
-        deferred = [KSDeferred defer];
-        promise = deferred.promise;
     });
 
     describe(@"[Promises/A] Basic characteristics of `then`", ^{
         describe(@"for fulfilled promises", ^{
             beforeEach(^{
-                [deferred resolveWithValue:@"A"];
+                promise = [KSPromise promise:^(resolveType resolve, rejectType reject) {
+                    resolve(@"A");
+                }];
             });
 
             it(@"must return a new promise", ^{
@@ -65,7 +62,10 @@ describe(@"KSPromiseA", ^{
             __block NSError *error;
             beforeEach(^{
                 error = [NSError errorWithDomain:@"Promise Spec" code:1 userInfo:nil];
-                [deferred rejectWithError:error];
+                promise = [KSPromise promise:^(resolveType resolve, rejectType reject) {
+                    reject(error);
+                }];
+
             });
 
             it(@"must return a new promise", ^{
@@ -95,77 +95,45 @@ describe(@"KSPromiseA", ^{
 
     describe(@"[Promises/A] State transitions", ^{
         it(@"cannot fulfill twice", ^{
-            __block int called = 0;
-            [promise then:^id(id value) {
-                value should equal(@"B");
-                ++called;
-                return value;
-            } error:nil];
-
-            [deferred resolveWithValue:@"B"];
-
-            ^{ [deferred resolveWithValue:@"B"]; } should raise_exception();
-
-            called should equal(1);
+            ^{ [KSPromise promise:^(resolveType resolve, rejectType reject) {
+                resolve(@"B");
+                resolve(@"B");
+            }]; } should raise_exception();
         });
 
         it(@"cannot reject twice", ^{
             NSError *error = [NSError errorWithDomain:@"Promise Spec" code:2 userInfo:nil];
 
-            __block int called = 0;
-            [promise then:nil error:^id(NSError *e) {
-                e should equal(error);
-                ++called;
-                return e;
-            }];
-
-            [deferred rejectWithError:error];
-            ^{ [deferred rejectWithError:error]; } should raise_exception();
-
-            called should equal(1);
+            ^{ [KSPromise promise:^(resolveType resolve, rejectType reject) {
+                reject(error);
+                reject(error);
+            }]; } should raise_exception();
         });
 
         it(@"cannot fulfill then reject", ^{
             NSError *error = [NSError errorWithDomain:@"Promise Spec" code:3 userInfo:nil];
-            __block int called = 0;
-            __block id result = nil;
-            [promise then:^id(id value) {
-                value should equal(@"C");
-                ++called;
-                result = value;
-                return value;
-            } error:nil];
-
-            [deferred resolveWithValue:@"C"];
-            ^{ [deferred rejectWithError:error]; } should raise_exception();
-
-            called should equal(1);
-            result should equal(@"C");
+            ^{ [KSPromise promise:^(resolveType resolve, rejectType reject) {
+                resolve(@"B");
+                reject(error);
+            }]; } should raise_exception();
         });
 
         it(@"cannot reject then fulfill", ^{
             NSError *error = [NSError errorWithDomain:@"Promise Spec" code:4 userInfo:nil];
-            __block int called = 0;
-            __block id result = nil;
-            [promise then:nil error:^NSError*(NSError *e) {
-                e should equal(error);
-                ++called;
-                result = e;
-                return e;
-            }];
-
-            [deferred rejectWithError:error];
-            ^{ [deferred resolveWithValue:@"D"]; } should raise_exception();
-
-            called should equal(1);
-            result should equal(error);
+            ^{ [KSPromise promise:^(resolveType resolve, rejectType reject) {
+                reject(error);
+                resolve(@"B");
+            }]; } should raise_exception();
         });
     });
 
     describe(@"[Promises/A] Chaining off of a fulfilled promise", ^{
         describe(@"when the first fulfillment callback returns a new value", ^{
             it(@"should call the second fulfillment callback with that new value", ^{
-                [deferred resolveWithValue:@"A"];
+                promise = [KSPromise promise:^(resolveType resolve, rejectType reject) {
+                    resolve(@"A");
+                }];
+
                 KSPromise *thenPromise = [promise then:^id(id) {
                     return @"B";
                 } error:nil];
@@ -183,7 +151,10 @@ describe(@"KSPromiseA", ^{
         describe(@"when the first fulfillment callback returns an error", ^{
             it(@"should call the second rejection callback with that error as the reason", ^{
                 NSError *error = [NSError errorWithDomain:@"Promise Spec" code:4 userInfo:nil];
-                [deferred resolveWithValue:@"A"];
+                promise = [KSPromise promise:^(resolveType resolve, rejectType reject) {
+                    resolve(@"A");
+                }];
+
                 KSPromise *thenPromise = [promise then:^id(id) {
                     return error;
                 } error:nil];
@@ -200,7 +171,10 @@ describe(@"KSPromiseA", ^{
 
         describe(@"with only a rejection callback", ^{
             it(@"should call the second fulfillment callback with the original value", ^{
-                [deferred resolveWithValue:@"A"];
+                promise = [KSPromise promise:^(resolveType resolve, rejectType reject) {
+                    resolve(@"A");
+                }];
+
                 KSPromise *thenPromise = [promise then:nil error:^id(NSError *e) {
                     return e;
                 }];
@@ -220,7 +194,10 @@ describe(@"KSPromiseA", ^{
         describe(@"when the first rejection callback returns a new value", ^{
             it(@"should call the second fulfillment callback with that new value", ^{
                 NSError *error = [NSError errorWithDomain:@"Promise Spec" code:1 userInfo:nil];
-                [deferred rejectWithError:error];
+                promise = [KSPromise promise:^(resolveType resolve, rejectType reject) {
+                    reject(error);
+                }];
+
                 KSPromise *thenPromise = [promise then:nil error:^id(NSError *e){
                     return @"A";
                 }];
@@ -239,7 +216,10 @@ describe(@"KSPromiseA", ^{
             it(@"should call the second rejection callback with that new reason", ^{
                 NSError *error = [NSError errorWithDomain:@"Promise Spec" code:1 userInfo:nil];
                 NSError *error2 = [NSError errorWithDomain:@"Promise Spec" code:2 userInfo:nil];
-                [deferred rejectWithError:error];
+                promise = [KSPromise promise:^(resolveType resolve, rejectType reject) {
+                    reject(error);
+                }];
+
                 KSPromise *thenPromise = [promise then:nil error:^NSError*(NSError *e){
                     return error2;
                 }];
@@ -257,7 +237,10 @@ describe(@"KSPromiseA", ^{
         describe(@"when there is only a fulfillment callback", ^{
             it(@"should call the second rejection callback with the original reason", ^{
                 NSError *error = [NSError errorWithDomain:@"Promise Spec" code:1 userInfo:nil];
-                [deferred rejectWithError:error];
+                promise = [KSPromise promise:^(resolveType resolve, rejectType reject) {
+                    reject(error);
+                }];
+
                 KSPromise *thenPromise = [promise then:^id(id value){
                     return value;
                 } error:nil];
@@ -274,13 +257,19 @@ describe(@"KSPromiseA", ^{
     });
 
     describe(@"[Promises/A] Chaining off of an eventually-fulfilled promise", ^{
+        __block resolveType resolve;
+
+        beforeEach(^{
+            promise = [KSPromise promise:^(resolveType _resolve, rejectType _reject) {
+                resolve = _resolve;
+            }];
+        });
 
         describe(@"when the first fulfillment callback returns a new value", ^{
             it(@"should call the second fulfillment callback with that new value", ^{
                 KSPromise *thenPromise = [promise then:^id(id value){
                     return value;
                 } error:nil];
-
 
                 __block BOOL done = NO;
                 [thenPromise then:^id(id value) {
@@ -289,7 +278,7 @@ describe(@"KSPromiseA", ^{
                     return value;
                 } error:nil];
 
-                [deferred resolveWithValue:@"A"];
+                resolve(@"A");
                 done should equal(YES);
             });
         });
@@ -307,7 +296,7 @@ describe(@"KSPromiseA", ^{
                     done = YES;
                     return e;
                 }];
-                [deferred resolveWithValue:@"A"];
+                resolve(@"A");
                 done should equal(YES);
             });
         });
@@ -324,7 +313,7 @@ describe(@"KSPromiseA", ^{
                     done = YES;
                     return value;
                 } error:nil];
-                [deferred resolveWithValue:@"A"];
+                resolve(@"A");
                 done should equal(YES);
             });
         });
@@ -332,6 +321,14 @@ describe(@"KSPromiseA", ^{
 
 
     describe(@"[Promises/A] Chaining off of an eventually-rejected promise", ^{
+        __block rejectType reject;
+
+        beforeEach(^{
+            promise = [KSPromise promise:^(resolveType _resolve, rejectType _reject) {
+                reject = _reject;
+            }];
+        });
+
         describe(@"when the first rejection callback returns a new value", ^{
             it(@"should call the second fulfillment callback with that new value", ^{
                 KSPromise *thenPromise = [promise then:nil error:^id(NSError *error){
@@ -344,7 +341,7 @@ describe(@"KSPromiseA", ^{
                     done = YES;
                     return value;
                 } error:nil];
-                [deferred rejectWithError:[NSError errorWithDomain:@"error" code:123 userInfo:nil]];
+                reject([NSError errorWithDomain:@"error" code:123 userInfo:nil]);
                 done should equal(YES);
             });
         });
@@ -364,7 +361,7 @@ describe(@"KSPromiseA", ^{
                     done = YES;
                     return error;
                 }];
-                [deferred rejectWithError:firstError];
+                reject(firstError);
                 done should equal(YES);
             });
         });
@@ -383,7 +380,7 @@ describe(@"KSPromiseA", ^{
                     done = YES;
                     return error;
                 }];
-                [deferred rejectWithError:firstError];
+                reject(firstError);
                 done should equal(YES);
             });
         });
@@ -392,7 +389,9 @@ describe(@"KSPromiseA", ^{
     describe(@"[Promises/A] Multiple handlers", ^{
         describe(@"when there are multiple fulfillment handlers for a fulfilled promise", ^{
             it(@"should call them all, in order, with the same fulfillment value", ^{
-                [deferred resolveWithValue:@"A"];
+                promise = [KSPromise promise:^(resolveType resolve, rejectType reject) {
+                    resolve(@"A");
+                }];
 
                 NSMutableArray *dones = [NSMutableArray array];
 
@@ -419,7 +418,9 @@ describe(@"KSPromiseA", ^{
             });
 
             it(@"should generate multiple branching chains with their own fulfillment values", ^{
-                [deferred resolveWithValue:@"A"];
+                promise = [KSPromise promise:^(resolveType resolve, rejectType reject) {
+                    resolve(@"A");
+                }];
 
                 NSMutableArray *dones = [NSMutableArray array];
 
@@ -455,7 +456,9 @@ describe(@"KSPromiseA", ^{
         describe(@"when there are multiple rejection handlers for a rejected promise", ^{
             it(@"should call them all, in order, with the same rejection reason", ^{
                 NSError *error = [NSError errorWithDomain:@"A" code:123 userInfo:nil];
-                [deferred rejectWithError:error];
+                promise = [KSPromise promise:^(resolveType resolve, rejectType reject) {
+                    reject(error);
+                }];
 
                 NSMutableArray *dones = [NSMutableArray array];
 
@@ -486,7 +489,9 @@ describe(@"KSPromiseA", ^{
     describe(@"[Promises/A] Attaching handlers later", ^{
         describe(@"to a fulfilled promise", ^{
             it(@"should call the handler with the fulfillment value", ^{
-                [deferred resolveWithValue:@"A"];
+                promise = [KSPromise promise:^(resolveType resolve, rejectType reject) {
+                    resolve(@"A");
+                }];
 
                 __block BOOL done = NO;
                 [promise then:^id(id value) {
@@ -502,7 +507,9 @@ describe(@"KSPromiseA", ^{
         describe(@"to a rejected promise", ^{
             it(@"should call the rejection handler with the rejection reason", ^{
                 NSError *error = [NSError errorWithDomain:@"A" code:123 userInfo:nil];
-                [deferred rejectWithError:error];
+                promise = [KSPromise promise:^(resolveType resolve, rejectType reject) {
+                    reject(error);
+                }];
 
                 __block BOOL done = NO;
                 [promise then:nil error:^id(NSError *e) {
@@ -517,16 +524,13 @@ describe(@"KSPromiseA", ^{
     });
 
     describe(@"[Promises/A] Returning a promise", ^{
-        __block KSDeferred *returnedDeferred;
         NSError *returnedPromiseError = [NSError errorWithDomain:@"Promise Spec" code:1 userInfo:nil];
-
-        beforeEach(^{
-            returnedDeferred = [KSDeferred defer];
-        });
 
         describe(@"from a fulfillment handler", ^{
             beforeEach(^{
-                [deferred resolveWithValue:@"A"];
+                promise = [KSPromise promise:^(resolveType resolve, rejectType reject) {
+                    resolve(@"A");
+                }];
             });
 
             describe(@"when the returned promise is resolved", ^{
@@ -534,15 +538,15 @@ describe(@"KSPromiseA", ^{
 
                     __block BOOL done = NO;
                     [[promise then:^id(id value) {
-                        return returnedDeferred.promise;
+                        return [KSPromise promise:^(resolveType resolve, rejectType reject) {
+                            resolve(@"B");
+                        }];
                     } error:nil] then:^id(id value) {
                         value should equal(@"B");
                         done = YES;
                         return value;
                     } error:nil];
 
-                    done should equal(NO);
-                    [returnedDeferred resolveWithValue:@"B"];
                     done should equal(YES);
                 });
             });
@@ -551,15 +555,15 @@ describe(@"KSPromiseA", ^{
                 it(@"should call the next rejection handler with the returned promise's error", ^{
                     __block BOOL done = NO;
                     [[promise then:^id(id value) {
-                        return returnedDeferred.promise;
+                        return [KSPromise promise:^(resolveType resolve, rejectType reject) {
+                            reject(returnedPromiseError);
+                        }];
                     } error:nil] then:nil error:^id(NSError *error) {
                         error should equal(returnedPromiseError);
                         done = YES;
                         return error;
                     }];
 
-                    done should equal(NO);
-                    [returnedDeferred rejectWithError:returnedPromiseError];
                     done should equal(YES);
                 });
             });
@@ -567,22 +571,24 @@ describe(@"KSPromiseA", ^{
 
         describe(@"from a rejection handler", ^{
             beforeEach(^{
-                [deferred rejectWithError:[NSError errorWithDomain:@"Promise Spec" code:2 userInfo:nil]];
+                promise = [KSPromise promise:^(resolveType resolve, rejectType reject) {
+                    reject([NSError errorWithDomain:@"Promise Spec" code:2 userInfo:nil]);
+                }];
             });
 
             describe(@"when the returned promise is resolved", ^{
                 it(@"should call the next fulfillment handler with the returned promise's value", ^{
                     __block BOOL done = NO;
                     [[promise then:nil error:^id(NSError *error) {
-                        return returnedDeferred.promise;
+                        return [KSPromise promise:^(resolveType resolve, rejectType reject) {
+                            resolve(@"B");
+                        }];
                     }] then:^id(id value) {
                         value should equal(@"B");
                         done = YES;
                         return value;
                     } error:nil];
 
-                    done should equal(NO);
-                    [returnedDeferred resolveWithValue:@"B"];
                     done should equal(YES);
                 });
             });
@@ -591,15 +597,15 @@ describe(@"KSPromiseA", ^{
                 it(@"should call the next rejection handler with the returned promise's error", ^{
                     __block BOOL done = NO;
                     [[promise then:nil error:^id(NSError *error) {
-                        return returnedDeferred.promise;
+                        return [KSPromise promise:^(resolveType resolve, rejectType reject) {
+                            reject(returnedPromiseError);
+                        }];
                     }] then:nil error:^id(NSError *error) {
                         error should equal(returnedPromiseError);
                         done = YES;
                         return error;
                     }];
 
-                    done should equal(NO);
-                    [returnedDeferred rejectWithError:returnedPromiseError];
                     done should equal(YES);
                 });
             });

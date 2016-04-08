@@ -1,5 +1,5 @@
 #import "KSURLSessionClient.h"
-#import "KSDeferred.h"
+#import "KSPromise.h"
 
 @interface KSURLSessionClient ()
 @property (strong, nonatomic, readwrite) NSURLSession *session;
@@ -20,20 +20,17 @@
 }
 
 - (KSPromise KS_GENERIC(KSNetworkResponse *) *)sendAsynchronousRequest:(NSURLRequest *)request queue:(NSOperationQueue *)queue {
-    __block KSDeferred KS_GENERIC(KSNetworkResponse *) *deferred = [KSDeferred defer];
-
-    [[self.session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-        [queue addOperationWithBlock:^{
-            if (error) {
-                [deferred rejectWithError:error];
-            } else {
-                [deferred resolveWithValue:[KSNetworkResponse networkResponseWithURLResponse:response
-                                                                                        data:data]];
-            }
-        }];
-    }] resume];
-
-    return deferred.promise;
+    return [KSPromise promise:^(resolveType  _Nonnull resolve, rejectType  _Nonnull reject) {
+        [[self.session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+            [queue addOperationWithBlock:^{
+                if (error) {
+                    reject(error);
+                } else {
+                    resolve([KSNetworkResponse networkResponseWithURLResponse:response data:data]);
+                }
+            }];
+        }] resume];
+    }];
 }
 
 @end

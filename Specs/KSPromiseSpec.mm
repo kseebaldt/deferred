@@ -1,6 +1,5 @@
 #import <Cedar/Cedar.h>
 #import "KSPromise.h"
-#import "KSDeferred.h"
 
 using namespace Cedar::Matchers;
 using namespace Cedar::Doubles;
@@ -9,18 +8,14 @@ SPEC_BEGIN(KSPromiseSpec)
 
 describe(@"KSPromise", ^{
 
-    __block KSDeferred *deferred;
     __block KSPromise<NSString *> *promise;
-    
-    beforeEach(^{
-        deferred = [KSDeferred defer];
-        promise = deferred.promise;
-    });
-    
+
     describe(@"then:", ^{
         describe(@"for fulfilled promises", ^{
             beforeEach(^{
-                [deferred resolveWithValue:@"A"];
+                promise = [KSPromise promise:^(resolveType resolve, rejectType reject) {
+                    resolve(@"A");
+                }];
             });
             
             it(@"must return a new promise", ^{
@@ -45,7 +40,9 @@ describe(@"KSPromise", ^{
             beforeEach(^{
                 error = [NSError errorWithDomain:@"Broken" code:1 userInfo:nil];
                 
-                [deferred rejectWithError:error];
+                promise = [KSPromise promise:^(resolveType resolve, rejectType reject) {
+                    reject(error);
+                }];
             });
 
             it(@"rejects the returned promise with the original error", ^{
