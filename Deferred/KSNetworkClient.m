@@ -1,5 +1,4 @@
 #import "KSNetworkClient.h"
-#import "KSDeferred.h"
 
 @interface KSNetworkResponse ()
 @property (strong, nonatomic, readwrite) NSURLResponse *response;

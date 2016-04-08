@@ -14,11 +14,16 @@ typedef __nullable id(^promiseValueCallback)(__nullable KS_GENERIC_TYPE(ObjectTy
 typedef __nullable id(^promiseErrorCallback)(NSError * __nullable error);
 typedef void(^deferredCallback)(KSPromise KS_GENERIC(ObjectType) *p);
 
+typedef void(^resolveType)(__nullable KS_GENERIC_TYPE(ObjectType) value);
+typedef void(^rejectType)(NSError * __nullable error);
+
 @property (strong, nonatomic, readonly, nullable) KS_GENERIC_TYPE(ObjectType) value;
 @property (strong, nonatomic, readonly, nullable) NSError *error;
 @property (assign, nonatomic, readonly) BOOL fulfilled;
 @property (assign, nonatomic, readonly) BOOL rejected;
 @property (assign, nonatomic, readonly) BOOL cancelled;
+
++ (KSPromise *)promise:(void (^)(resolveType resolve, rejectType reject))promiseCallback;
 
 + (KSPromise *)when:(NSArray *)promises;
 - (KSPromise *)then:(nullable __nullable id(^)(__nullable KS_GENERIC_TYPE(ObjectType) value))fulfilledCallback error:(nullable promiseErrorCallback)errorCallback;

@@ -78,6 +78,20 @@ NSString *const KSPromiseWhenErrorValuesKey = @"KSPromiseWhenErrorValuesKey";
     KS_DISPATCH_RELEASE(_sem);
 }
 
++ (KSPromise *)promise:(void (^)(resolveType resolve, rejectType reject))promiseCallback {
+    KSPromise *promise = [[KSPromise alloc] init];
+
+    promiseCallback(
+    ^(id value){
+        [promise resolveWithValue:value];
+    },
+    ^(NSError *error) {
+        [promise rejectWithError:error];
+    });
+
+    return promise;
+}
+
 + (KSPromise *)when:(NSArray *)promises {
     KSPromise *promise = [[KSPromise alloc] init];
     promise.parentPromises = promises;
