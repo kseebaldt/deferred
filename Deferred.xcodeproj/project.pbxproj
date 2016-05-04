@@ -22,14 +22,12 @@
 		34490E631BC7F5840067BFD5 /* KSDeferred.h in Headers */ = {isa = PBXBuildFile; fileRef = E15F47451570786900080763 /* KSDeferred.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		34490E641BC7F5840067BFD5 /* KSPromise.h in Headers */ = {isa = PBXBuildFile; fileRef = E1E5C51316CAE6F000C1385F /* KSPromise.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		34490E651BC7F5840067BFD5 /* KSNetworkClient.h in Headers */ = {isa = PBXBuildFile; fileRef = E10B702516F11AF800957DA4 /* KSNetworkClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		34490E661BC7F5840067BFD5 /* KSURLConnectionClient.h in Headers */ = {isa = PBXBuildFile; fileRef = AE3C6E4B19A3533B004BECE4 /* KSURLConnectionClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		34490E671BC7F5840067BFD5 /* KSURLSessionClient.h in Headers */ = {isa = PBXBuildFile; fileRef = AE3C6E6119A354E5004BECE4 /* KSURLSessionClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		34490E681BC7F5840067BFD5 /* KSNullabilityCompat.h in Headers */ = {isa = PBXBuildFile; fileRef = 34244A261B4BA559008A0DF0 /* KSNullabilityCompat.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		34490E691BC7F5840067BFD5 /* KSGenericsCompat.h in Headers */ = {isa = PBXBuildFile; fileRef = 3432C7A41B669E590044B115 /* KSGenericsCompat.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		34490E6A1BC7F5930067BFD5 /* KSDeferred.m in Sources */ = {isa = PBXBuildFile; fileRef = E15F47461570786900080763 /* KSDeferred.m */; };
 		34490E6B1BC7F5930067BFD5 /* KSPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E5C51416CAE6F000C1385F /* KSPromise.m */; };
 		34490E6C1BC7F5930067BFD5 /* KSNetworkClient.m in Sources */ = {isa = PBXBuildFile; fileRef = E10B702616F11AF800957DA4 /* KSNetworkClient.m */; };
-		34490E6D1BC7F5930067BFD5 /* KSURLConnectionClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AE3C6E4C19A3533B004BECE4 /* KSURLConnectionClient.m */; };
 		34490E6E1BC7F5930067BFD5 /* KSURLSessionClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AE3C6E6219A354E5004BECE4 /* KSURLSessionClient.m */; };
 		34490E701BC7F5BB0067BFD5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34490E6F1BC7F5BB0067BFD5 /* Foundation.framework */; };
 		34490E801BC824D50067BFD5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34490E7F1BC824D50067BFD5 /* Foundation.framework */; };
@@ -48,7 +46,6 @@
 		34490EA91BC829550067BFD5 /* KSDeferred.h in Headers */ = {isa = PBXBuildFile; fileRef = E15F47451570786900080763 /* KSDeferred.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		34490EAA1BC829550067BFD5 /* KSPromise.h in Headers */ = {isa = PBXBuildFile; fileRef = E1E5C51316CAE6F000C1385F /* KSPromise.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		34490EAB1BC829550067BFD5 /* KSNetworkClient.h in Headers */ = {isa = PBXBuildFile; fileRef = E10B702516F11AF800957DA4 /* KSNetworkClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		34490EAC1BC829550067BFD5 /* KSURLConnectionClient.h in Headers */ = {isa = PBXBuildFile; fileRef = AE3C6E4B19A3533B004BECE4 /* KSURLConnectionClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		34490EAD1BC829550067BFD5 /* KSURLSessionClient.h in Headers */ = {isa = PBXBuildFile; fileRef = AE3C6E6119A354E5004BECE4 /* KSURLSessionClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		34490EAE1BC829550067BFD5 /* KSNullabilityCompat.h in Headers */ = {isa = PBXBuildFile; fileRef = 34244A261B4BA559008A0DF0 /* KSNullabilityCompat.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		34490EAF1BC829550067BFD5 /* KSGenericsCompat.h in Headers */ = {isa = PBXBuildFile; fileRef = 3432C7A41B669E590044B115 /* KSGenericsCompat.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -62,7 +59,6 @@
 		34490EB81BC8296A0067BFD5 /* KSDeferred.m in Sources */ = {isa = PBXBuildFile; fileRef = E15F47461570786900080763 /* KSDeferred.m */; };
 		34490EB91BC8296A0067BFD5 /* KSPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E5C51416CAE6F000C1385F /* KSPromise.m */; };
 		34490EBA1BC8296A0067BFD5 /* KSNetworkClient.m in Sources */ = {isa = PBXBuildFile; fileRef = E10B702616F11AF800957DA4 /* KSNetworkClient.m */; };
-		34490EBB1BC8296A0067BFD5 /* KSURLConnectionClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AE3C6E4C19A3533B004BECE4 /* KSURLConnectionClient.m */; };
 		34490EBC1BC8296A0067BFD5 /* KSURLSessionClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AE3C6E6219A354E5004BECE4 /* KSURLSessionClient.m */; };
 		34490EBD1BC8296B0067BFD5 /* KSDeferred.m in Sources */ = {isa = PBXBuildFile; fileRef = E15F47461570786900080763 /* KSDeferred.m */; };
 		34490EBE1BC8296B0067BFD5 /* KSPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E5C51416CAE6F000C1385F /* KSPromise.m */; };
@@ -541,7 +537,6 @@
 				34490E651BC7F5840067BFD5 /* KSNetworkClient.h in Headers */,
 				34490E631BC7F5840067BFD5 /* KSDeferred.h in Headers */,
 				34490E671BC7F5840067BFD5 /* KSURLSessionClient.h in Headers */,
-				34490E661BC7F5840067BFD5 /* KSURLConnectionClient.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -570,7 +565,6 @@
 				34490EAB1BC829550067BFD5 /* KSNetworkClient.h in Headers */,
 				34490EA91BC829550067BFD5 /* KSDeferred.h in Headers */,
 				34490EAD1BC829550067BFD5 /* KSURLSessionClient.h in Headers */,
-				34490EAC1BC829550067BFD5 /* KSURLConnectionClient.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -913,7 +907,6 @@
 				34490E6C1BC7F5930067BFD5 /* KSNetworkClient.m in Sources */,
 				34490E6A1BC7F5930067BFD5 /* KSDeferred.m in Sources */,
 				34490E6E1BC7F5930067BFD5 /* KSURLSessionClient.m in Sources */,
-				34490E6D1BC7F5930067BFD5 /* KSURLConnectionClient.m in Sources */,
 				34490E6B1BC7F5930067BFD5 /* KSPromise.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -936,7 +929,6 @@
 				34490EBA1BC8296A0067BFD5 /* KSNetworkClient.m in Sources */,
 				34490EB81BC8296A0067BFD5 /* KSDeferred.m in Sources */,
 				34490EBC1BC8296A0067BFD5 /* KSURLSessionClient.m in Sources */,
-				34490EBB1BC8296A0067BFD5 /* KSURLConnectionClient.m in Sources */,
 				34490EB91BC8296A0067BFD5 /* KSPromise.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
