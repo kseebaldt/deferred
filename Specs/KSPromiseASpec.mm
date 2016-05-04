@@ -85,6 +85,11 @@ describe(@"KSPromiseA", ^{
         });
 
         describe(@"for pending promises", ^{
+            beforeEach(^{
+                promise = [KSPromise promise:^(resolveType resolve, rejectType reject) {
+                }];
+            });
+
             it(@"must return a new promise", ^{
                 KSPromise *thenPromise = [promise then:nil error:nil];
 
