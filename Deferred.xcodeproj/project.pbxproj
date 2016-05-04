@@ -69,7 +69,6 @@
 		34490ED61BC82EC40067BFD5 /* KSDeferredSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = E18A7B5315674F350083D745 /* KSDeferredSpec.mm */; };
 		34490ED71BC82EC40067BFD5 /* KSPromiseASpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = E1E5C51A16CAE71500C1385F /* KSPromiseASpec.mm */; };
 		34490ED81BC82EC40067BFD5 /* KSDeferredDeprecatedSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = E17F799E16F04D1800BAD8D0 /* KSDeferredDeprecatedSpec.mm */; };
-		34490ED91BC82EC40067BFD5 /* KSNetworkClientSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = E10B703416F11CEA00957DA4 /* KSNetworkClientSpec.mm */; };
 		34490EDA1BC82EC40067BFD5 /* KSURLSessionClientSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = AE3C6E6819A35697004BECE4 /* KSURLSessionClientSpec.mm */; };
 		34490EDB1BC82EC40067BFD5 /* KSPromiseCancellationSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = B866F9F81A27A86400484F68 /* KSPromiseCancellationSpec.mm */; };
 		34490EDC1BC82EC40067BFD5 /* KSDeferredWaitForValueSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = AE6831BA1A36691A00B1B815 /* KSDeferredWaitForValueSpec.mm */; };
@@ -950,7 +949,6 @@
 			files = (
 				34490EDC1BC82EC40067BFD5 /* KSDeferredWaitForValueSpec.mm in Sources */,
 				AEEC4C681CA1F2ED00D0F035 /* KSPromiseSpec.mm in Sources */,
-				34490ED91BC82EC40067BFD5 /* KSNetworkClientSpec.mm in Sources */,
 				34490EDB1BC82EC40067BFD5 /* KSPromiseCancellationSpec.mm in Sources */,
 				34490ED61BC82EC40067BFD5 /* KSDeferredSpec.mm in Sources */,
 				34490ED81BC82EC40067BFD5 /* KSDeferredDeprecatedSpec.mm in Sources */,
