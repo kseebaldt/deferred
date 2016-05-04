@@ -1,7 +1,7 @@
 #import "KSPromise.h"
 #import "KSCancellable.h"
 #import "KSNetworkClient.h"
-#if !TARGET_OS_WATCH || !TARGET_OS_TV
+#if !TARGET_OS_WATCH && !TARGET_OS_TV
 #import "KSURLConnectionClient.h"
 #endif
 #import "KSURLSessionClient.h"
