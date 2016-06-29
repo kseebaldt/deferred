@@ -92,6 +92,18 @@ NSString *const KSPromiseWhenErrorValuesKey = @"KSPromiseWhenErrorValuesKey";
     return promise;
 }
 
++ (KSPromise *)resolve:(id)value {
+    KSPromise *promise = [[KSPromise alloc] init];
+    [promise resolveWithValue:value];
+    return promise;
+}
+
++ (KSPromise *)reject:(NSError *)error {
+    KSPromise *promise = [[KSPromise alloc] init];
+    [promise rejectWithError:error];
+    return promise;
+}
+
 + (KSPromise *)when:(NSArray *)promises {
     KSPromise *promise = [[KSPromise alloc] init];
     promise.parentPromises = promises;

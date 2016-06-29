@@ -10,6 +10,28 @@ describe(@"KSPromise", ^{
 
     __block KSPromise<NSString *> *promise;
 
+    describe(@"constructors", ^{
+        describe(@"+resolve:", ^{
+            it(@"should create a resolved promise with the argument", ^{
+                KSPromise<NSString *> *promise = [KSPromise resolve:@"A"];
+
+                promise.fulfilled should equal(YES);
+                promise.value should equal(@"A");
+            });
+        });
+
+        describe(@"+reject:", ^{
+            it(@"should create a rejected promise with the argument", ^{
+                NSError *error = [NSError errorWithDomain:@"ERROR" code:0 userInfo:nil];
+                KSPromise<NSString *> *promise = [KSPromise reject:error];
+
+                promise.rejected should equal(YES);
+                promise.error should equal(error);
+            });
+        });
+    });
+
+
     describe(@"then:", ^{
         describe(@"for fulfilled promises", ^{
             beforeEach(^{

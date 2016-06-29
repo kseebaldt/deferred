@@ -23,9 +23,13 @@ typedef void(^rejectType)(NSError * __nullable error);
 @property (assign, nonatomic, readonly) BOOL rejected;
 @property (assign, nonatomic, readonly) BOOL cancelled;
 
+#pragma mark - Constructors
 + (KSPromise *)promise:(void (^)(resolveType resolve, rejectType reject))promiseCallback;
++ (KSPromise *)resolve:(KS_GENERIC_TYPE(ObjectType))value;
++ (KSPromise *)reject:(NSError *)error;
 
 + (KSPromise *)when:(NSArray *)promises;
+
 - (KSPromise *)then:(nullable __nullable id(^)(__nullable KS_GENERIC_TYPE(ObjectType) value))fulfilledCallback error:(nullable promiseErrorCallback)errorCallback;
 - (KSPromise *)then:(nullable __nullable id(^)(__nullable KS_GENERIC_TYPE(ObjectType) value))fulfilledCallback;
 
