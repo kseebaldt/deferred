@@ -25,7 +25,7 @@ typedef void(^rejectType)(NSError * __nullable error);
 
 #pragma mark - Constructors
 + (KSPromise *)promise:(void (^)(resolveType resolve, rejectType reject))promiseCallback;
-+ (KSPromise *)resolve:(KS_GENERIC_TYPE(ObjectType))value;
++ (KSPromise *)resolve:(nullable KS_GENERIC_TYPE(ObjectType))value;
 + (KSPromise *)reject:(NSError *)error;
 
 + (KSPromise *)when:(NSArray *)promises;

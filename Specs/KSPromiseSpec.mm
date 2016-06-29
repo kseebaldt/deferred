@@ -82,6 +82,15 @@ describe(@"KSPromise", ^{
                 nextPromise.error should equal(error);
             });
         });
+
+        describe(@"with nil", ^{
+            it(@"has a nil value", ^{
+                KSPromise *promise = [KSPromise resolve:nil];
+
+                promise.fulfilled should equal(YES);
+                promise.value should be_nil;
+            });
+        });
     });
 
     describe(@"error:", ^{
