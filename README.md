@@ -25,6 +25,16 @@ pod 'KSDeferred'
     }];
 ```
 
+## Creating a resolved promise
+``` objc
+    KSPromise<NSString *> *promise = [KSPromise resolve:@"A"];
+```
+
+## Creating a resolved promise
+``` objc
+    KSPromise<NSString *> *promise = [KSPromise reject:[NSError errorWithDomain:@"error" code:1 userInfo:nil]];
+```
+
 ## Adding callback to the promise
 
 ``` objc
