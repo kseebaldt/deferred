@@ -29,9 +29,12 @@ typedef void(^rejectType)(NSError * __nullable error);
 + (KSPromise *)reject:(NSError *)error;
 
 + (KSPromise *)when:(NSArray *)promises;
++ (KSPromise *)all:(NSArray *)promises;
 
 - (KSPromise *)then:(nullable __nullable id(^)(__nullable KS_GENERIC_TYPE(ObjectType) value))fulfilledCallback error:(nullable promiseErrorCallback)errorCallback;
-- (KSPromise *)then:(nullable __nullable id(^)(__nullable KS_GENERIC_TYPE(ObjectType) value))fulfilledCallback;
+- (KSPromise *)then:(__nullable id(^)(__nullable KS_GENERIC_TYPE(ObjectType) value))fulfilledCallback;
+- (KSPromise *)error:(promiseErrorCallback)errorCallback;
+- (KSPromise *)finally:(void(^)())callback;
 
 - (id)waitForValue;
 - (nullable id)waitForValueWithTimeout:(NSTimeInterval)timeout;

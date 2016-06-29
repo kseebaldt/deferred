@@ -128,6 +128,10 @@ NSString *const KSPromiseWhenErrorValuesKey = @"KSPromiseWhenErrorValuesKey";
     return promise;
 }
 
++ (KSPromise *)all:(NSArray *)promises {
+    return [self when:promises];
+}
+
 + (KSPromise *)join:(NSArray *)promises {
     return [self when:promises];
 }
@@ -163,6 +167,20 @@ NSString *const KSPromiseWhenErrorValuesKey = @"KSPromiseWhenErrorValuesKey";
 
 - (KSPromise *)then:(promiseValueCallback)fulfilledCallback {
     return [self then:fulfilledCallback error:nil];
+}
+
+- (KSPromise *)error:(promiseErrorCallback)errorCallback {
+    return [self then:nil error:errorCallback];
+}
+
+- (KSPromise *)finally:(void(^)())callback {
+    return [self then:^id (id value) {
+        callback();
+        return value;
+    } error:^id (NSError *error) {
+        callback();
+        return error;
+    }];
 }
 
 - (void)addCancellable:(id<KSCancellable>)cancellable

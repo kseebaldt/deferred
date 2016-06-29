@@ -30,7 +30,7 @@ pod 'KSDeferred'
     KSPromise<NSString *> *promise = [KSPromise resolve:@"A"];
 ```
 
-## Creating a resolved promise
+## Creating a rejected promise
 ``` objc
     KSPromise<NSString *> *promise = [KSPromise reject:[NSError errorWithDomain:@"error" code:1 userInfo:nil]];
 ```
@@ -44,6 +44,20 @@ pod 'KSDeferred'
       } error:^id(NSError *e) {
         .. handle error ..
         return e;
+    }];
+```
+
+### Shortcut methods when only one callback is needed
+
+``` objc
+    [promise then:^id(id value) {
+        .. do something ..
+        return value;
+    }];
+
+    [promise error:^id(NSError error) {
+        .. do something ..
+        return error;
     }];
 ```
 
@@ -66,6 +80,14 @@ pod 'KSDeferred'
     } error:^id(NSError *e) {
         # error is error returned from first promise
 		return e;
+    }];
+```
+
+## Always execute a callback, regardless of fulfillment or rejection
+
+``` objc
+    [promise finally:^ {
+        .. do something ..
     }];
 ```
 
@@ -96,6 +118,8 @@ pod 'KSDeferred'
         waitForMe1, waitForMe2
     ]];
 ```
+
+The method `all:` is a synonym for `when:`.
 
 ## Working with generics for improved type safety (Xcode 7 and higher)
 ``` objc
