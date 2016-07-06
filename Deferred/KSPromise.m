@@ -116,12 +116,8 @@ NSString *const KSPromiseWhenErrorValuesKey = @"KSPromiseWhenErrorValuesKey";
             for (id<KSCancellable> cancellable in joinedPromise.cancellables) {
                 [promise addCancellable:cancellable];
             }
-            [joinedPromise then:^id(id value) {
+            [joinedPromise finally:^ {
                 [promise joinedPromiseFulfilled:joinedPromise];
-                return value;
-            } error:^id(NSError *error) {
-                [promise joinedPromiseFulfilled:joinedPromise];
-                return error;
             }];
         }
     }
