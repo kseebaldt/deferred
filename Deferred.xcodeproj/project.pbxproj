@@ -133,7 +133,6 @@
 		AE6831B81A365DD500B1B815 /* KSPromiseCancellationSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = B866F9F81A27A86400484F68 /* KSPromiseCancellationSpec.mm */; };
 		AE6831BB1A36691A00B1B815 /* KSDeferredWaitForValueSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = AE6831BA1A36691A00B1B815 /* KSDeferredWaitForValueSpec.mm */; };
 		AE6831BC1A36691A00B1B815 /* KSDeferredWaitForValueSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = AE6831BA1A36691A00B1B815 /* KSDeferredWaitForValueSpec.mm */; };
-		AEEC4C651CA1F2ED00D0F035 /* KSPromiseSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = AEEC4C641CA1F2ED00D0F035 /* KSPromiseSpec.mm */; };
 		AEEC4C661CA1F2ED00D0F035 /* KSPromiseSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = AEEC4C641CA1F2ED00D0F035 /* KSPromiseSpec.mm */; };
 		AEEC4C671CA1F2ED00D0F035 /* KSPromiseSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = AEEC4C641CA1F2ED00D0F035 /* KSPromiseSpec.mm */; };
 		AEEC4C681CA1F2ED00D0F035 /* KSPromiseSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = AEEC4C641CA1F2ED00D0F035 /* KSPromiseSpec.mm */; };
@@ -978,7 +977,6 @@
 				AE4864AD1B066A67005DB302 /* KSPromise.m in Sources */,
 				AE4864AE1B066A67005DB302 /* KSNetworkClient.m in Sources */,
 				AE4864AF1B066A67005DB302 /* KSURLConnectionClient.m in Sources */,
-				AEEC4C651CA1F2ED00D0F035 /* KSPromiseSpec.mm in Sources */,
 				AE4864B01B066A67005DB302 /* KSURLSessionClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
