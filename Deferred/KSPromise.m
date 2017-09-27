@@ -169,7 +169,7 @@ NSString *const KSPromiseWhenErrorValuesKey = @"KSPromiseWhenErrorValuesKey";
     return [self then:nil error:errorCallback];
 }
 
-- (KSPromise *)finally:(void(^)())callback {
+- (KSPromise *)finally:(void(^)(void))callback {
     return [self then:^id (id value) {
         callback();
         return value;
