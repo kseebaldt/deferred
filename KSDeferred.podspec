@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.ios.deployment_target = '5.1'
-  s.osx.deployment_target = '10.7'
+  s.osx.deployment_target = '10.9'
   s.watchos.deployment_target = '2.0'
   s.watchos.exclude_files = "Deferred/KSURLConnectionClient.{h,m}"
   s.tvos.deployment_target = '9.0'
