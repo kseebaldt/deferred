@@ -102,6 +102,37 @@ describe(@"KSPromiseCancellation", ^{
                 otherDeferredCancelBlockCalled should be_truthy;
             });
         });
+
+        context(@"for a promise that cancels itself within it's finally block", ^{
+            beforeEach(^{
+                deferred = [KSDeferred defer];
+                promise = deferred.promise;
+                [promise finally:^{
+                    [promise cancel];
+                }];
+            });
+
+            context(@"when resolving the deferred", ^{
+                beforeEach(^{
+                    [deferred resolveWithValue:@"some value"];
+                });
+
+                it(@"does not crash and fulfilled the promise", ^{
+                    promise.fulfilled should be_truthy;
+                });
+            });
+
+            context(@"when rejecting the deferred", ^{
+                beforeEach(^{
+                    [deferred rejectWithError:nil];
+                });
+
+                it(@"does not crash and rejects the promise", ^{
+                    promise.rejected should be_truthy;
+                });
+            });
+
+        });
     });
 });
 
