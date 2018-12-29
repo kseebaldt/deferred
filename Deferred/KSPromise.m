@@ -216,7 +216,7 @@ NSString *const KSPromiseWhenErrorValuesKey = @"KSPromiseWhenErrorValuesKey";
     if (self.completed || self.cancelled) return;
     self.value = value;
     self.fulfilled = YES;
-    for (KSPromiseCallbacks *callbacks in self.callbacks) {
+    for (__strong KSPromiseCallbacks *callbacks in self.callbacks) {
         id nextValue = self.value;
         if (callbacks.fulfilledCallback) {
             nextValue = callbacks.fulfilledCallback(value);
@@ -234,7 +234,7 @@ NSString *const KSPromiseWhenErrorValuesKey = @"KSPromiseWhenErrorValuesKey";
     if (self.completed || self.cancelled) return;
     self.error = error;
     self.rejected = YES;
-    for (KSPromiseCallbacks *callbacks in self.callbacks) {
+    for (__strong KSPromiseCallbacks *callbacks in self.callbacks) {
         id nextValue = self.error;
         if (callbacks.errorCallback) {
             nextValue = callbacks.errorCallback(error);
@@ -264,7 +264,7 @@ NSString *const KSPromiseWhenErrorValuesKey = @"KSPromiseWhenErrorValuesKey";
 }
 
 - (void)finish {
-    for (KSPromiseCallbacks *callbacks in self.callbacks) {
+    for (__strong KSPromiseCallbacks *callbacks in self.callbacks) {
         if (callbacks.deprecatedCompleteCallback) {
             callbacks.deprecatedCompleteCallback(self);
         }
