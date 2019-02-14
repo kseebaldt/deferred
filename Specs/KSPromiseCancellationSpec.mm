@@ -58,6 +58,38 @@ describe(@"KSPromiseCancellation", ^{
                 [deferred rejectWithError:rejectError];
                 errorBlockCalledWithError should be_nil;
             });
+
+            context(@"when chaining a promise to a cancelled promise", ^{
+                __block BOOL thenBlockCalled;
+                __block KSPromise *childPromiseOfCancelledPromise;
+                beforeEach(^{
+                    thenBlockCalled = NO;
+                    childPromiseOfCancelledPromise = [promise then:^id(id value) {
+                        thenBlockCalled = YES;
+                        return value;
+                    }];
+                });
+
+                it(@"did not return nil", ^{
+                    childPromiseOfCancelledPromise should_not be_nil;
+                });
+
+                it(@"does not call the then block", ^{
+                    thenBlockCalled should be_falsy;
+                });
+            });
+
+            context(@"when adding a cancellable to the cancelled promise", ^{
+                __block id<KSCancellable> cancellable;
+                beforeEach(^{
+                    cancellable = nice_fake_for(@protocol(KSCancellable));
+                    [promise addCancellable:cancellable];
+                });
+
+                it(@"instantly cancels the cancellable", ^{
+                    cancellable should have_received(@selector(cancel));
+                });
+            });
         });
 
         context(@"for a child promise", ^{
